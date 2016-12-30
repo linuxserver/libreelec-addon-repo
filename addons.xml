@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon id="docker.linuxserver.quassel-core"
+       name="Quassel Core (LinuxServer.io)"
+       version="1.0.2"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Quassel Core in a docker container</summary>
+    <description>
+Quassel IRC is a modern, cross-platform, distributed IRC client, meaning that one (or multiple) client(s) can attach to and detach from a central core.
+
+This container handles the IRC connection (quasselcore) and requires a desktop client (quasselclient) to be used and configured. It is designed to be always on and will keep your identity present in IRC even when your clients cannot be online. Backlog (history) is downloaded by your client upon reconnection allowing infinite scrollback through time.
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.quassel-core:
+--------------------------------
+
+1.0.2
+- Added aarch64 support
+
+1.0.1
+- Fix default settings
+
+1.0.0
+- Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="docker.linuxserver.mariadb"
+       name="MariaDB (LinuxServer.io)"
+       version="1.0.2"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>MariaDB in a docker container</summary>
+    <description>
+MariaDB is one of the most popular database servers. Made by the original developers of MySQL.
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.mariadb:
+---------------------------
+
+1.0.2
+- Added aarch64 support
+
+1.0.1
+- Change user to nobody
+
+1.0.0
+- Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="docker.linuxserver.duckdns"
+       name="DuckDNS (LinuxServer.io)"
+       version="1.0.6"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>DuckDNS dynamic dns updater as a Docker container</summary>
+    <description>
+Duckdns is a free dynamic DNS service hosted on Amazon VPC. Unlike most other free dynamic DNS providers, DuckDNS accounts do not require periodic user action to keep them alive. Visit www.duckdns.org to register your domain.
+
+This docker container is brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+Please visit www.duckdns.org to get a custom url and token
+    </disclaimer>
+    <news>
+docker.linuxserver.duckdns:
+---------------------------
+
+1.0.6
+- Added aarch64 support
+
+1.0.5
+- Update image links
+
+1.0.4
+- Change default settings so container doesn't continuously restart
+
+1.0.3
+- Run as user nobody
+
+1.0.2
+- Unified addon for x86_64 and arm
+
+1.0.1
+- Switch logging to local file for easy access
+
+1.0.0
+- Initial addon
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="docker.linuxserver.oscam"
+       name="Oscam (LinuxServer.io)"
+       version="1.0.2"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Oscam in a docker container</summary>
+    <description>
+Oscam is an Open Source Conditional Access Module software used for descrambling DVB transmissions using smart cards. It's both a server and a client.
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.oscam:
+-------------------------
+
+1.0.2
+- Added aarch64 support
+
+1.0.1
+- Add ports for devices
+
+1.0.0
+- Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="docker.linuxserver.plexpy"
+       name="PlexPy (LinuxServer.io)"
+       version="1.0.3"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>PlexPy in a docker container</summary>
+    <description>
+Plexpy is a Python-based Plex Usage tracker, that is currently in active development.
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.plexpy:
+--------------------------
+
+1.0.3
+- Added aarch64 support
+
+1.0.2
+- Run as user nobody
+
+1.0.1
+- Unified addon for x86_64 and arm
+
+1.0.0
+- Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="docker.linuxserver.znc"
+       name="ZNC (LinuxServer.io)"
+       version="1.0.2"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>ZNC in a docker container</summary>
+    <description>
+ZNC is an IRC network bouncer or BNC. It can detach the client from the actual IRC server, and also from selected channels. Multiple clients from different locations can connect to a single ZNC account simultaneously and therefore appear under the same nickname on IRC.
+
+***Default username:password are admin:admin (Change password ASAP)
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.znc:
+-----------------------
+
+1.0.2
+- Added aarch64 support
+
+1.0.1
+- Fix default settings
+
+1.0.0
+- Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="docker.linuxserver.minisatip"
+       name="Minisatip (LinuxServer.io)"
+       version="1.0.4"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Minisatip in a docker container</summary>
+    <description>
+Minisatip is a multi-threaded satip server version 1.2 that runs under Linux and it was tested with DVB-S, DVB-S2, DVB-T, DVB-T2, DVB-C, DVB-C2, ATSC and ISDB-T cards.
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.minisatip:
+-----------------------------
+
+1.0.4
+- Added aarch64 support
+
+1.0.3
+- Fix default settings
+
+1.0.2
+- Add device setting
+
+1.0.1
+- Run as user nobody
+
+1.0.0
+- Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="docker.linuxserver.tvheadend"
+       name="TVheadend (LinuxServer.io)"
+       version="1.0.2"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>TVheadend in a docker container</summary>
+    <description>
+Tvheadend is a TV streaming server and recorder for Linux, FreeBSD and Android supporting DVB-S, DVB-S2, DVB-C, DVB-T, ATSC, ISDB-T, IPTV, SAT>IP and HDHomeRun as input sources. Tvheadend offers the HTTP (VLC, MPlayer), HTSP (Kodi, Movian) and SAT>IP streaming. Multiple EPG sources are supported (over-the-air DVB and ATSC including OpenTV DVB extensions, XMLTV, PyXML).
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.tvheadend:
+-----------------------------
+
+1.0.2
+- Added aarch64 support
+
+1.0.1
+- Fix config location
+
+1.0.0
+- Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="docker.linuxserver.resilio-sync"
+       name="Resilio Sync (LinuxServer.io)"
+       version="1.0.2"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Resilio Sync in a docker container</summary>
+    <description>
+Resilio Sync (formerly BitTorrent Sync) uses the BitTorrent protocol to sync files and folders between all of your devices. There are both free and paid versions, this container supports both. There is an official sync image but we created this one as it supports user mapping to simplify permissions for volumes.
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.resilio-sync:
+--------------------------------
+
+1.0.2
+- Added aarch64 support
+
+1.0.1
+- Run as user nobody
+
+1.0.0
+- Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="docker.linuxserver.plex"
+       name="Plex (LinuxServer.io)"
+       version="1.0.3"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Plex Media Server as a Docker container</summary>
+    <description>
+Plex organizes video, music and photos from personal media libraries and streams them to smart televisions, streaming boxes and mobile devices.
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.plex:
+------------------------
+
+1.0.3
+- Added aarch64 support
+
+1.0.2
+- Run as user nobody
+
+1.0.1
+- Unified addon for x86_64 and arm
+
+1.0.0
+- Initial addon
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="docker.linuxserver.thelounge"
+       name="TheLounge (LinuxServer.io)"
+       version="1.0.1"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>TheLounge in a docker container</summary>
+    <description>
+TheLounge (a fork of shoutIRC) is a web IRC client that you host on your own server. * Multiple user support * Stays connected even when you close the browser * Connect from multiple devices at once * Responsive layout — works well on your smartphone
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.thelounge:
+-----------------------------
+
+1.0.1
+- Added aarch64 support
+
+1.0.0
+- Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="docker.linuxserver.muximux"
+       name="Muximux (LinuxServer.io)"
+       version="1.0.1"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Muximux in a docker container</summary>
+    <description>
+Muximux is a lightweight portal to view and manage your HTPC apps without having to run anything more than a PHP enabled webserver. With Muximux you don't need to keep multiple tabs open, or bookmark the URL to all of your apps.
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.muximux:
+---------------------------
+
+1.0.1
+- Added aarch64 support
+
+1.0.0
+- Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="docker.linuxserver.photoshow"
+       name="Photoshow (LinuxServer.io)"
+       version="1.0.1"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Photoshow in a docker container</summary>
+    <description>
+Photoshow is gallery software at its easiest, it doesn't even require a database.
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.photoshow:
+-----------------------------
+
+1.0.1
+- Added aarch64 support
+
+1.0.0
+- Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="docker.linuxserver.beets"
+       name="Beets (LinuxServer.io)"
+       version="1.0.3"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Beets in a docker container</summary>
+    <description>
+Beets is a music library manager and not, for the most part, a music player. It does include a simple player plugin and an experimental Web-based player, but it generally leaves actual sound-reproduction to specialized tools.
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.beets:
+-------------------------
+
+1.0.3
+- Add aarch64 support
+
+1.0.2
+- Fix port mapping typo
+
+1.0.1
+- Run as user nobody
+
+1.0.0
+- Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="docker.linuxserver.letsencrypt"
+       name="Nginx Letsencrypt (LinuxServer.io)"
+       version="1.0.5"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Nginx Letsencrypt in a docker container</summary>
+    <description>
+This container sets up an Nginx webserver and reverse proxy with php support and a built-in letsencrypt client that automates free SSL server certificate generation and renewal processes. It also contains fail2ban for intrusion prevention.
+
+***Port 443 on the router has to be forwarded to this machine.
+***During first run, dhparams are generated before the webserver is up, which may take over an hour especially on arm.
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.letsencrypt:
+-------------------------------
+
+1.0.5
+- Added aarch64 support
+
+1.0.4
+- Stall systemd if variables are not set
+
+1.0.3
+- Update dockerhub image links
+
+1.0.2
+- Change group to users
+
+1.0.1
+- Change user to nobody
+
+1.0.0
+- Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+</addons>
