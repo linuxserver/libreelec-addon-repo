@@ -2,7 +2,7 @@
 <addons>
 <addon id="docker.linuxserver.quassel-core"
        name="Quassel Core (LinuxServer.io)"
-       version="1.0.2"
+       version="1.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -28,6 +28,9 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.quassel-core:
 --------------------------------
 
+1.0.3
+- Fix timezone bug
+
 1.0.2
 - Added aarch64 support
 
@@ -48,7 +51,7 @@ docker.linuxserver.quassel-core:
 
 <addon id="docker.linuxserver.mariadb"
        name="MariaDB (LinuxServer.io)"
-       version="1.0.2"
+       version="1.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -72,6 +75,9 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.mariadb:
 ---------------------------
 
+1.0.3
+- Fix timezone bug
+
 1.0.2
 - Added aarch64 support
 
@@ -92,7 +98,7 @@ docker.linuxserver.mariadb:
 
 <addon id="docker.linuxserver.duckdns"
        name="DuckDNS (LinuxServer.io)"
-       version="1.0.6"
+       version="1.0.7"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -116,6 +122,9 @@ Please visit www.duckdns.org to get a custom url and token
     <news>
 docker.linuxserver.duckdns:
 ---------------------------
+
+1.0.7
+- Fix timezone bug
 
 1.0.6
 - Added aarch64 support
@@ -149,7 +158,7 @@ docker.linuxserver.duckdns:
 
 <addon id="docker.linuxserver.oscam"
        name="Oscam (LinuxServer.io)"
-       version="1.0.2"
+       version="1.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -173,6 +182,9 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.oscam:
 -------------------------
 
+1.0.3
+- Fix timezone bug
+
 1.0.2
 - Added aarch64 support
 
@@ -193,7 +205,7 @@ docker.linuxserver.oscam:
 
 <addon id="docker.linuxserver.plexpy"
        name="PlexPy (LinuxServer.io)"
-       version="1.0.3"
+       version="1.0.4"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -216,6 +228,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.plexpy:
 --------------------------
+
+1.0.4
+- Fix timezone bug
 
 1.0.3
 - Added aarch64 support
@@ -240,7 +255,7 @@ docker.linuxserver.plexpy:
 
 <addon id="docker.linuxserver.znc"
        name="ZNC (LinuxServer.io)"
-       version="1.0.2"
+       version="1.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -266,6 +281,9 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.znc:
 -----------------------
 
+1.0.3
+- Fix timezone bug
+
 1.0.2
 - Added aarch64 support
 
@@ -286,7 +304,7 @@ docker.linuxserver.znc:
 
 <addon id="docker.linuxserver.minisatip"
        name="Minisatip (LinuxServer.io)"
-       version="1.0.4"
+       version="1.0.5"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -309,6 +327,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.minisatip:
 -----------------------------
+
+1.0.5
+- Fix timezone bug
 
 1.0.4
 - Added aarch64 support
@@ -336,7 +357,7 @@ docker.linuxserver.minisatip:
 
 <addon id="docker.linuxserver.tvheadend"
        name="TVheadend (LinuxServer.io)"
-       version="1.0.2"
+       version="1.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -360,6 +381,9 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.tvheadend:
 -----------------------------
 
+1.0.3
+- Fix timezone bug
+
 1.0.2
 - Added aarch64 support
 
@@ -380,7 +404,7 @@ docker.linuxserver.tvheadend:
 
 <addon id="docker.linuxserver.resilio-sync"
        name="Resilio Sync (LinuxServer.io)"
-       version="1.0.2"
+       version="1.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -404,6 +428,9 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.resilio-sync:
 --------------------------------
 
+1.0.3
+- Fix timezone bug
+
 1.0.2
 - Added aarch64 support
 
@@ -424,7 +451,7 @@ docker.linuxserver.resilio-sync:
 
 <addon id="docker.linuxserver.plex"
        name="Plex (LinuxServer.io)"
-       version="1.0.3"
+       version="1.0.4"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -447,6 +474,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.plex:
 ------------------------
+
+1.0.4
+- Fix timezone bug
 
 1.0.3
 - Added aarch64 support
@@ -471,7 +501,7 @@ docker.linuxserver.plex:
 
 <addon id="docker.linuxserver.thelounge"
        name="TheLounge (LinuxServer.io)"
-       version="1.0.1"
+       version="1.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -495,6 +525,9 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.thelounge:
 -----------------------------
 
+1.0.2
+- Fix timezone bug
+
 1.0.1
 - Added aarch64 support
 
@@ -512,7 +545,7 @@ docker.linuxserver.thelounge:
 
 <addon id="docker.linuxserver.muximux"
        name="Muximux (LinuxServer.io)"
-       version="1.0.1"
+       version="1.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -536,6 +569,9 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.muximux:
 ---------------------------
 
+1.0.2
+- Fix timezone bug
+
 1.0.1
 - Added aarch64 support
 
@@ -553,7 +589,7 @@ docker.linuxserver.muximux:
 
 <addon id="docker.linuxserver.photoshow"
        name="Photoshow (LinuxServer.io)"
-       version="1.0.1"
+       version="1.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -577,6 +613,9 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.photoshow:
 -----------------------------
 
+1.0.2
+- Fix timezone bug
+
 1.0.1
 - Added aarch64 support
 
@@ -594,7 +633,7 @@ docker.linuxserver.photoshow:
 
 <addon id="docker.linuxserver.beets"
        name="Beets (LinuxServer.io)"
-       version="1.0.3"
+       version="1.0.4"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -617,6 +656,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.beets:
 -------------------------
+
+1.0.4
+- Fix timezone bug
 
 1.0.3
 - Add aarch64 support
@@ -641,7 +683,7 @@ docker.linuxserver.beets:
 
 <addon id="docker.linuxserver.letsencrypt"
        name="Nginx Letsencrypt (LinuxServer.io)"
-       version="1.0.5"
+       version="1.0.6"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -667,6 +709,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.letsencrypt:
 -------------------------------
+
+1.0.6
+- Fix timezone bug
 
 1.0.5
 - Added aarch64 support
@@ -697,7 +742,7 @@ docker.linuxserver.letsencrypt:
 
 <addon id="docker.linuxserver.portainer"
        name="Portainer (LinuxServer.io)"
-       version="1.0.0"
+       version="1.0.1"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -723,6 +768,9 @@ Please do not use portainer to manage other LinuxServer.io addon generated conta
     <news>
 docker.linuxserver.portainer:
 --------------------------
+
+1.0.1
+- Fix timezone bug
 
 1.0.0
 - Initial release
