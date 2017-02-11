@@ -1,0 +1,6 @@
+<settings>
+    <setting id="V_config" value="/storage/.kodi/userdata/addon_data/docker.linuxserver.resilio-sync/config" />
+    <setting id="V_sync" value="/storage/.kodi/userdata/addon_data/docker.linuxserver.resilio-sync/sync" />
+    <setting id="P_port" value="8888" />
+    <setting id="P_port2" value="55555" />
+</settings>

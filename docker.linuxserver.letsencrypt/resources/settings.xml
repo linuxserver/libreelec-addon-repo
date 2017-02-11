@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+   <category   label="30000">
+      <setting label="30001" type="lsep" />
+      <setting label="30005" type="folder" id="V_config"  default="/storage/.kodi/userdata/addon_data/docker.linuxserver.letsencrypt/config"  option="writeable" />
+      <setting label="30006" type="number" id="P_port"    default="443" />
+      <setting label="30007" type="text"   id="E_url"     default="" />
+      <setting label="30008" type="text"   id="E_subd"    default="www," />
+      <setting label="30009" type="text"   id="E_email"   default="" />
+   </category>
+</settings>

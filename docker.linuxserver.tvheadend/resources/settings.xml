@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+   <category   label="30000">
+      <setting label="30005" type="folder" id="V_config"     default="/storage/.kodi/userdata/addon_data/docker.linuxserver.tvheadend/config"    option="writeable" />
+      <setting label="30011" type="folder" id="V_record"     default="/storage/recordings"  option="writeable" />
+      <setting label="30006" type="text"   id="E_version"    default="latest" />
+      <setting label="30007" type="bool"   id="D_dev_port"   default="false" />
+      <setting label="30008" type="number" id="P_port"       default="9981" enable="eq(-1,true)" />
+      <setting label="30009" type="number" id="P_port2"      default="9982" enable="eq(-2,true)" />
+      <setting label="30010" type="text"   id="D_device"     default="/dev/dvb" enable="eq(-3,true)" />
+   </category>
+</settings>

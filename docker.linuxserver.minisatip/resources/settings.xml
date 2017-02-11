@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+   <category   label="30000">
+      <setting label="30006" type="number" id="P_port"       default="8875" />
+      <setting label="30008" type="number" id="P_port2"      default="554" />
+      <setting label="30009" type="number" id="P_port3"      default="1900" />
+      <setting label="30010" type="text"   id="E_opt"        default="" />
+      <setting label="30011" type="text"   id="D_device"     default="/dev/dvb" />
+   </category>
+</settings>

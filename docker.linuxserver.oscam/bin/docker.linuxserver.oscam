@@ -1,0 +1,49 @@
+#!/bin/sh
+
+name="$(basename $0)"
+. /etc/profile
+
+if [ -f /storage/.cache/timezone ]; then
+ . /storage/.cache/timezone
+else
+ TIMEZONE="America/New_York"
+fi
+
+oe_setup_addon "$name"
+
+#get arch variable from os
+LEARCHVAR=`sed -e '/LIBREELEC_ARCH/ !d' -e 's/[^.]*\.\([^"]*\).*/\1/' /etc/os-release`
+
+#figure out number of devices to use
+D_devices=""
+if [ "$D_device1e" = "true" ]; then
+  D_devices="--device=${D_device1} -p ${P_portd1}:${P_portd1}"
+  if [ "$D_device2e" = "true" ]; then
+    D_devices="$D_devices --device=${D_device2} -p ${P_portd2}:${P_portd2}"
+    if [ "$D_device3e" = "true" ]; then
+      D_devices="$D_devices --device=${D_device3} -p ${P_portd3}:${P_portd3}"
+      if [ "$D_device4e" = "true" ]; then
+        D_devices="$D_devices --device=${D_device4} -p ${P_portd4}:${P_portd4}"
+      fi
+    fi
+  fi
+fi
+
+#figure out which docker hub image to use
+if [ "$LEARCHVAR" = "x86_64" ]; then
+  DOCKERIMAGE="linuxserver/oscam"
+elif [ "$LEARCHVAR" = "arm" ] || [ "$LEARCHVAR" = "aarch64" ]; then
+  DOCKERIMAGE="lsioarmhf/oscam"
+fi
+
+docker rm "$name" 2>/dev/null
+docker pull "$DOCKERIMAGE":latest
+docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
+docker run --name="$name" \
+           -e PUID="65534" \
+           -e PGID="100" \
+           -e TZ="$TIMEZONE" \
+           -v "$V_config":/config \
+           -p "$P_port":8888 \
+           ${D_devices} \
+           "$DOCKERIMAGE":latest

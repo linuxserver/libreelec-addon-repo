@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+   <category   label="30000">
+      <setting label="30001" type="lsep" />
+      <setting label="30004" type="text"   id="E_SUBDOMAINS"  default="subdomains" />
+      <setting label="30005" type="text"   id="E_TOKEN"       default="token" />
+      <setting label="30006" type="folder" id="V_config"      default="/storage/.kodi/userdata/addon_data/docker.linuxserver.duckdns" option="writeable" />
+   </category>
+</settings>

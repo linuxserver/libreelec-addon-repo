@@ -1,0 +1,6 @@
+<settings>
+    <setting id="V_config" value="/storage/.kodi/userdata/addon_data/docker.linuxserver.beets/config" />
+    <setting id="V_downloads" value="/storage/downloads/beets" />
+    <setting id="V_music" value="/storage/music" />
+    <setting id="P_port" value="8337" />
+</settings>

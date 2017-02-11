@@ -1,0 +1,5 @@
+<settings>
+    <setting id="V_config" value="/storage/.kodi/userdata/addon_data/docker.linuxserver.plexpy/config" />
+    <setting id="V_logs" value="/storage/.kodi/userdata/addon_data/docker.linuxserver.plex/Library/Application Support/Plex Media Server/Logs/" />
+    <setting id="P_port" value="8181" />
+</settings>

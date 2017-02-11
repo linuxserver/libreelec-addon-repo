@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+   <category   label="30000">
+      <setting label="30001" type="lsep" />
+      <setting label="30005" type="folder" id="V_config"    default="/storage/.kodi/userdata/addon_data/docker.linuxserver.photoshow/config"  option="writeable" />
+      <setting label="30006" type="folder" id="V_thumbs"    default="/storage/.kodi/userdata/addon_data/docker.linuxserver.photoshow/thumbs"  option="writeable" />
+      <setting label="30007" type="folder" id="V_pictures"  default="/storage/pictures" option="writeable" />
+      <setting label="30008" type="number" id="P_port"      default="83" />
+   </category>
+</settings>
