@@ -1,0 +1,7 @@
+<settings>
+    <setting id="E_VERSION" value="public" />
+    <setting id="V_config" value="/storage/.kodi/userdata/addon_data/docker.linuxserver.plex" />
+    <setting id="V_data_movies" value="/storage/videos" />
+    <setting id="V_data_tvshows" value="/storage/tvshows" />
+    <setting id="V_transcode" value="/storage/downloads/plextemp" />
+</settings>

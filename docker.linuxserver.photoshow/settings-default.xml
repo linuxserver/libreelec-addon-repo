@@ -1,0 +1,6 @@
+<settings>
+    <setting id="V_config" value="/storage/.kodi/userdata/addon_data/docker.linuxserver.photoshow/config" />
+    <setting id="V_thumbs" value="/storage/.kodi/userdata/addon_data/docker.linuxserver.photoshow/thumbs" />
+    <setting id="V_pictures" value="/storage/pictures" />
+    <setting id="P_port" value="83" />
+</settings>

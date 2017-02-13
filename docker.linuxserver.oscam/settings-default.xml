@@ -1,0 +1,16 @@
+<settings>
+    <setting id="V_config"   value="/storage/.kodi/userdata/addon_data/docker.linuxserver.oscam/config" />
+    <setting id="P_port"     value="8888" />
+    <setting id="D_device1e" value="false" />
+    <setting id="D_device1"  value="/dev/ttyUSB0" />
+    <setting id="P_portd1"   value="10000" />
+    <setting id="D_device2e" value="false" />
+    <setting id="D_device2"  value="/dev/ttyUSB1" />
+    <setting id="P_portd2"   value="10001" />
+    <setting id="D_device3e" value="false" />
+    <setting id="D_device3"  value="/dev/ttyUSB2" />
+    <setting id="P_portd3"   value="10002" />
+    <setting id="D_device4e" value="false" />
+    <setting id="D_device4"  value="/dev/ttyUSB3" />
+    <setting id="P_portd4"   value="10003" />
+</settings>

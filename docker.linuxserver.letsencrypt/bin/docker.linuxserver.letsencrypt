@@ -1,0 +1,38 @@
+#!/bin/sh
+
+name="$(basename $0)"
+. /etc/profile
+
+if [ -f /storage/.cache/timezone ]; then
+ . /storage/.cache/timezone
+else
+ TIMEZONE="America/New_York"
+fi
+
+oe_setup_addon "$name"
+
+#get arch variable from os
+LEARCHVAR=`sed -e '/LIBREELEC_ARCH/ !d' -e 's/[^.]*\.\([^"]*\).*/\1/' /etc/os-release`
+
+#figure out which docker hub image to use
+if [ "$LEARCHVAR" = "x86_64" ]; then
+  DOCKERIMAGE="linuxserver/letsencrypt"
+elif [ "$LEARCHVAR" = "arm" ] || [ "$LEARCHVAR" = "aarch64" ]; then
+  DOCKERIMAGE="lsioarmhf/letsencrypt"
+fi
+
+docker rm "$name" 2>/dev/null
+docker pull "$DOCKERIMAGE":latest
+docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
+while [ -z "$E_url" ] || [ -z "$E_subd" ] || [ -z "$E_email" ]; do sleep 10000; done
+docker run --name="$name" \
+           --privileged \
+           -e PUID="65534" \
+           -e PGID="100" \
+           -e TZ="$TIMEZONE" \
+           -v "$V_config":/config \
+           -p "$P_port":443 \
+           -e URL="$E_url" \
+           -e SUBDOMAINS="$E_subd" \
+           -e EMAIL="$E_email" \
+           "$DOCKERIMAGE":latest

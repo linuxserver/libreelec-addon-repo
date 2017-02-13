@@ -1,0 +1,7 @@
+<settings>
+    <setting id="V_config" value="/storage/.kodi/userdata/addon_data/docker.linuxserver.letsencrypt/config" />
+    <setting id="P_port"   value="443" />
+    <setting id="E_url"    value="" />
+    <setting id="E_subd"   value="www," />
+    <setting id="E_email"  value="" />
+</settings>

@@ -1,0 +1,4 @@
+<settings>
+    <setting id="V_config" value="/storage/.kodi/userdata/addon_data/docker.linuxserver.muximux/config" />
+    <setting id="P_port" value="84" />
+</settings>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="docker.linuxserver.letsencrypt"
+       name="Nginx Letsencrypt (LinuxServer.io)"
+       version="1.0.6"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Nginx Letsencrypt in a docker container</summary>
+    <description>
+This container sets up an Nginx webserver and reverse proxy with php support and a built-in letsencrypt client that automates free SSL server certificate generation and renewal processes. It also contains fail2ban for intrusion prevention.
+
+***Port 443 on the router has to be forwarded to this machine.
+***During first run, dhparams are generated before the webserver is up, which may take over an hour especially on arm.
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.letsencrypt:
+-------------------------------
+
+1.0.6
+- Fix timezone bug
+
+1.0.5
+- Added aarch64 support
+
+1.0.4
+- Stall systemd if variables are not set
+
+1.0.3
+- Update dockerhub image links
+
+1.0.2
+- Change group to users
+
+1.0.1
+- Change user to nobody
+
+1.0.0
+- Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>

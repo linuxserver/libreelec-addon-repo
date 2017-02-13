@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="docker.linuxserver.duckdns"
+       name="DuckDNS (LinuxServer.io)"
+       version="1.0.7"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>DuckDNS dynamic dns updater as a Docker container</summary>
+    <description>
+Duckdns is a free dynamic DNS service hosted on Amazon VPC. Unlike most other free dynamic DNS providers, DuckDNS accounts do not require periodic user action to keep them alive. Visit www.duckdns.org to register your domain.
+
+This docker container is brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+Please visit www.duckdns.org to get a custom url and token
+    </disclaimer>
+    <news>
+docker.linuxserver.duckdns:
+---------------------------
+
+1.0.7
+- Fix timezone bug
+
+1.0.6
+- Added aarch64 support
+
+1.0.5
+- Update image links
+
+1.0.4
+- Change default settings so container doesn't continuously restart
+
+1.0.3
+- Run as user nobody
+
+1.0.2
+- Unified addon for x86_64 and arm
+
+1.0.1
+- Switch logging to local file for easy access
+
+1.0.0
+- Initial addon
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>

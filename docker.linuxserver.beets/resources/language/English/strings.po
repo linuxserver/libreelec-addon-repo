@@ -1,0 +1,26 @@
+msgid ""
+msgstr ""
+
+msgctxt "#30000"
+msgid "Configuration"
+msgstr ""
+
+msgctxt "#30001"
+msgid "Note: Kodi remote sources can not be used as Docker volume host sources"
+msgstr ""
+
+msgctxt "#30005"
+msgid "Map /config"
+msgstr ""
+
+msgctxt "#30006"
+msgid "Map /downloads"
+msgstr ""
+
+msgctxt "#30008"
+msgid "Map /music"
+msgstr ""
+
+msgctxt "#30009"
+msgid "Webui port"
+msgstr ""

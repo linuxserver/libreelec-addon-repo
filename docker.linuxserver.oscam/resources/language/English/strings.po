@@ -1,0 +1,66 @@
+msgid ""
+msgstr ""
+
+msgctxt "#30000"
+msgid "Configuration"
+msgstr ""
+
+msgctxt "#30001"
+msgid "Note: Kodi remote sources can not be used as Docker volume host sources"
+msgstr ""
+
+msgctxt "#30005"
+msgid "Map /config"
+msgstr ""
+
+msgctxt "#30006"
+msgid "Webui port"
+msgstr ""
+
+msgctxt "#30007"
+msgid "Enable 1st card"
+msgstr ""
+
+msgctxt "#30008"
+msgid "1st card location"
+msgstr ""
+
+msgctxt "#30009"
+msgid "1st card port"
+msgstr ""
+
+msgctxt "#30010"
+msgid "Enable 2nd card"
+msgstr ""
+
+msgctxt "#30011"
+msgid "2nd card location"
+msgstr ""
+
+msgctxt "#30012"
+msgid "2nd card port"
+msgstr ""
+
+msgctxt "#30013"
+msgid "Enable 3rd card"
+msgstr ""
+
+msgctxt "#30014"
+msgid "3rd card location"
+msgstr ""
+
+msgctxt "#30015"
+msgid "3rd card port"
+msgstr ""
+
+msgctxt "#30016"
+msgid "Enable 4th card"
+msgstr ""
+
+msgctxt "#30017"
+msgid "4th card location"
+msgstr ""
+
+msgctxt "#30018"
+msgid "4th card port"
+msgstr ""

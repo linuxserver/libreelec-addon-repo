@@ -1,0 +1,22 @@
+msgid ""
+msgstr ""
+
+msgctxt "#30000"
+msgid "Configuration"
+msgstr ""
+
+msgctxt "#30001"
+msgid "Note: You can enter multiple subdomains (comma separated, no spaces)"
+msgstr ""
+
+msgctxt "#30004"
+msgid "SUBDOMAINS"
+msgstr ""
+
+msgctxt "#30005"
+msgid "TOKEN"
+msgstr ""
+
+msgctxt "#30006"
+msgid "Map /config"
+msgstr ""
