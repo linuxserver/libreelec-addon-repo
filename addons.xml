@@ -659,8 +659,8 @@ Please visit https://linuxserver.io for more information.
     <disclaimer>
     </disclaimer>
     <news>
-docker.linuxserver.letsencrypt:
--------------------------------
+docker.linuxserver.nginx:
+-------------------------
 
 1.0.0
 - Initial release
