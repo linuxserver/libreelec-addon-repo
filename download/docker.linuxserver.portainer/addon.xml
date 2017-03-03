@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="docker.linuxserver.portainer"
        name="Portainer (LinuxServer.io)"
-       version="1.0.1"
+       version="1.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -27,6 +27,9 @@ Please do not use portainer to manage other LinuxServer.io addon generated conta
     <news>
 docker.linuxserver.portainer:
 --------------------------
+
+1.0.2
+- Switch to multi-arch image for latest
 
 1.0.1
 - Fix timezone bug
