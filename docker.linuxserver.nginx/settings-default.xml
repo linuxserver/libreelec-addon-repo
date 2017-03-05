@@ -1,0 +1,5 @@
+<settings>
+    <setting id="V_config" value="/storage/.kodi/userdata/addon_data/docker.linuxserver.nginx/config" />
+    <setting id="P_port"   value="80" />
+    <setting id="P_port2"  value="443" />
+</settings>
