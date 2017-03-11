@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="docker.linuxserver.emby"
+       name="Emby (LinuxServer.io)"
+       version="1.0.0"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Emby Server as a Docker container</summary>
+    <description>
+Emby organizes video, music and photos from personal media libraries and streams them to smart televisions, streaming boxes and mobile devices.
+
+This addon uses the official Emby Server docker images. Please visit https://emby.media for emby related support.
+Please visit https://linuxserver.io for more info on the wrapper addon.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.emby:
+------------------------
+
+1.0.0
+- Initial addon
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>

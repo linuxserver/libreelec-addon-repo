@@ -1,0 +1,6 @@
+<settings>
+    <setting id="V_config" value="/storage/.kodi/userdata/addon_data/docker.linuxserver.emby" />
+    <setting id="V_data_movies" value="/storage/videos" />
+    <setting id="V_data_tvshows" value="/storage/tvshows" />
+    <setting id="E_additional" value="" />
+</settings>
