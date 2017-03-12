@@ -2,20 +2,13 @@
 
 name="$(basename $0)"
 . /etc/profile
-
-if [ -f /storage/.cache/timezone ]; then
- . /storage/.cache/timezone
-else
- TIMEZONE="America/New_York"
-fi
-
 oe_setup_addon "$name"
 
 docker rm "$name" 2>/dev/null
 docker pull portainer/portainer
 docker rmi $(docker images | grep 'portainer' | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
 docker run --name="$name" \
-           -e TZ="$TIMEZONE" \
+           -v /etc/localtime:/etc/localtime:ro \
            -v "$V_config":/data \
            -v /var/run/docker.sock:/var/run/docker.sock \
            -p "$P_port":9000 \
