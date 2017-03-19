@@ -17,3 +17,10 @@ msgctxt "#30006"
 msgid "Listening port"
 msgstr ""
 
+msgctxt "#30007"
+msgid "Setting the below to On will cause a delay in kodi start"
+msgstr ""
+
+msgctxt "#30008"
+msgid "Using for kodi library"
+msgstr ""
