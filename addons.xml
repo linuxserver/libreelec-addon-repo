@@ -129,7 +129,7 @@ docker.linuxserver.quassel-core:
 
 <addon id="docker.linuxserver.mariadb"
        name="MariaDB (LinuxServer.io)"
-       version="1.0.3"
+       version="1.0.4"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -152,6 +152,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.mariadb:
 ---------------------------
+
+1.0.4
+- Add support for kodi library on the same machine
 
 1.0.3
 - Fix timezone bug
