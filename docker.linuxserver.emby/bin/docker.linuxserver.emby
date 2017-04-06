@@ -31,6 +31,7 @@ mkdir -p "$V_data_tvshows" "$V_data_movies"
 chown -R nobody:users "$V_data_tvshows" "$V_data_movies"
 docker run --name="$name" \
            --net=host \
+           -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
            -e EDGE="1" \
            -e APP_UID="65534" \
            -e APP_GID="100" \

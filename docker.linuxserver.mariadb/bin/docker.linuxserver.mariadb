@@ -28,6 +28,7 @@ if [ "$E_kodi_mysql" = "false" ]; then
 fi
 
 docker run --name="$name" \
+           -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
            -e PUID="65534" \
            -e PGID="100" \
            -e TZ="$TIMEZONE" \

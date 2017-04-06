@@ -28,6 +28,7 @@ mkdir -p "$V_data_tvshows" "$V_data_movies" "$V_transcode"
 chown -R nobody:users "$V_data_tvshows" "$V_data_movies" "$V_transcode"
 docker run --name="$name" \
            --net=host \
+           -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
            -e VERSION="$E_VERSION" \
            -e PUID="65534" \
            -e PGID="100" \

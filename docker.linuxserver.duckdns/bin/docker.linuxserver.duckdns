@@ -26,6 +26,7 @@ docker pull "$DOCKERIMAGE":latest
 docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
 docker run --name="$name" \
            -v "$V_config":/config \
+           -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
            -e SUBDOMAINS="$E_SUBDOMAINS" \
            -e TOKEN="$E_TOKEN" \
            -e PUID="65534" \
