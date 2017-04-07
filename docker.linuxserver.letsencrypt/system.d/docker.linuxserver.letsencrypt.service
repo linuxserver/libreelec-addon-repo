@@ -2,6 +2,8 @@
 Description=%p container
 Requires=service.system.docker.service
 After=service.system.docker.service
+Requires=network-online.service
+After=network-online.service
 
 [Service]
 Restart=always

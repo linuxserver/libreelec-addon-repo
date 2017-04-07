@@ -27,6 +27,7 @@ docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\
 while [ -z "$E_url" ] || [ -z "$E_subd" ] || [ -z "$E_email" ]; do sleep 10000; done
 docker run --name="$name" \
            --privileged \
+           -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
            -e PUID="65534" \
            -e PGID="100" \
            -e TZ="$TIMEZONE" \

@@ -27,6 +27,7 @@ docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\
 mkdir -p "$V_sync"
 chown -R nobody:users "$V_sync"
 docker run --name="$name" \
+           -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
            -e PUID="65534" \
            -e PGID="100" \
            -e TZ="$TIMEZONE" \
