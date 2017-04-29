@@ -803,7 +803,7 @@ docker.linuxserver.duplicati:
 
 <addon id="docker.linuxserver.nginx"
        name="Nginx (LinuxServer.io)"
-       version="1.0.1"
+       version="1.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -828,6 +828,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.nginx:
 -------------------------
+
+1.0.2
+- Change repo for armhf
 
 1.0.1
 - Wait for network

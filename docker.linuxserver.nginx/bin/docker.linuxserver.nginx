@@ -18,7 +18,7 @@ LEARCHVAR=`sed -e '/LIBREELEC_ARCH/ !d' -e 's/[^.]*\.\([^"]*\).*/\1/' /etc/os-re
 if [ "$LEARCHVAR" = "x86_64" ]; then
   DOCKERIMAGE="linuxserver/nginx"
 elif [ "$LEARCHVAR" = "arm" ] || [ "$LEARCHVAR" = "aarch64" ]; then
-  DOCKERIMAGE="lsioarmhf/nginx"
+  DOCKERIMAGE="lsioarmhf/nginx-armhf"
 fi
 
 docker rm "$name" 2>/dev/null
