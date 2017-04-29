@@ -1,6 +1,0 @@
-<settings>
-    <setting id="V_config" value="/storage/.kodi/userdata/addon_data/docker.linuxserver.duplicati/config" />
-    <setting id="V_backups" value="/storage/.kodi/userdata/addon_data/docker.linuxserver.duplicati/backups" />
-    <setting id="V_source" value="/storage/.kodi/userdata" />
-    <setting id="P_port" value="8200" />
-</settings>
