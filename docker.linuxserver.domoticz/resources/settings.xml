@@ -3,7 +3,7 @@
    <category   label="30000">
       <setting label="30005" type="folder" id="V_config"     default="/storage/.kodi/userdata/addon_data/docker.linuxserver.domoticz/config"    option="writeable" />
       <setting label="30006" type="text"   id="E_version"    default="latest" />
-      <setting label="30008" type="number" id="P_port"       default="8080" />
+      <setting label="30008" type="number" id="P_port"       default="8090" />
       <setting label="30009" type="number" id="P_port2"      default="1443" />
       <setting label="30010" type="number" id="P_port3"      default="6144" />
       <setting label="30011" type="bool"   id="B_device"     default="false" />

@@ -41,9 +41,9 @@ docker run --name="$name" \
            -e PUID="65534" \
            -e PGID="100" \
            -e TZ="$TIMEZONE" \
-           -p "$P_port"=8080 \
-           -p "$P_port2"=1443 \
-           -p "$P_port3"=6144 \
+           -p "$P_port":8080 \
+           -p "$P_port2":1443 \
+           -p "$P_port3":6144 \
            -v "$V_config":/config \
            ${DOCKEROPTS} \
            ${ADD_PARAM} \
