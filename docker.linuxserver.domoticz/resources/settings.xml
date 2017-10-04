@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+   <category   label="30000">
+      <setting label="30005" type="folder" id="V_config"     default="/storage/.kodi/userdata/addon_data/docker.linuxserver.domoticz/config"    option="writeable" />
+      <setting label="30006" type="text"   id="E_version"    default="latest" />
+      <setting label="30008" type="number" id="P_port"       default="8080" />
+      <setting label="30009" type="number" id="P_port2"      default="1443" />
+      <setting label="30010" type="number" id="P_port3"      default="6144" />
+      <setting label="30011" type="bool"   id="B_device"     default="false" />
+      <setting label="30012" type="text"   id="D_device"     default="/dev/ttyUSB0" enable="eq(-1,true)" />
+      <setting label="30013" type="bool"   id="B_add_param"  default="false" />
+      <setting label="30014" type="text"   id="ADD_PARAM"    default="" enable="eq(-1,true)" />
+   </category>
+</settings>

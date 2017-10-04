@@ -1,0 +1,11 @@
+<settings>
+    <setting id="V_config"    value="/storage/.kodi/userdata/addon_data/docker.linuxserver.domoticz/config" />
+    <setting id="E_version"   value="latest" />
+    <setting id="P_port"      value="8080" />
+    <setting id="P_port2"     value="1443" />
+    <setting id="P_port3"     value="6144" />
+    <setting id="B_device"    value="false" />
+    <setting id="D_device"    value="/dev/ttyUSB0" />
+    <setting id="B_add_param" value="false" />
+    <setting id="ADD_PARAM"   value="" />
+</settings>
