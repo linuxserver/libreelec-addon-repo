@@ -1,0 +1,50 @@
+#!/bin/sh
+
+name="$(basename $0)"
+. /etc/profile
+
+if [ -f /storage/.cache/timezone ]; then
+ . /storage/.cache/timezone
+else
+ TIMEZONE="America/New_York"
+fi
+
+oe_setup_addon "$name"
+
+#get arch variable from os
+LEARCHVAR=`sed -e '/LIBREELEC_ARCH/ !d' -e 's/[^.]*\.\([^"]*\).*/\1/' /etc/os-release`
+
+#figure out whether to use dvb card or ip
+if [ "$B_device" = "true" ]; then
+  DOCKEROPTS="--device=${D_device}"
+else
+  DOCKEROPTS=""
+fi
+
+#figure out whether additional parameters are added
+if [ "$B_add_param" = "false" ]; then
+  ADD_PARAM=""
+fi
+
+#figure out which docker hub image to use
+if [ "$LEARCHVAR" = "x86_64" ]; then
+  DOCKERIMAGE="linuxserver/domoticz"
+elif [ "$LEARCHVAR" = "arm" ] || [ "$LEARCHVAR" = "aarch64" ]; then
+  DOCKERIMAGE="lsioarmhf/domoticz"
+fi
+
+docker rm "$name" 2>/dev/null
+docker pull "$DOCKERIMAGE":"$E_version"
+docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
+docker run --name="$name" \
+           -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
+           -e PUID="65534" \
+           -e PGID="100" \
+           -e TZ="$TIMEZONE" \
+           -p "$P_port":8080 \
+           -p "$P_port2":1443 \
+           -p "$P_port3":6144 \
+           -v "$V_config":/config \
+           ${DOCKEROPTS} \
+           ${ADD_PARAM} \
+           "$DOCKERIMAGE":"$E_version"

@@ -355,6 +355,46 @@ docker.linuxserver.plexpy:
   </extension>
 </addon>
 
+<addon id="docker.linuxserver.domoticz"
+       name="Domoticz (LinuxServer.io)"
+       version="1.0.0"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Domoticz in a docker container</summary>
+    <description>
+Domoticz is a Home Automation System that lets you monitor and configure various devices like: Lights, Switches, various sensors/meters like Temperature, Rain, Wind, UV, Electra, Gas, Water and much more. Notifications/Alerts can be sent to any mobile device.
+
+Notice: The first time it is started, the container generates DHPARAMS, which can take a while especially on low powered systems (up to 2 hours), during which time the webserver will not be up. Be patient.
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.domoticz:
+-----------------------------
+
+1.0.0
+- Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
 <addon id="docker.linuxserver.znc"
        name="ZNC (LinuxServer.io)"
        version="1.0.4"
