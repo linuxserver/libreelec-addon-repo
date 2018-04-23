@@ -14,17 +14,45 @@ msgid "Map /config"
 msgstr ""
 
 msgctxt "#30006"
-msgid "Listening port"
+msgid "Port Settings"
 msgstr ""
 
 msgctxt "#30007"
-msgid "URL"
+msgid "Port 443"
 msgstr ""
 
 msgctxt "#30008"
-msgid "Subdomains, comma separated, no spaces"
+msgid "Enable port 80 (required for http validation)"
 msgstr ""
 
 msgctxt "#30009"
+msgid "Port 80"
+msgstr ""
+
+msgctxt "#30010"
+msgid "Letsencrypt settings"
+msgstr ""
+
+msgctxt "#30011"
+msgid "URL"
+msgstr ""
+
+msgctxt "#30012"
+msgid "Subdomains, comma separated, no spaces"
+msgstr ""
+
+msgctxt "#30013"
+msgid "Validation method"
+msgstr ""
+
+msgctxt "#30014"
+msgid "DNS plugin"
+msgstr ""
+
+msgctxt "#30015"
+msgid "E-mail notifications?"
+msgstr ""
+
+msgctxt "#30016"
 msgid "Email"
 msgstr ""
