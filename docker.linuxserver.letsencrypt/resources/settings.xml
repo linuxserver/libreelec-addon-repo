@@ -3,9 +3,16 @@
    <category   label="30000">
       <setting label="30001" type="lsep" />
       <setting label="30005" type="folder" id="V_config"  default="/storage/.kodi/userdata/addon_data/docker.linuxserver.letsencrypt/config"  option="writeable" />
-      <setting label="30006" type="number" id="P_port"    default="443" />
-      <setting label="30007" type="text"   id="E_url"     default="" />
-      <setting label="30008" type="text"   id="E_subd"    default="www," />
-      <setting label="30009" type="text"   id="E_email"   default="" />
+      <setting label="30006" type="lsep"/>
+      <setting label="30007" type="number" id="P_port"    default="443" />
+      <setting label="30008" type="bool"   id="P_port2_bool"   default="false" />
+      <setting label="30009" type="number" id="P_port2"    default="80" enable="eq(-1,true)" />
+      <setting label="30010" type="lsep"/>
+      <setting label="30011" type="text"   id="E_url"     default="" />
+      <setting label="30012" type="text"   id="E_subd"    default="www," />
+      <setting label="30013" type="enum"   id="E_validation" lvalues="http|dns|tls-sni"   default="http" />
+      <setting label="30014" type="enum"   id="E_dnsplugin" lvalues="cloudflare|cloudxns|digitalocean|dnsimple|dnsmadeeasy|google|luadns|nsone|rfc2136|route53"   default="" enable="eq(-1,dns)" />
+      <setting label="30015" type="bool"   id="E_email_bool"   default="false" />
+      <setting label="30016" type="text"   id="E_email"   default="" enable="eq(-1,true)" />
    </category>
 </settings>
