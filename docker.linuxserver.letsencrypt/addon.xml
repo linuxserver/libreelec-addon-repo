@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="docker.linuxserver.letsencrypt"
        name="Nginx Letsencrypt (LinuxServer.io)"
-       version="1.0.7"
+       version="1.0.8"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -17,7 +17,10 @@
 This container sets up an Nginx webserver and reverse proxy with php support and a built-in letsencrypt client that automates free SSL server certificate generation and renewal processes. It also contains fail2ban for intrusion prevention.
 
 ***Port 443 on the router has to be forwarded to this machine.
+***Port 80 on the router has to be forwarded to this machine if using http validation.
 ***During first run, dhparams are generated before the webserver is up, which may take over an hour especially on arm.
+
+For dns validation, go to the config folder and edit the relevant ini file under /config/dns-conf with your settings
 
 This is a docker container brought to you by the LinuxServer.io team.
 Please visit https://linuxserver.io for more information.
@@ -27,6 +30,11 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.letsencrypt:
 -------------------------------
+
+1.0.8
+- Add validation parameter
+- Add dns validation support
+- Add port 80 mapping (required for http validation, optional for dns)
 
 1.0.7
 - Wait for network
