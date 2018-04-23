@@ -15,13 +15,15 @@ oe_setup_addon "$name"
 LEARCHVAR=`sed -e '/LIBREELEC_ARCH/ !d' -e 's/[^.]*\.\([^"]*\).*/\1/' /etc/os-release`
 
 #figure out which docker hub image to use
-DOCKERIMAGE="emby/embyserver"
 if [ "$LEARCHVAR" = "x86_64" ]; then
+  DOCKERIMAGE="emby/embyserver"
   DOCKERIMAGETAG="${DOCKERIMAGE}:latest"
 elif [ "$LEARCHVAR" = "arm" ];then
-  DOCKERIMAGETAG="${DOCKERIMAGE}:armv7"
+  DOCKERIMAGE="emby/embyserver_arm32v7_neon"
+  DOCKERIMAGETAG="${DOCKERIMAGE}:latest"
 elif [ "$LEARCHVAR" = "aarch64" ]; then
-  DOCKERIMAGETAG="${DOCKERIMAGE}:aarch64"
+  DOCKERIMAGE="emby/embyserver_arm32v7_neon"
+  DOCKERIMAGETAG="${DOCKERIMAGE}:latest"
 fi
 
 docker rm "$name" 2>/dev/null
@@ -32,10 +34,8 @@ chown -R nobody:users "$V_data_tvshows" "$V_data_movies"
 docker run --name="$name" \
            --net=host \
            -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
-           -e EDGE="1" \
            -e APP_UID="65534" \
            -e APP_GID="100" \
-           -e APP_USER="nobody" \
            -e TZ="$TIMEZONE" \
            -v "$V_config":/config \
            -v "$V_data_tvshows":/data/tvshows \
