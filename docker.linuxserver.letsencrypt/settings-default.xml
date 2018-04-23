@@ -6,7 +6,7 @@
     <setting id="E_url"    value="" />
     <setting id="E_subd"   value="www," />
     <setting id="E_validation"   value="http" />
-    <setting id="E_dnsplugin"   value="" />
+    <setting id="E_dnsplugin"   value="cloudflare" />
     <setting id="E_email_bool"   value="false" />
     <setting id="E_email"  value="" />
 </settings>
