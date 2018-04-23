@@ -41,7 +41,7 @@ msgctxt "#30012"
 msgid "Subdomains, comma separated, no spaces"
 msgstr ""
 
-msgctxt "#300913"
+msgctxt "#30013"
 msgid "Validation method"
 msgstr ""
 
