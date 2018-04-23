@@ -23,17 +23,17 @@ fi
 
 #figure out if dns plugin should be selected
 if [ "$E_validation" = "dns" ]; then
-  OPTDNSPLUGIN="$E_dnsplugin"
+  OPTDNSPLUGIN="-e DNSPLUGIN=${E_dnsplugin}"
 fi
 
 #figure out if email should be used
 if [ "$E_email_bool" = "true" ]; then
-  OPTEMAIL="$E_email"
+  OPTEMAIL="-e EMAIL=${E_email}"
 fi
 
 #figure out if port 80 should be mapped
 if [ "$P_port2_bool" = "true" ]; then
-  OPTPORT80="$P_port2"
+  OPTPORT80="-p ${P_port2}:80"
 fi
 
 docker rm "$name" 2>/dev/null
