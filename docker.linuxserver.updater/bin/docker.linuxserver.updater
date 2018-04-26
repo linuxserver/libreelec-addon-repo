@@ -20,12 +20,12 @@ if ! grep -q '#!/bin/sh' /storage/.kodi/userdata/addon_data/docker.linuxserver.u
   sed -i '1i#!\/bin\/sh' /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
 fi
 
-if ! grep -q '5 1 * * 0 /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh > /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.log' /storage/.cache/cron/crontabs/root; then
-  echo "5 1 * * 0 /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh > /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.log" >> /storage/.cache/cron/crontabs/root
+if ! grep -q 'docker.linuxserver.updater/update.sh' /storage/.cache/cron/crontabs/root; then
+  echo '5 1 * * 0 /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh > /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.log' >> /storage/.cache/cron/crontabs/root
   systemctl restart cron
 fi
 
-if ! grep -q '5 2 * * * /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/prune.sh > /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/prune.log' /storage/.cache/cron/crontabs/root; then
-  echo "5 2 * * * /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/prune.sh > /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/prune.log" >> /storage/.cache/cron/crontabs/root
+if ! grep -q 'docker.linuxserver.updater/prune.sh' /storage/.cache/cron/crontabs/root; then
+  echo '5 2 * * * /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/prune.sh > /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/prune.log' >> /storage/.cache/cron/crontabs/root
   systemctl restart cron
 fi
