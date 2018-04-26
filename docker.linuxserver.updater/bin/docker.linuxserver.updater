@@ -30,4 +30,7 @@ if ! grep -q 'docker.linuxserver.updater/prune.sh' /storage/.cache/cron/crontabs
   systemctl restart cron
 fi
 
+sleep 600
+/storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
+
 while :; do sleep 2073600; done
