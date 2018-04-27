@@ -5,15 +5,5 @@
 # stop and remove container
 docker stop docker.linuxserver.mariadb
 
-#get arch variable from os
-LEARCHVAR=`sed -e '/LIBREELEC_ARCH/ !d' -e 's/[^.]*\.\([^"]*\).*/\1/' /etc/os-release`
-
-#figure out which docker hub image to use
-if [ "$LEARCHVAR" = "x86_64" ]; then
-  DOCKERIMAGE="linuxserver/mariadb"
-elif [ "$LEARCHVAR" = "arm" ] || [ "$LEARCHVAR" = "aarch64" ]; then
-  DOCKERIMAGE="lsioarmhf/mariadb"
-fi
-
 # remove image from cron updater list
-sed -i "/$DOCKERIMAGE/d" /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
+sed -i '/mariadb/d' /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
