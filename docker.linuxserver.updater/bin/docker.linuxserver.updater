@@ -5,6 +5,11 @@ name="$(basename $0)"
 
 oe_setup_addon "$name"
 
+# create lsio network
+if ! docker network list | grep -q lsio; then
+  docker network create lsio
+fi
+
 # create update.sh
 if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh ]; then
   echo "#!/bin/sh" > /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
