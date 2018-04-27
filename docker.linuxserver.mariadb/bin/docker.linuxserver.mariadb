@@ -34,6 +34,7 @@ docker rm "$name" 2>/dev/null
 
 docker run --name="$name" \
            --rm \
+           --hostname=mariadb \
            -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
            -e PUID="65534" \
            -e PGID="100" \
