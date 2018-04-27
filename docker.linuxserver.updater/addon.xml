@@ -26,7 +26,7 @@ docker.linuxserver.updater:
 -------------------------
 
 1.0.1
-- Fix prunse.sh script
+- Fix prune.sh script
 
 1.0.0
 - Initial release
