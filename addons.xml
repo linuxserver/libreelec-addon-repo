@@ -143,12 +143,13 @@ docker.linuxserver.quassel-core:
 
 <addon id="docker.linuxserver.mariadb"
        name="MariaDB (LinuxServer.io)"
-       version="1.0.5"
+       version="1.0.6"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
   <extension point="xbmc.service" library="default.py">
     <provides></provides>
@@ -166,6 +167,10 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.mariadb:
 ---------------------------
+
+1.0.6
+- Use the new docker image updater for image updates (faster startup on boot)
+- Use the custom lsio docker network for intercontainer communication via containername as hostname
 
 1.0.5
 - Wait for network
