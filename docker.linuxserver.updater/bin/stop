@@ -1,0 +1,4 @@
+#!/bin/sh
+
+sed -i '/update.sh/d' /storage/.cache/cron/crontabs/root
+sed -i '/prune.sh/d' /storage/.cache/cron/crontabs/root

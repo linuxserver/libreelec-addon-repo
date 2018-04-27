@@ -1,0 +1,41 @@
+#!/bin/sh
+
+name="$(basename $0)"
+. /etc/profile
+
+oe_setup_addon "$name"
+
+# create lsio network
+if ! docker network list | grep -q lsio; then
+  docker network create lsio
+fi
+
+# create update.sh
+if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh ]; then
+  echo "#!/bin/sh" > /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
+  chmod +x /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
+fi
+
+# create prune.sh
+if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/prune.sh ]; then
+  echo "#!/bin/sh" > /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/prune.sh
+  echo "docker image prune -f" >> /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/prune.sh
+  chmod +x /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/prune.sh
+fi
+
+# add update.sh to cron
+if ! grep -q 'docker.linuxserver.updater/update.sh' /storage/.cache/cron/crontabs/root; then
+  echo '5 1 * * 0 /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh > /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.log' >> /storage/.cache/cron/crontabs/root
+  systemctl restart cron
+fi
+
+# add prune.sh to cron
+if ! grep -q 'docker.linuxserver.updater/prune.sh' /storage/.cache/cron/crontabs/root; then
+  echo '5 2 * * * /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/prune.sh > /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/prune.log' >> /storage/.cache/cron/crontabs/root
+  systemctl restart cron
+fi
+
+sleep 600
+/storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
+
+while :; do sleep 2073600; done

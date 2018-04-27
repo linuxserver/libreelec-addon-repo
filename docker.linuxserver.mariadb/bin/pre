@@ -16,7 +16,7 @@ if [ "$E_kodi_mysql" = "true" ]; then
     DOCKERIMAGE="lsioarmhf/mariadb"
   fi
 
-  docker rm "$name" 2>/dev/null
-  docker pull "$DOCKERIMAGE":latest
-  docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
+  if ! docker images | grep -q "$DOCKERIMAGE"; then
+    docker pull "$DOCKERIMAGE":latest
+  fi
 fi
