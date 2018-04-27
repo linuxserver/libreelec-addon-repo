@@ -143,7 +143,7 @@ docker.linuxserver.quassel-core:
 
 <addon id="docker.linuxserver.mariadb"
        name="MariaDB (LinuxServer.io)"
-       version="1.0.7"
+       version="1.0.8"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -167,6 +167,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.mariadb:
 ---------------------------
+
+1.0.8
+- Fix cron entry
 
 1.0.7
 - Add network-alias for intercontainer communication
@@ -949,7 +952,7 @@ docker.linuxserver.photoshow:
 
 <addon id="docker.linuxserver.updater"
        name="Docker Image Updater (LinuxServer.io)"
-       version="1.0.0"
+       version="1.0.1"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -972,6 +975,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.updater:
 -------------------------
+
+1.0.1
+- Fix prunse.sh script
 
 1.0.0
 - Initial release
