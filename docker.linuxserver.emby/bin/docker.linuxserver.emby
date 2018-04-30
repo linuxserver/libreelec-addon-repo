@@ -41,7 +41,7 @@ docker run --name="$name" \
            -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
            -e UID="65534" \
            -e GID="100" \
-           -e GIDLIST="39"
+           -e GIDLIST="39" \
            -e TZ="$TIMEZONE" \
            -v "$V_config":/config \
            -v "$V_data_tvshows":/data/tvshows \
