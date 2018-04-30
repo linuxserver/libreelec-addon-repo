@@ -29,6 +29,7 @@ docker.linuxserver.emby:
 1.0.4
 - Use updater addon for image updates
 - Faster start on boot
+- Enable hw transcoding via vaapi (x86_64 only)
 
 1.0.3
 - Fix uid and gid variables
