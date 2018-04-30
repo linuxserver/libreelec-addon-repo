@@ -2,12 +2,13 @@
 <addons>
 <addon id="docker.linuxserver.nextcloud"
        name="Nextcloud (LinuxServer.io)"
-       version="1.0.1"
+       version="1.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
   <extension point="xbmc.service" library="default.py">
     <provides></provides>
@@ -28,6 +29,12 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.nextcloud:
 -----------------------------
 
+1.0.2
+- Use updater addon for image updates
+- Faster start on boot
+- Enable aarch64 build
+- Enable direct communication between containers
+
 1.0.1
 - Wait for network
 
@@ -45,12 +52,13 @@ docker.linuxserver.nextcloud:
 
 <addon id="docker.linuxserver.emby"
        name="Emby (LinuxServer.io)"
-       version="1.0.3"
+       version="1.0.4"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
   <extension point="xbmc.service" library="default.py">
     <provides></provides>
@@ -68,6 +76,12 @@ Please visit https://linuxserver.io for more info on the wrapper addon.
     <news>
 docker.linuxserver.emby:
 ------------------------
+
+1.0.4
+- Use updater addon for image updates
+- Faster start on boot
+- Enable hw transcoding via vaapi (x86_64 only)
+
 1.0.3
 - Fix uid and gid variables
 
@@ -91,12 +105,13 @@ docker.linuxserver.emby:
 
 <addon id="docker.linuxserver.quassel-core"
        name="Quassel Core (LinuxServer.io)"
-       version="1.0.4"
+       version="1.0.5"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
   <extension point="xbmc.service" library="default.py">
     <provides></provides>
@@ -116,6 +131,12 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.quassel-core:
 --------------------------------
+
+1.0.5
+- Use updater addon for image updates
+- Faster start on boot
+- Enable aarch64 build
+- Enable direct communication between containers
 
 1.0.4
 - Wait for network
@@ -143,7 +164,7 @@ docker.linuxserver.quassel-core:
 
 <addon id="docker.linuxserver.mariadb"
        name="MariaDB (LinuxServer.io)"
-       version="1.0.8"
+       version="1.0.9"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -167,6 +188,10 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.mariadb:
 ---------------------------
+
+1.0.9
+- Clean up stale images in case prune fails
+- Enable aarch64 image
 
 1.0.8
 - Fix cron entry
@@ -207,12 +232,13 @@ docker.linuxserver.mariadb:
 
 <addon id="docker.linuxserver.duckdns"
        name="DuckDNS (LinuxServer.io)"
-       version="1.0.8"
+       version="1.0.9"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
   <extension point="xbmc.service" library="default.py">
     <provides></provides>
@@ -231,6 +257,11 @@ Please visit www.duckdns.org to get a custom url and token
     <news>
 docker.linuxserver.duckdns:
 ---------------------------
+
+1.0.9
+- Use updater addon for image updates
+- Faster start on boot
+- Enable aarch64 image
 
 1.0.8
 - Wait for network
@@ -270,12 +301,13 @@ docker.linuxserver.duckdns:
 
 <addon id="docker.linuxserver.oscam"
        name="Oscam (LinuxServer.io)"
-       version="1.0.4"
+       version="1.0.5"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
   <extension point="xbmc.service" library="default.py">
     <provides></provides>
@@ -293,6 +325,11 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.oscam:
 -------------------------
+
+1.0.5
+- Use updater addon for image updates
+- Faster start on boot
+- Enable direct communication between containers
 
 1.0.4
 - Wait for network
@@ -318,67 +355,15 @@ docker.linuxserver.oscam:
   </extension>
 </addon>
 
-<addon id="docker.linuxserver.plexpy"
-       name="PlexPy (LinuxServer.io)"
-       version="1.0.5"
-       provider-name="LinuxServer.io">
-  <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="service.system.docker" version="0.0.0" />
-  </requires>
-  <extension point="xbmc.service" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>PlexPy in a docker container</summary>
-    <description>
-Plexpy is a Python-based Plex Usage tracker, that is currently in active development.
-
-This is a docker container brought to you by the LinuxServer.io team.
-Please visit https://linuxserver.io for more information.
-    </description>
-    <disclaimer>
-    </disclaimer>
-    <news>
-docker.linuxserver.plexpy:
---------------------------
-
-1.0.5
-- Wait for network
-
-1.0.4
-- Fix timezone bug
-
-1.0.3
-- Added aarch64 support
-
-1.0.2
-- Run as user nobody
-
-1.0.1
-- Unified addon for x86_64 and arm
-
-1.0.0
-- Initial release
-    </news>
-    <platform>all</platform>
-    <website>http://linuxserver.io/</website>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon>
-
 <addon id="docker.linuxserver.domoticz"
        name="Domoticz (LinuxServer.io)"
-       version="1.0.0"
+       version="1.0.1"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
   <extension point="xbmc.service" library="default.py">
     <provides></provides>
@@ -399,6 +384,12 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.domoticz:
 -----------------------------
 
+1.0.1
+- Use updater addon for image updates
+- Faster start on boot
+- Enable aarch64 build
+- Enable direct communication between containers
+
 1.0.0
 - Initial release
     </news>
@@ -413,12 +404,13 @@ docker.linuxserver.domoticz:
 
 <addon id="docker.linuxserver.znc"
        name="ZNC (LinuxServer.io)"
-       version="1.0.4"
+       version="1.0.5"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
   <extension point="xbmc.service" library="default.py">
     <provides></provides>
@@ -438,6 +430,12 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.znc:
 -----------------------
+
+1.0.5
+- Use updater addon for image updates
+- Faster start on boot
+- Enable aarch64 build
+- Enable direct communication between containers
 
 1.0.4
 - Wait for network
@@ -465,12 +463,13 @@ docker.linuxserver.znc:
 
 <addon id="docker.linuxserver.minisatip"
        name="Minisatip (LinuxServer.io)"
-       version="1.0.6"
+       version="1.0.7"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
   <extension point="xbmc.service" library="default.py">
     <provides></provides>
@@ -488,6 +487,12 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.minisatip:
 -----------------------------
+
+1.0.7
+- Use updater addon to update images
+- Faster start on boot
+- Enable aarch64 image
+- Enable direct communication between containers
 
 1.0.6
 - Wait for network
@@ -521,12 +526,13 @@ docker.linuxserver.minisatip:
 
 <addon id="docker.linuxserver.portainer"
        name="Portainer (LinuxServer.io)"
-       version="1.0.4"
+       version="1.0.5"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
   <extension point="xbmc.service" library="default.py">
     <provides></provides>
@@ -547,6 +553,10 @@ Please do not use portainer to manage other LinuxServer.io addon generated conta
     <news>
 docker.linuxserver.portainer:
 --------------------------
+
+1.0.5
+- Use updater addon to update image
+- Faster start on boot
 
 1.0.4
 - Wait for network
@@ -574,12 +584,13 @@ docker.linuxserver.portainer:
 
 <addon id="docker.linuxserver.tvheadend"
        name="TVheadend (LinuxServer.io)"
-       version="1.0.4"
+       version="1.0.5"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
   <extension point="xbmc.service" library="default.py">
     <provides></provides>
@@ -597,6 +608,12 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.tvheadend:
 -----------------------------
+
+1.0.5
+- Use updater addon for image updates
+- Faster start on boot
+- Enable aarch64 build
+- Enable direct communication between containers
 
 1.0.4
 - Wait for network
@@ -624,12 +641,13 @@ docker.linuxserver.tvheadend:
 
 <addon id="docker.linuxserver.resilio-sync"
        name="Resilio Sync (LinuxServer.io)"
-       version="1.0.4"
+       version="1.0.5"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
   <extension point="xbmc.service" library="default.py">
     <provides></provides>
@@ -647,6 +665,11 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.resilio-sync:
 --------------------------------
+
+1.0.5
+- Use updater addon for image updates
+- Faster start on boot
+- Enable direct communication between containers
 
 1.0.4
 - Wait for network
@@ -674,12 +697,13 @@ docker.linuxserver.resilio-sync:
 
 <addon id="docker.linuxserver.plex"
        name="Plex (LinuxServer.io)"
-       version="1.0.5"
+       version="1.0.6"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
   <extension point="xbmc.service" library="default.py">
     <provides></provides>
@@ -697,6 +721,10 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.plex:
 ------------------------
+
+1.0.6
+- Use updater addon for image updates
+- Faster start on boot
 
 1.0.5
 - Wait for network
@@ -727,12 +755,13 @@ docker.linuxserver.plex:
 
 <addon id="docker.linuxserver.thelounge"
        name="TheLounge (LinuxServer.io)"
-       version="1.0.3"
+       version="1.0.4"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
   <extension point="xbmc.service" library="default.py">
     <provides></provides>
@@ -750,6 +779,12 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.thelounge:
 -----------------------------
+
+1.0.4
+- Use updater addon for image updates
+- Faster start on boot
+- Enable aarch64 build
+- Enable direct communication between containers
 
 1.0.3
 - Wait for network
@@ -774,12 +809,13 @@ docker.linuxserver.thelounge:
 
 <addon id="docker.linuxserver.muximux"
        name="Muximux (LinuxServer.io)"
-       version="1.0.3"
+       version="1.0.4"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
   <extension point="xbmc.service" library="default.py">
     <provides></provides>
@@ -797,6 +833,12 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.muximux:
 ---------------------------
+
+1.0.4
+- Use updater addon to update images
+- Faster start on boot
+- Enable aarch64 image
+- Enable direct communication between containers
 
 1.0.3
 - Wait for network
@@ -821,12 +863,13 @@ docker.linuxserver.muximux:
 
 <addon id="docker.linuxserver.duplicati"
        name="Duplicati (LinuxServer.io)"
-       version="1.0.0"
+       version="1.0.1"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
   <extension point="xbmc.service" library="default.py">
     <provides></provides>
@@ -845,6 +888,50 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.duplicati:
 -----------------------------
 
+1.0.1
+- Use updater addon to update images
+- Faster start on boot
+- Enable direct communication between containers
+
+1.0.0
+- Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="docker.linuxserver.tautulli"
+       name="Tautulli (LinuxServer.io)"
+       version="1.0.0"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Tautulli in a docker container</summary>
+    <description>
+Tautulli is a python based web application for monitoring, analytics and notifications for Plex Media Server.
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.tautulli:
+--------------------------
+
 1.0.0
 - Initial release
     </news>
@@ -859,12 +946,13 @@ docker.linuxserver.duplicati:
 
 <addon id="docker.linuxserver.nginx"
        name="Nginx (LinuxServer.io)"
-       version="1.0.2"
+       version="1.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
   <extension point="xbmc.service" library="default.py">
     <provides></provides>
@@ -884,6 +972,12 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.nginx:
 -------------------------
+
+1.0.3
+- Use updater addon for image updates
+- Faster start on boot
+- Enable aarch64 build
+- Enable direct communication between containers
 
 1.0.2
 - Change repo for armhf
@@ -905,12 +999,13 @@ docker.linuxserver.nginx:
 
 <addon id="docker.linuxserver.photoshow"
        name="Photoshow (LinuxServer.io)"
-       version="1.0.3"
+       version="1.0.4"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
   <extension point="xbmc.service" library="default.py">
     <provides></provides>
@@ -928,6 +1023,12 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.photoshow:
 -----------------------------
+
+1.0.4
+- Use updater addon for image updates
+- Faster start on boot
+- Enable aarch64 build
+- Enable direct communication between containers
 
 1.0.3
 - Wait for network
@@ -993,12 +1094,13 @@ docker.linuxserver.updater:
 
 <addon id="docker.linuxserver.beets"
        name="Beets (LinuxServer.io)"
-       version="1.0.5"
+       version="1.0.6"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
   <extension point="xbmc.service" library="default.py">
     <provides></provides>
@@ -1016,6 +1118,12 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.beets:
 -------------------------
+
+1.0.6
+- Use the updater addon for image updates
+- Faster start on boot
+- Enable aarch64 image
+- Enable direct communication between containers
 
 1.0.5
 - Wait for network
@@ -1046,12 +1154,13 @@ docker.linuxserver.beets:
 
 <addon id="docker.linuxserver.letsencrypt"
        name="Nginx Letsencrypt (LinuxServer.io)"
-       version="1.0.8"
+       version="1.0.9"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
   <extension point="xbmc.service" library="default.py">
     <provides></provides>
@@ -1075,6 +1184,12 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.letsencrypt:
 -------------------------------
+
+1.0.9
+- Use updater addon for image updates
+- Faster start on boot
+- Enable direct communication between containers
+- Enable aarch64 image
 
 1.0.8
 - Add validation parameter
