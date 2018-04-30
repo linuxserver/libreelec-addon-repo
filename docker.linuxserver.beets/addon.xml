@@ -29,6 +29,8 @@ docker.linuxserver.beets:
 1.0.6
 - Use the updater addon for image updates
 - Faster start on boot
+- Enable aarch64 image
+- Enable direct communication between containers
 
 1.0.5
 - Wait for network
