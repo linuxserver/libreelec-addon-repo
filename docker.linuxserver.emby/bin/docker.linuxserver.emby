@@ -17,6 +17,7 @@ LEARCHVAR=`sed -e '/LIBREELEC_ARCH/ !d' -e 's/[^.]*\.\([^"]*\).*/\1/' /etc/os-re
 #figure out which docker hub image to use
 if [ "$LEARCHVAR" = "x86_64" ]; then
   DOCKERIMAGE="emby/embyserver"
+  $E_vaapi="--device /dev/dri/renderD128"
 elif [ "$LEARCHVAR" = "arm" ] || [ "$LEARCHVAR" = "aarch64" ]; then
   DOCKERIMAGE="emby/embyserver_arm32v7_neon"
 fi
@@ -40,9 +41,11 @@ docker run --name="$name" \
            -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
            -e UID="65534" \
            -e GID="100" \
+           -e GIDLIST="39"
            -e TZ="$TIMEZONE" \
            -v "$V_config":/config \
            -v "$V_data_tvshows":/data/tvshows \
            -v "$V_data_movies":/data/movies \
+           $E_vaapi \
            $E_additional \
            "$DOCKERIMAGE":latest
