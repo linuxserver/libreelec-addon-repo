@@ -31,7 +31,7 @@ if ! grep -q "$DOCKERIMAGE" /storage/.kodi/userdata/addon_data/docker.linuxserve
 fi
 
 docker rm "$name" 2>/dev/null
-
+docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
 docker run --name="$name" \
            --rm \
            -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
