@@ -32,6 +32,7 @@ docker.linuxserver.domoticz:
 - Use updater addon for image updates
 - Faster start on boot
 - Enable aarch64 build
+- Enable direct communication between containers
 
 1.0.0
 - Initial release
