@@ -7,6 +7,7 @@
     <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
   <extension point="xbmc.service" library="default.py">
     <provides></provides>
