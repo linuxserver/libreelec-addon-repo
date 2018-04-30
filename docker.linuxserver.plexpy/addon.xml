@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="docker.linuxserver.plexpy"
-       name="PlexPy (LinuxServer.io)"
-       version="1.0.5"
+<addon id="docker.linuxserver.tautulli"
+       name="Tautulli (LinuxServer.io)"
+       version="1.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
   <extension point="xbmc.service" library="default.py">
     <provides></provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>PlexPy in a docker container</summary>
+    <summary>Tautulli in a docker container</summary>
     <description>
-Plexpy is a Python-based Plex Usage tracker, that is currently in active development.
+Tautulli is a python based web application for monitoring, analytics and notifications for Plex Media Server.
 
 This is a docker container brought to you by the LinuxServer.io team.
 Please visit https://linuxserver.io for more information.
@@ -22,23 +23,8 @@ Please visit https://linuxserver.io for more information.
     <disclaimer>
     </disclaimer>
     <news>
-docker.linuxserver.plexpy:
+docker.linuxserver.tautulli:
 --------------------------
-
-1.0.5
-- Wait for network
-
-1.0.4
-- Fix timezone bug
-
-1.0.3
-- Added aarch64 support
-
-1.0.2
-- Run as user nobody
-
-1.0.1
-- Unified addon for x86_64 and arm
 
 1.0.0
 - Initial release
