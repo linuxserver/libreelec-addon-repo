@@ -28,6 +28,7 @@ docker.linuxserver.mariadb:
 
 1.0.9
 - Clean up stale images in case prune fails
+- Enable aarch64 image
 
 1.0.8
 - Fix cron entry
