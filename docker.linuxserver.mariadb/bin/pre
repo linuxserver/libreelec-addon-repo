@@ -12,8 +12,10 @@ if [ "$E_kodi_mysql" = "true" ]; then
   #figure out which docker hub image to use
   if [ "$LEARCHVAR" = "x86_64" ]; then
     DOCKERIMAGE="linuxserver/mariadb"
-  elif [ "$LEARCHVAR" = "arm" ] || [ "$LEARCHVAR" = "aarch64" ]; then
+  elif [ "$LEARCHVAR" = "arm" ]; then
     DOCKERIMAGE="lsioarmhf/mariadb"
+  elif [ "$LEARCHVAR" = "aarch64" ]; then
+    DOCKERIMAGE="lsioarmhf/mariadb-aarch64"
   fi
 
   if ! docker images | grep -q "$DOCKERIMAGE"; then
