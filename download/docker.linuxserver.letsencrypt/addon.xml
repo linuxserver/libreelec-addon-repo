@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="docker.linuxserver.letsencrypt"
        name="Nginx Letsencrypt (LinuxServer.io)"
-       version="1.0.8"
+       version="1.0.9"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
   <extension point="xbmc.service" library="default.py">
     <provides></provides>
@@ -30,6 +31,12 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.letsencrypt:
 -------------------------------
+
+1.0.9
+- Use updater addon for image updates
+- Faster start on boot
+- Enable direct communication between containers
+- Enable aarch64 image
 
 1.0.8
 - Add validation parameter

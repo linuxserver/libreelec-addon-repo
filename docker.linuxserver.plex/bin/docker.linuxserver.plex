@@ -21,12 +21,21 @@ elif [ "$LEARCHVAR" = "arm" ] || [ "$LEARCHVAR" = "aarch64" ]; then
   DOCKERIMAGE="lsioarmhf/plex"
 fi
 
+# add image to cron updater list
+if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh ]; then
+  sleep 10
+fi
+
+if ! grep -q "$DOCKERIMAGE" /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh; then
+  echo "/storage/.kodi/addons/service.system.docker/bin/docker pull $DOCKERIMAGE" >> /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
+fi
+
 docker rm "$name" 2>/dev/null
-docker pull "$DOCKERIMAGE":latest
 docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
 mkdir -p "$V_data_tvshows" "$V_data_movies" "$V_transcode"
 chown -R nobody:users "$V_data_tvshows" "$V_data_movies" "$V_transcode"
 docker run --name="$name" \
+           --rm \
            --net=host \
            -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
            -e VERSION="$E_VERSION" \

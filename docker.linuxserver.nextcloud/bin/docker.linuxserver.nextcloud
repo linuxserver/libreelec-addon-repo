@@ -17,16 +17,27 @@ LEARCHVAR=`sed -e '/LIBREELEC_ARCH/ !d' -e 's/[^.]*\.\([^"]*\).*/\1/' /etc/os-re
 #figure out which docker hub image to use
 if [ "$LEARCHVAR" = "x86_64" ]; then
   DOCKERIMAGE="linuxserver/nextcloud"
-elif [ "$LEARCHVAR" = "arm" ] || [ "$LEARCHVAR" = "aarch64" ]; then
+elif [ "$LEARCHVAR" = "arm" ]; then
   DOCKERIMAGE="lsioarmhf/nextcloud"
+elif [ "$LEARCHVAR" = "aarch64" ]; then
+  DOCKERIMAGE="lsioarmhf/nextcloud-aarch64"
+fi
+
+# add image to cron updater list
+if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh ]; then
+  sleep 10
+fi
+
+if ! grep -q "$DOCKERIMAGE" /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh; then
+  echo "/storage/.kodi/addons/service.system.docker/bin/docker pull $DOCKERIMAGE" >> /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
 fi
 
 docker rm "$name" 2>/dev/null
-docker pull "$DOCKERIMAGE":latest
 docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
 mkdir -p "$V_data"
 chown -R nobody:users "$V_data"
 docker run --name="$name" \
+           --rm \
            -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
            -e PUID="65534" \
            -e PGID="100" \
@@ -34,4 +45,6 @@ docker run --name="$name" \
            -v "$V_config":/config \
            -v "$V_data":/data \
            -p "$P_port":443 \
+           --network=lsio \
+           --network-alias=nextcloud \
            "$DOCKERIMAGE":latest

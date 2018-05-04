@@ -17,8 +17,10 @@ LEARCHVAR=`sed -e '/LIBREELEC_ARCH/ !d' -e 's/[^.]*\.\([^"]*\).*/\1/' /etc/os-re
 #figure out which docker hub image to use
 if [ "$LEARCHVAR" = "x86_64" ]; then
   DOCKERIMAGE="linuxserver/letsencrypt"
-elif [ "$LEARCHVAR" = "arm" ] || [ "$LEARCHVAR" = "aarch64" ]; then
+elif [ "$LEARCHVAR" = "arm" ]; then
   DOCKERIMAGE="lsioarmhf/letsencrypt"
+elif [ "$LEARCHVAR" = "aarch64" ]; then
+  DOCKERIMAGE="lsioarmhf/letsencrypt-aarch64"
 fi
 
 #figure out if dns plugin should be selected
@@ -36,10 +38,19 @@ if [ "$P_port2_bool" = "true" ]; then
   OPTPORT80="-p ${P_port2}:80"
 fi
 
+# add image to cron updater list
+if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh ]; then
+  sleep 10
+fi
+
+if ! grep -q "$DOCKERIMAGE" /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh; then
+  echo "/storage/.kodi/addons/service.system.docker/bin/docker pull $DOCKERIMAGE" >> /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
+fi
+
 docker rm "$name" 2>/dev/null
-docker pull "$DOCKERIMAGE":latest
 docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
 docker run --name="$name" \
+           --rm \
            --cap-add=NET_ADMIN \
            -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
            -e PUID="65534" \
@@ -53,4 +64,6 @@ docker run --name="$name" \
            -e VALIDATION="$E_validation" \
            ${OPTDNSPLUGIN} \
            ${OPTEMAIL} \
+           --network=lsio \
+           --network-alias=letsencrypt \
            "$DOCKERIMAGE":latest
