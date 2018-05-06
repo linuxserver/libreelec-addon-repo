@@ -47,5 +47,5 @@ docker run --name="$name" \
            -v "$V_music":/music \
            -p "$P_port":8337 \
            --network=lsio \
-           --network-alias=mariadb \
+           --network-alias=beets \
            "$DOCKERIMAGE":latest
