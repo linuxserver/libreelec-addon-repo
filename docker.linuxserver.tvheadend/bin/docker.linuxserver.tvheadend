@@ -16,7 +16,7 @@ LEARCHVAR=`sed -e '/LIBREELEC_ARCH/ !d' -e 's/[^.]*\.\([^"]*\).*/\1/' /etc/os-re
 
 #figure out whether to use dvb card or ip
 if [ "$D_dev_port" = "true" ]; then
-  DOCKEROPTS="--device=${D_device} -p ${P_port}:9981 -p ${P_port2}:9982"
+  DOCKEROPTS="--device=${D_device} -p ${P_port}:9981 -p ${P_port2}:9982 --network=lsio --network-alias=tvheadend"
 else
   DOCKEROPTS="--net=host"
 fi
@@ -24,16 +24,27 @@ fi
 #figure out which docker hub image to use
 if [ "$LEARCHVAR" = "x86_64" ]; then
   DOCKERIMAGE="linuxserver/tvheadend"
-elif [ "$LEARCHVAR" = "arm" ] || [ "$LEARCHVAR" = "aarch64" ]; then
+elif [ "$LEARCHVAR" = "arm" ]; then
   DOCKERIMAGE="lsioarmhf/tvheadend"
+elif [ "$LEARCHVAR" = "aarch64" ]; then
+  DOCKERIMAGE="lsioarmhf/tvheadend-aarch64"
+fi
+
+# add image to cron updater list
+if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh ]; then
+  sleep 10
+fi
+
+if ! grep -q "$DOCKERIMAGE" /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh; then
+  echo "/storage/.kodi/addons/service.system.docker/bin/docker pull ${DOCKERIMAGE}:${E_version}" >> /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
 fi
 
 docker rm "$name" 2>/dev/null
-docker pull "$DOCKERIMAGE":"$E_version"
 docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
 mkdir -p "$V_record"
 chown -R nobody:users "$V_record"
 docker run --name="$name" \
+           --rm \
            -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
            -e PUID="65534" \
            -e PGID="100" \

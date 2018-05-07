@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="docker.linuxserver.portainer"
        name="Portainer (LinuxServer.io)"
-       version="1.0.4"
+       version="1.0.5"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
   <extension point="xbmc.service" library="default.py">
     <provides></provides>
@@ -27,6 +28,10 @@ Please do not use portainer to manage other LinuxServer.io addon generated conta
     <news>
 docker.linuxserver.portainer:
 --------------------------
+
+1.0.5
+- Use updater addon to update image
+- Faster start on boot
 
 1.0.4
 - Wait for network

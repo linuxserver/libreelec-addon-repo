@@ -17,28 +17,35 @@ LEARCHVAR=`sed -e '/LIBREELEC_ARCH/ !d' -e 's/[^.]*\.\([^"]*\).*/\1/' /etc/os-re
 #figure out which docker hub image to use
 if [ "$LEARCHVAR" = "x86_64" ]; then
   DOCKERIMAGE="emby/embyserver"
-  DOCKERIMAGETAG="${DOCKERIMAGE}:latest"
-elif [ "$LEARCHVAR" = "arm" ];then
+  $E_vaapi="--device /dev/dri/renderD128"
+elif [ "$LEARCHVAR" = "arm" ] || [ "$LEARCHVAR" = "aarch64" ]; then
   DOCKERIMAGE="emby/embyserver_arm32v7_neon"
-  DOCKERIMAGETAG="${DOCKERIMAGE}:latest"
-elif [ "$LEARCHVAR" = "aarch64" ]; then
-  DOCKERIMAGE="emby/embyserver_arm32v7_neon"
-  DOCKERIMAGETAG="${DOCKERIMAGE}:latest"
+fi
+
+# add image to cron updater list
+if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh ]; then
+  sleep 10
+fi
+
+if ! grep -q "$DOCKERIMAGE" /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh; then
+  echo "/storage/.kodi/addons/service.system.docker/bin/docker pull $DOCKERIMAGE" >> /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
 fi
 
 docker rm "$name" 2>/dev/null
-docker pull "$DOCKERIMAGETAG"
 docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
 mkdir -p "$V_data_tvshows" "$V_data_movies"
 chown -R nobody:users "$V_data_tvshows" "$V_data_movies"
 docker run --name="$name" \
+           --rm \
            --net=host \
            -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
            -e UID="65534" \
            -e GID="100" \
+           -e GIDLIST="39" \
            -e TZ="$TIMEZONE" \
            -v "$V_config":/config \
            -v "$V_data_tvshows":/data/tvshows \
            -v "$V_data_movies":/data/movies \
+           $E_vaapi \
            $E_additional \
-           "$DOCKERIMAGETAG"
+           "$DOCKERIMAGE":latest
