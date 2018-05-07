@@ -17,6 +17,8 @@
     <description>
 MariaDB is one of the most popular database servers. Made by the original developers of MySQL.
 
+Important: By default there is no root password set. It is highly recommended that you set a root password through mysql interface right away.
+
 This is a docker container brought to you by the LinuxServer.io team.
 Please visit https://linuxserver.io for more information.
     </description>
