@@ -3,7 +3,7 @@
 . /etc/profile
 
 # stop and remove container
-docker stop docker.linuxserver.mariadb
+docker stop docker.linuxserver.mariadb 2> /dev/null
 
 # remove image from cron updater list
 sed -i '/mariadb/d' /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
