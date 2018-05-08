@@ -17,10 +17,14 @@ msgctxt "#30006"
 msgid "Listening port"
 msgstr ""
 
-msgctxt "#30007"
-msgid "Setting the below to On will cause a delay in kodi start"
+msgctxt "#30008"
+msgid "Note: Mysql won't start unless a root password is set below"
 msgstr ""
 
-msgctxt "#30008"
-msgid "Using for kodi library"
+msgctxt "#30009"
+msgid "Password can only be set during creation of mysql library, changing it here later will have no effect. You can change it later through the mysql interface"
+msgstr ""
+
+msgctxt "#30010"
+msgid "Mysql root password"
 msgstr ""
