@@ -23,10 +23,12 @@ elif [ "$LEARCHVAR" = "aarch64" ]; then
   DOCKERIMAGE="lsioarmhf/mariadb-aarch64"
 fi
 
-while [ "$E_password" = "" ]; do
-  echo "Enter mysql root password in addon settings to continue"
-  sleep 60
-done
+if [ ! -f "${V_config}/custom.cnf" ]; then
+  while [ "$E_password" = "" ]; do
+    echo "Enter mysql root password in addon settings to continue"
+    sleep 60
+  done
+fi
 
 # add image to cron updater list
 if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh ]; then
