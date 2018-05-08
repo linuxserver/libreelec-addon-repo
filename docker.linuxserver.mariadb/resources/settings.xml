@@ -6,6 +6,7 @@
       <setting label="30006" type="number" id="P_port"         default="3306" />
       <setting label="30007" type="sep" />
       <setting label="30008" type="lsep" />
-      <setting label="30010" type="text"   id="E_password"     default="" />
+      <setting label="30009" type="lsep" />
+      <setting label="30010" type="text"   id="E_password"     default="" option="hidden" />
    </category>
 </settings>
