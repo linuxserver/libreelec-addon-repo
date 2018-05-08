@@ -2,7 +2,7 @@
 import subprocess
 import xbmc
 import xbmcaddon
-import os.time
+import os.path
 
 
 class Monitor(xbmc.Monitor):
