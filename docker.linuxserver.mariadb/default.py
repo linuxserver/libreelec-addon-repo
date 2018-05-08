@@ -2,6 +2,7 @@
 import subprocess
 import xbmc
 import xbmcaddon
+import os.time
 
 
 class Monitor(xbmc.Monitor):
@@ -13,6 +14,10 @@ class Monitor(xbmc.Monitor):
    def onSettingsChanged(self):
       subprocess.call(['systemctl', 'restart', self.id])
 
+V_configfolder = xbmcaddon.Addon().getSetting('V_config')
+
+if not os.path.isfile('%s/custom.cnf' % (V_configfolder)):
+   xbmcaddon.Addon().openSettings('id')
 
 if __name__ == '__main__':
    Monitor().waitForAbort()
