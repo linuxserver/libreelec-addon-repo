@@ -14,7 +14,6 @@ RestartSec=10s
 StartLimitInterval=86400
 StartLimitBurst=3
 TimeoutStartSec=0
-ExecStartPre=-/bin/sh /storage/.kodi/addons/%p/bin/pre
 ExecStart=/bin/sh /storage/.kodi/addons/%p/bin/%p
 ExecStartPost=/usr/bin/sleep 10
 ExecStop=/bin/sh /storage/.kodi/addons/%p/bin/stop
