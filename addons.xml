@@ -1162,7 +1162,7 @@ docker.linuxserver.beets:
 
 <addon id="docker.linuxserver.letsencrypt"
        name="Nginx Letsencrypt (LinuxServer.io)"
-       version="1.0.9"
+       version="1.0.10"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -1192,6 +1192,10 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.letsencrypt:
 -------------------------------
+
+1.0.10
+- Open settings window if first install
+- Silence docker stop error
 
 1.0.9
 - Use updater addon for image updates
