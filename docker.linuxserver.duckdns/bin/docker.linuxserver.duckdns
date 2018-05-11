@@ -23,6 +23,11 @@ elif [ "$LEARCHVAR" = "aarch64" ]; then
   DOCKERIMAGE="lsioarmhf/duckdns-aarch64"
 fi
 
+while [ "$E_TOKEN" = "token" ]; do
+  echo "Enter duckdns subdomain and token in addon settings to continue"
+  sleep 60
+done
+
 # add image to cron updater list
 if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh ]; then
   sleep 10

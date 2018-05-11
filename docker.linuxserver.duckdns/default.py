@@ -13,6 +13,10 @@ class Monitor(xbmc.Monitor):
    def onSettingsChanged(self):
       subprocess.call(['systemctl', 'restart', self.id])
 
+E_TOKEN_ = xbmcaddon.Addon().getSetting('E_TOKEN')
+
+if E_TOKEN_ == "token":
+   xbmcaddon.Addon().openSettings('id')
 
 if __name__ == '__main__':
    Monitor().waitForAbort()
