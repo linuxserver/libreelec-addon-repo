@@ -38,7 +38,7 @@ msgid "IPv4"
 msgstr ""
 
 msgctxt "#30012"
-msgid "IPv6 Enable?"
+msgid "Enable IPv6"
 msgstr ""
 
 msgctxt "#30013"
