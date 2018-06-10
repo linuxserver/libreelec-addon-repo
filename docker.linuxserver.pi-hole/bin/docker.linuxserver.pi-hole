@@ -67,10 +67,10 @@ docker run --name="$name" \
            -e PGID="100" \
            -e TZ="$TIMEZONE" \
            -e ServerIP="$IPv4" \
-           "$IPv6_EN" \
+           $IPv6_EN \
            -e WEBPASSWORD="$E_pass" \
            -v "$V_pihole":/etc/pihole \
-           -v "$V_dnsmasq.d":/etc/dnsmasq.d \
+           -v "$V_dnsmasq":/etc/dnsmasq.d \
            -p 53:53/tcp \
            -p 53:53/udp \
            -p "$P_port":80 \
