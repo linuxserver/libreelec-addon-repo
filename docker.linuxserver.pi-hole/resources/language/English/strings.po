@@ -38,9 +38,13 @@ msgid "IPv4"
 msgstr ""
 
 msgctxt "#30012"
-msgid "IPv6 Override?"
+msgid "IPv6 Enable?"
 msgstr ""
 
 msgctxt "#30013"
+msgid "IPv6 Override?"
+msgstr ""
+
+msgctxt "#30014"
 msgid "IPv6"
 msgstr ""
