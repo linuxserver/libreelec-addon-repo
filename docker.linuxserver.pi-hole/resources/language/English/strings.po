@@ -22,7 +22,7 @@ msgid "Web gui port"
 msgstr ""
 
 msgctxt "#30008"
-msgid "Admin password"
+msgid "Admin password (required)"
 msgstr ""
 
 msgctxt "#30009"
