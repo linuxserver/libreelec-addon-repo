@@ -39,11 +39,14 @@ else
   IPv4="$(ip route get 8.8.8.8 | awk '{ print $NF; exit }')"
 fi
 
-# set server IPv6
-if [ "$E_IPv6_OR" = "true" ]; then
-  IPv6="$E_IPv6"
-else
- IPv6="$(ip -6 route get 2001:4860:4860::8888 | awk '{ print $10; exit }')"
+# enable and set server IPv6
+if [ "$E_IPv6_EN" = "true" ]; then
+  if [ "$E_IPv6_OR" = "true" ]; then
+    IPv6="$E_IPv6"
+  else
+    IPv6="$(ip -6 route get 2001:4860:4860::8888 | awk '{ print $10; exit }')"
+  fi
+  IPv6_EN="-e ServerIPv6=$IPv6"
 fi
 
 # add image to cron updater list
@@ -64,7 +67,7 @@ docker run --name="$name" \
            -e PGID="100" \
            -e TZ="$TIMEZONE" \
            -e ServerIP="$IPv4" \
-           -e ServerIPv6="$IPv6" \
+           "$IPv6_EN" \
            -e WEBPASSWORD="$E_pass" \
            -v "$V_pihole":/etc/pihole \
            -v "$V_dnsmasq.d":/etc/dnsmasq.d \
