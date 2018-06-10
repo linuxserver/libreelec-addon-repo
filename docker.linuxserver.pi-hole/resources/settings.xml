@@ -3,10 +3,10 @@
    <category   label="30000">
       <setting label="30001" type="lsep" />
       <setting label="30005" type="folder" id="V_pihole" default="/storage/.kodi/userdata/addon_data/docker.linuxserver.pi-hole/pihole"  option="writeable" />
-      <setting label="30006" type="folder" id="V_dnsmasq.d" default="/storage/.kodi/userdata/addon_data/docker.linuxserver.pi-hole/dnsmasq.d"  option="writeable" />
+      <setting label="30006" type="folder" id="V_dnsmasq" default="/storage/.kodi/userdata/addon_data/docker.linuxserver.pi-hole/dnsmasq.d"  option="writeable" />
       <setting type="sep" />
       <setting label="30007" type="number" id="P_port" default="80" />
-      <setting label="30008" type="text" id="P_pass" default="" option="hidden" />
+      <setting label="30008" type="text" id="E_pass" default="" option="hidden" />
       <setting type="sep" />
       <setting label="30009" type="lsep" />
       <setting label="30010" type="bool" id="E_IP_OR" default="false" />
