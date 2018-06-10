@@ -13,6 +13,6 @@
       <setting label="30011" type="ipaddress" id="E_IP" default="" enable="eq(-1,true)" />
       <setting label="30012" type="bool" id="E_IPv6_EN" default="false" />
       <setting label="30013" type="bool" id="E_IPv6_OR" default="false" enable="eq(-1,true)" />
-      <setting label="30013" type="ipaddress" id="E_IPv6" default="" enable="eq(-1,true)" />
+      <setting label="30014" type="ipaddress" id="E_IPv6" default="" enable="eq(-1,true)" />
    </category>
 </settings>
