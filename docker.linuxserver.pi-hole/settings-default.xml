@@ -5,6 +5,7 @@
     <setting id="E_pass"  value="" />
     <setting id="E_IP_OR" value="false" />
     <setting id="E_IP" value"" />
+    <setting id="E_IPv6_EN" value="false" />
     <setting id="E_IPv6_OR" value="false" />
     <setting id="E_IPv6" value"" />
 </settings>
