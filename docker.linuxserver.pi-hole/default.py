@@ -13,6 +13,9 @@ class Monitor(xbmc.Monitor):
    def onSettingsChanged(self):
       subprocess.call(['systemctl', 'restart', self.id])
 
+E_password = xbmcaddon.Addon().getSetting('E_pass')
+if E_password == "":
+   xbmcaddon.Addon().openSettings('id')
 
 if __name__ == '__main__':
    Monitor().waitForAbort()
