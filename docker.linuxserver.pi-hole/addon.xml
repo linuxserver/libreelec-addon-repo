@@ -17,6 +17,8 @@
     <description>
 The Pi-hole is a DNS sinkhole that protects your devices from unwanted content, without installing any client-side software.
 
+On initial install, enter an admin password. Port 53 must be open.
+
 This is a docker addon brought to you by the LinuxServer.io team.
 Please visit https://linuxserver.io for more information.
     </description>
