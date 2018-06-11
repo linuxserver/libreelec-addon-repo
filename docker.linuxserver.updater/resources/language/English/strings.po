@@ -1,3 +1,18 @@
 msgid ""
 msgstr ""
 
+msgctxt "#30000"
+msgid "Configuration"
+msgstr ""
+
+msgctxt "#30001"
+msgid "Warning: These actions are potentially destructive"
+msgstr ""
+
+msgctxt "#30005"
+msgid "Remove all stopped docker containers"
+msgstr ""
+
+msgctxt "#30006"
+msgid "Remove all unused docker images"
+msgstr ""
