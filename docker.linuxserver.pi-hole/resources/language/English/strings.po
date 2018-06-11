@@ -48,3 +48,11 @@ msgstr ""
 msgctxt "#30014"
 msgid "IPv6"
 msgstr ""
+
+msgctxt "#30015"
+msgid "Below settings are only set during initial install"
+msgstr ""
+
+msgctxt "#30016"
+msgid "Delete the addon folder for changes to work"
+msgstr ""

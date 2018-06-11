@@ -32,21 +32,24 @@ elif [ "$LEARCHVAR" = "aarch64" ]; then
   DOCKERIMAGETAG="debian_aarch64"
 fi
 
-# set server IP
-if [ "$E_IP_OR" = "true" ]; then
-  IPv4="$E_IP"
-else
-  IPv4="$(ip route get 8.8.8.8 | awk '{ print $NF; exit }')"
-fi
-
-# enable and set server IPv6
-if [ "$E_IPv6_EN" = "true" ]; then
-  if [ "$E_IPv6_OR" = "true" ]; then
-    IPv6="$E_IPv6"
+if [ ! -f "$V_pihole"/setupVars.conf ]; then
+  # set server IP
+  if [ "$E_IP_OR" = "true" ]; then
+    IPv4="$E_IP"
   else
-    IPv6="$(ip -6 route get 2001:4860:4860::8888 | awk '{ print $10; exit }')"
+    IPv4="$(ip route get 8.8.8.8 | awk '{ print $NF; exit }')"
   fi
-  IPv6_EN="-e ServerIPv6=$IPv6"
+  # enable and set server IPv6
+  if [ "$E_IPv6_EN" = "true" ]; then
+    if [ "$E_IPv6_OR" = "true" ]; then
+      IPv6="$E_IPv6"
+    else
+      IPv6="$(ip -6 route get 2001:4860:4860::8888 | awk '{ print $10; exit }')"
+    fi
+    IP_setup="-e ServerIP=$IPv4 -e ServerIPv6=$IPv6"
+  else
+    IP_setup="-e ServerIP=$IPv4"
+  fi
 fi
 
 # add image to cron updater list
@@ -63,11 +66,9 @@ docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\
 docker run --name="$name" \
            --rm \
            -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
-           -e PUID="65534" \
-           -e PGID="100" \
            -e TZ="$TIMEZONE" \
-           -e ServerIP="$IPv4" \
-           $IPv6_EN \
+           -h $(cat /etc/hostname) \
+           $IP_setup \
            -e WEBPASSWORD="$E_pass" \
            -v "$V_pihole":/etc/pihole \
            -v "$V_dnsmasq":/etc/dnsmasq.d \
