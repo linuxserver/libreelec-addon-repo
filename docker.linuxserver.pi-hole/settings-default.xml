@@ -1,0 +1,11 @@
+<settings>
+    <setting id="V_pihole" value="/storage/.kodi/userdata/addon_data/docker.linuxserver.pi-hole/pihole" />
+    <setting id="V_dnsmasq" value="/storage/.kodi/userdata/addon_data/docker.linuxserver.pi-hole/dnsmasq.d" />
+    <setting id="P_port"   value="80" />
+    <setting id="E_pass"  value="" />
+    <setting id="E_IP_OR" value="false" />
+    <setting id="E_IP" value"" />
+    <setting id="E_IPv6_EN" value="false" />
+    <setting id="E_IPv6_OR" value="false" />
+    <setting id="E_IPv6" value"" />
+</settings>

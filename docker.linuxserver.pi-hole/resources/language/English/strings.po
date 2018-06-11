@@ -1,0 +1,50 @@
+msgid ""
+msgstr ""
+
+msgctxt "#30000"
+msgid "Configuration"
+msgstr ""
+
+msgctxt "#30001"
+msgid "Note: Kodi remote sources can not be used as Docker volume host sources"
+msgstr ""
+
+msgctxt "#30005"
+msgid "Map /etc/pihole"
+msgstr ""
+
+msgctxt "#30006"
+msgid "Map /etc/dnsmasq.d"
+msgstr ""
+
+msgctxt "#30007"
+msgid "Web gui port"
+msgstr ""
+
+msgctxt "#30008"
+msgid "Admin password (required)"
+msgstr ""
+
+msgctxt "#30009"
+msgid "LAN IPs auto detected"
+msgstr ""
+
+msgctxt "#30010"
+msgid "IPv4 Override?"
+msgstr ""
+
+msgctxt "#30011"
+msgid "IPv4"
+msgstr ""
+
+msgctxt "#30012"
+msgid "Enable IPv6"
+msgstr ""
+
+msgctxt "#30013"
+msgid "IPv6 Override?"
+msgstr ""
+
+msgctxt "#30014"
+msgid "IPv6"
+msgstr ""
