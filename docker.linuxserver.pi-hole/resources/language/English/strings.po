@@ -56,3 +56,19 @@ msgstr ""
 msgctxt "#30016"
 msgid "Delete the addon folder for changes to work"
 msgstr ""
+
+msgctxt "#30017"
+msgid "Default dns set to google, can be changed in gui"
+msgstr ""
+
+msgctxt "#30018"
+msgid "DNS settings Override?"
+msgstr ""
+
+msgctxt "#30019"
+msgid "DNS 1"
+msgstr ""
+
+msgctxt "#30020"
+msgid "DNS 2"
+msgstr ""
