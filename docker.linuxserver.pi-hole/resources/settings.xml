@@ -10,7 +10,6 @@
       <setting label="30022" type="bool" id="P_port2_EN" default="false" />
       <setting type="sep" />
       <setting label="30015" type="lsep" />
-      <setting label="30016" type="lsep" />
       <setting label="30008" type="text" id="E_pass" default="" option="hidden" />
       <setting label="30017" type="lsep" />
       <setting label="30018" type="bool" id="E_dns_EN" default="false" />
