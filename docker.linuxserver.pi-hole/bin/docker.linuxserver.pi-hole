@@ -52,6 +52,9 @@ if [ ! -f "$V_pihole"/setupVars.conf ]; then
   fi
 fi
 
+# write current settings to file
+echo -e "ORIGE_pass=\"$E_pass\" ORIGE_dns_EN=\"$E_dns_EN\" ORIGE_dns1=\"$E_dns1\" ORIGE_dns2=\"$E_dns2\" ORIGE_IP_OR=\"$E_IP_OR\" ORIGE_IP=\"$E_IP\" ORIGE_IPv6_EN=\"$E_IPv6_EN\" ORIGE_IPv6_OR=\"$E_IPv6_OR\" ORIGE_IPv6=\"$E_IPv6\"" > /storage/.kodi/userdata/addon_data/docker.linuxserver.pi-hole/.donoteditthisfile.conf
+
 # add image to cron updater list
 if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh ]; then
   sleep 10
