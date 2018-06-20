@@ -72,3 +72,11 @@ msgstr ""
 msgctxt "#30020"
 msgid "DNS 2"
 msgstr ""
+
+msgctxt "#30021"
+msgid "If you enable port 443, make sure it is not used by anything else"
+msgstr ""
+
+msgctxt "#30022"
+msgid "Enable port 443"
+msgstr ""
