@@ -32,24 +32,55 @@ elif [ "$LEARCHVAR" = "aarch64" ]; then
   DOCKERIMAGETAG="debian_aarch64"
 fi
 
-if [ ! -f "$V_pihole"/setupVars.conf ]; then
-  # set server IP
-  if [ "$E_IP_OR" = "true" ]; then
-    IPv4="$E_IP"
+# build docker variables
+VAR_setup="-e WEBPASSWORD=$E_pass"
+# set dns
+if [ "$E_dns_EN" = "true" ]; then
+  VAR_SETUP="$VAR_SETUP -e DNS1=E_dns1 -e DNS2=E_dns2"
+else
+  VAR_SETUP="$VAR_SETUP -e DNS1=8.8.8.8 -e DNS2=8.8.4.4"
+fi
+# set IPv4
+if [ "$E_IP_OR" = "true" ]; then
+  VAR_setup="$VAR_setup -e ServerIP=$E_IP"
+else
+  IPv4="$(ip route get 8.8.8.8 | awk '{ print $NF; exit }')"
+  VAR_setup="$VAR_setup -e ServerIP=$IPv4"
+fi
+# set IPv6 if needed
+if [ "$E_IPv6_EN" = "true" ]; then
+  if [ "$E_IPv6_OR" = "true" ]; then
+    IPv6="$E_IPv6"
   else
-    IPv4="$(ip route get 8.8.8.8 | awk '{ print $NF; exit }')"
+    IPv6="$(ip -6 route get 2001:4860:4860::8888 | awk '{ print $10; exit }')"
   fi
-  # enable and set server IPv6
-  if [ "$E_IPv6_EN" = "true" ]; then
-    if [ "$E_IPv6_OR" = "true" ]; then
-      IPv6="$E_IPv6"
-    else
-      IPv6="$(ip -6 route get 2001:4860:4860::8888 | awk '{ print $10; exit }')"
-    fi
-    IP_setup="-e ServerIP=$IPv4 -e ServerIPv6=$IPv6"
+  VAR_setup="$VAR_setup -e ServerIPv6=$IPv6"
+fi
+
+if [ -f "/storage/.kodi/userdata/addon_data/docker.linuxserver.pi-hole/.donoteditthisfile.conf" ]; then
+  # load previous settings
+  echo "Previous settings found"
+  . /storage/.kodi/userdata/addon_data/docker.linuxserver.pi-hole/.donoteditthisfile.conf
+  # check if settings are different
+  if [ ! "$E_pass" = "$ORIGE_pass" ] || [ ! "$E_dns_EN" = "$ORIGE_dns_EN" ] || [ ! "$E_dns1" = "$ORIGE_dns1" ] || [ ! "$E_dns2" = "$ORIGE_dns2" ] || [ ! "$E_IP_OR" = "$ORIGE_IP_OR" ] || [ ! "$E_IP" = "$ORIGE_IP" ] || [ ! "$E_IPv6_EN" = "$ORIGE_IPv6_EN" ] || [ ! "$E_IPv6_OR" = "$ORIGE_IPv6_OR" ] || [ ! "$E_IPv6" = "$ORIGE_IPv6" ]; then
+    echo "Settings are changed, re-running pi-hole setup"
+    # build new docker options based on new settings
+    BUILD_VARS="$VAR_setup"
+  elif [ ! -f "$V_pihole"/setupVars.conf ]; then
+    echo "No setupVars.conf exists, running pi-hole setup"
+    BUILD_VARS="$VAR_setup"
   else
-    IP_setup="-e ServerIP=$IPv4"
+    echo "Using existing settings"
+    BUILD_VARS=""
   fi
+else
+  echo "First install detected, running pi-hole setup"
+  BUILD_VARS="$VAR_setup"
+fi
+
+# map port 443 if needed
+if [ "$P_port2_EN" = "true" ]; then
+  P_port2_setup="-p 443:443"
 fi
 
 # write current settings to file
@@ -71,13 +102,13 @@ docker run --name="$name" \
            -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
            -e TZ="$TIMEZONE" \
            -h $(cat /etc/hostname) \
-           $IP_setup \
-           -e WEBPASSWORD="$E_pass" \
            -v "$V_pihole":/etc/pihole \
            -v "$V_dnsmasq":/etc/dnsmasq.d \
            -p 53:53/tcp \
            -p 53:53/udp \
            -p "$P_port":80 \
+           $P_port2_setup \
+           $BUILD_VARS \
            --network=lsio \
            --network-alias=pi-hole \
            "$DOCKERIMAGE":"$DOCKERIMAGETAG"
