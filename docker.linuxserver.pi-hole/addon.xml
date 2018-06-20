@@ -20,6 +20,7 @@ The Pi-hole is a DNS sinkhole that protects your devices from unwanted content, 
 On initial install, enter an admin password. Port 53 must be open.
 By default only IPv4 is enabled. IPv6 can be enabled in addon settings.
 Server LAN IPs are autodetected, but can be overridden by manual entry in addon settings.
+DNS servers can be changed in the webgui, however, if any of the addon settings are changed, DNS servers will reset to whatever is selected in addon settings or the default Google servers
 
 This is a docker addon brought to you by the LinuxServer.io team.
 Please visit https://linuxserver.io for more information.
@@ -33,6 +34,7 @@ docker.linuxserver.pi-hole:
 1.0.2
 - Add DNS override settings
 - Allow changing settings without wiping data
+- Add option to map port 443 for rejecting https rather than timing out
 
 1.0.1
 - Set hostname
