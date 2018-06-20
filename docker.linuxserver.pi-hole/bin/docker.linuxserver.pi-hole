@@ -36,9 +36,9 @@ fi
 VAR_setup="-e WEBPASSWORD=$E_pass"
 # set dns
 if [ "$E_dns_EN" = "true" ]; then
-  VAR_SETUP="$VAR_SETUP -e DNS1=$E_dns1 -e DNS2=$E_dns2"
+  VAR_setup="$VAR_setup -e DNS1=$E_dns1 -e DNS2=$E_dns2"
 else
-  VAR_SETUP="$VAR_SETUP -e DNS1=8.8.8.8 -e DNS2=8.8.4.4"
+  VAR_setup="$VAR_setup -e DNS1=8.8.8.8 -e DNS2=8.8.4.4"
 fi
 # set IPv4
 if [ "$E_IP_OR" = "true" ]; then
