@@ -6,6 +6,8 @@
       <setting label="30006" type="folder" id="V_dnsmasq" default="/storage/.kodi/userdata/addon_data/docker.linuxserver.pi-hole/dnsmasq.d"  option="writeable" />
       <setting type="sep" />
       <setting label="30007" type="number" id="P_port" default="80" />
+      <setting label="30021" type="lsep" />
+      <setting label="30022" type="bool" id="P_port2_EN" default="false" />
       <setting type="sep" />
       <setting label="30015" type="lsep" />
       <setting label="30016" type="lsep" />
