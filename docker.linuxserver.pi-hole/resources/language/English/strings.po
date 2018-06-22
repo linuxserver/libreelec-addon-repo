@@ -50,9 +50,29 @@ msgid "IPv6"
 msgstr ""
 
 msgctxt "#30015"
-msgid "Below settings are only set during initial install"
+msgid "Changing below settings will reset gui DNS"
 msgstr ""
 
-msgctxt "#30016"
-msgid "Delete the addon folder for changes to work"
+msgctxt "#30017"
+msgid "Default dns set to google, can be changed in gui"
+msgstr ""
+
+msgctxt "#30018"
+msgid "DNS settings Override?"
+msgstr ""
+
+msgctxt "#30019"
+msgid "DNS 1"
+msgstr ""
+
+msgctxt "#30020"
+msgid "DNS 2"
+msgstr ""
+
+msgctxt "#30021"
+msgid "If you enable port 443, make sure it is not used by anything else"
+msgstr ""
+
+msgctxt "#30022"
+msgid "Enable port 443"
 msgstr ""

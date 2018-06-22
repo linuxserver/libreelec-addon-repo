@@ -6,10 +6,15 @@
       <setting label="30006" type="folder" id="V_dnsmasq" default="/storage/.kodi/userdata/addon_data/docker.linuxserver.pi-hole/dnsmasq.d"  option="writeable" />
       <setting type="sep" />
       <setting label="30007" type="number" id="P_port" default="80" />
+      <setting label="30021" type="lsep" />
+      <setting label="30022" type="bool" id="P_port2_EN" default="false" />
       <setting type="sep" />
       <setting label="30015" type="lsep" />
-      <setting label="30016" type="lsep" />
       <setting label="30008" type="text" id="E_pass" default="" option="hidden" />
+      <setting label="30017" type="lsep" />
+      <setting label="30018" type="bool" id="E_dns_EN" default="false" />
+      <setting label="30019" type="ipaddress" id="E_dns1" default="8.8.8.8" enable="eq(-1,true)" />
+      <setting label="30020" type="ipaddress" id="E_dns2" default="8.8.4.4" enable="eq(-2,true)" />
       <setting label="30009" type="lsep" />
       <setting label="30010" type="bool" id="E_IP_OR" default="false" />
       <setting label="30011" type="ipaddress" id="E_IP" default="" enable="eq(-1,true)" />
