@@ -1061,7 +1061,7 @@ docker.linuxserver.nginx:
   </extension>
 </addon>
 
-<addon id="docker.linuxserver.nginx"
+<addon id="docker.linuxserver.webgrabplus"
        name="WebGrab+Plus (LinuxServer.io)"
        version="1.0.0"
        provider-name="LinuxServer.io">
