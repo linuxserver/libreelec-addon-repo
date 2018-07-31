@@ -1,0 +1,4 @@
+<settings>
+    <setting id="V_config" value="/storage/.kodi/userdata/addon_data/docker.linuxserver.webgrabplus/config" />
+    <setting id="V_data" value="/storage/.kodi/userdata/addon_data/docker.linuxserver.webgrabplus/data" />
+</settings>
