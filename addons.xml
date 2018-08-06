@@ -684,6 +684,7 @@ docker.linuxserver.pi-hole:
 
 1.0.3
 - Fix typo in default settings that caused it to break on Leia
+(If you run into this issue, uninstall the addon, delete the addon_data folder and reinstall)
 
 1.0.2
 - Add DNS override settings
