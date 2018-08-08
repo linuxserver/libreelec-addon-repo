@@ -7,3 +7,4 @@ docker stop docker.linuxserver.pi-hole
 
 # remove image from cron updater list
 sed -i '/pi-hole/d' /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
+sed -i '/pihole/d' /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
