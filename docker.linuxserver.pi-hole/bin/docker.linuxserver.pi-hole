@@ -20,14 +20,16 @@ while [ "$E_pass" = "" ]; do
   sleep 60
 done
 
-DOCKERIMAGE="pihole/pihole"
 #figure out which docker hub image tag to use
 if [ "$LEARCHVAR" = "x86_64" ]; then
+  DOCKERIMAGE="diginc/pi-hole"
   DOCKERIMAGETAG="latest"
 elif [ "$LEARCHVAR" = "arm" ]; then
-  DOCKERIMAGETAG="v4.0_armhf"
+  DOCKERIMAGE="diginc/pi-hole-multiarch"
+  DOCKERIMAGETAG="debian_armhf"
 elif [ "$LEARCHVAR" = "aarch64" ]; then
-  DOCKERIMAGETAG="v4.0_aarch64"
+DOCKERIMAGE="diginc/pi-hole-multiarch"
+  DOCKERIMAGETAG="debian_aarch64"
 fi
 
 # build docker variables
