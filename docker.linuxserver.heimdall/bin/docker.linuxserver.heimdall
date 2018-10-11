@@ -1,0 +1,39 @@
+#!/bin/sh
+
+name="$(basename $0)"
+. /etc/profile
+
+if [ -f /storage/.cache/timezone ]; then
+ . /storage/.cache/timezone
+else
+ TIMEZONE="America/New_York"
+fi
+
+oe_setup_addon "$name"
+
+# set docker image
+DOCKERIMAGE="linuxserver/heimdall"
+
+# add image to cron updater list
+if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh ]; then
+  sleep 10
+fi
+
+if ! grep -q "$DOCKERIMAGE" /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh; then
+  echo "/storage/.kodi/addons/service.system.docker/bin/docker pull $DOCKERIMAGE" >> /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
+fi
+
+docker rm "$name" 2>/dev/null
+docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
+docker run --name="$name" \
+           --rm \
+           -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
+           -e PUID="65534" \
+           -e PGID="100" \
+           -e TZ="$TIMEZONE" \
+           -v "$V_config":/config \
+           -p "$P_port":80 \
+           -p "$P_port2":443 \
+           --network=lsio \
+           --network-alias=heimdall \
+           "$DOCKERIMAGE":latest
