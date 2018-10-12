@@ -2,7 +2,7 @@
 <addons>
 <addon id="docker.linuxserver.beets"
        name="Beets (LinuxServer.io)"
-       version="1.0.6"
+       version="1.0.7"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -26,6 +26,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.beets:
 -------------------------
+
+1.0.7
+- Support *elec
 
 1.0.6
 - Use the updater addon for image updates
@@ -62,7 +65,7 @@ docker.linuxserver.beets:
 
 <addon id="docker.linuxserver.domoticz"
        name="Domoticz (LinuxServer.io)"
-       version="1.0.1"
+       version="1.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -89,6 +92,9 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.domoticz:
 -----------------------------
 
+1.0.2
+- Support *elec
+
 1.0.1
 - Use updater addon for image updates
 - Faster start on boot
@@ -109,7 +115,7 @@ docker.linuxserver.domoticz:
 
 <addon id="docker.linuxserver.duckdns"
        name="DuckDNS (LinuxServer.io)"
-       version="1.0.10"
+       version="1.0.11"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -134,6 +140,9 @@ Please visit www.duckdns.org to get a custom url and token
     <news>
 docker.linuxserver.duckdns:
 ---------------------------
+
+1.0.11
+- Support *elec
 
 1.0.10
 - Open settings window during initial install
@@ -181,7 +190,7 @@ docker.linuxserver.duckdns:
 
 <addon id="docker.linuxserver.duplicati"
        name="Duplicati (LinuxServer.io)"
-       version="1.0.1"
+       version="1.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -206,6 +215,9 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.duplicati:
 -----------------------------
 
+1.0.2
+- Support *elec
+
 1.0.1
 - Use updater addon to update images
 - Faster start on boot
@@ -225,7 +237,7 @@ docker.linuxserver.duplicati:
 
 <addon id="docker.linuxserver.emby"
        name="Emby (LinuxServer.io)"
-       version="1.0.4"
+       version="1.0.5"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -249,6 +261,9 @@ Please visit https://linuxserver.io for more info on the wrapper addon.
     <news>
 docker.linuxserver.emby:
 ------------------------
+
+1.0.5
+- Support *elec
 
 1.0.4
 - Use updater addon for image updates
@@ -276,9 +291,48 @@ docker.linuxserver.emby:
   </extension>
 </addon>
 
+<addon id="docker.linuxserver.heimdall"
+       name="Heimdall (LinuxServer.io)"
+       version="1.0.0"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Heimdall landing page in a docker container</summary>
+    <description>
+Heimdall is a way to organise all those links to your most used web sites and web applications in a simple way. Simplicity is the key to Heimdall. Why not use it as your browser start page? It even has the ability to include a search bar using either Google, Bing or DuckDuckGo.
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.heimdall:
+-------------------------
+
+1.0.0
+- Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
 <addon id="docker.linuxserver.letsencrypt"
        name="Nginx Letsencrypt (LinuxServer.io)"
-       version="1.0.10"
+       version="1.0.11"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -308,6 +362,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.letsencrypt:
 -------------------------------
+
+1.0.11
+- Support *elec
 
 1.0.10
 - Open settings window if first install
@@ -359,7 +416,7 @@ docker.linuxserver.letsencrypt:
 
 <addon id="docker.linuxserver.mariadb"
        name="MariaDB (LinuxServer.io)"
-       version="1.0.10"
+       version="1.0.11"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -387,6 +444,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.mariadb:
 ---------------------------
+
+1.0.11
+- Support *elec
 
 1.0.10
 - Enable required root password during database creation
@@ -435,7 +495,7 @@ docker.linuxserver.mariadb:
 
 <addon id="docker.linuxserver.minisatip"
        name="Minisatip (LinuxServer.io)"
-       version="1.0.7"
+       version="1.0.8"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -459,6 +519,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.minisatip:
 -----------------------------
+
+1.0.8
+- Support *elec
 
 1.0.7
 - Use updater addon to update images
@@ -498,7 +561,7 @@ docker.linuxserver.minisatip:
 
 <addon id="docker.linuxserver.muximux"
        name="Muximux (LinuxServer.io)"
-       version="1.0.4"
+       version="1.0.5"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -522,6 +585,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.muximux:
 ---------------------------
+
+1.0.5
+- Support *elec
 
 1.0.4
 - Use updater addon to update images
@@ -552,7 +618,7 @@ docker.linuxserver.muximux:
 
 <addon id="docker.linuxserver.nextcloud"
        name="Nextcloud (LinuxServer.io)"
-       version="1.0.2"
+       version="1.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -579,6 +645,9 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.nextcloud:
 -----------------------------
 
+1.0.3
+- Support *elec
+
 1.0.2
 - Use updater addon for image updates
 - Faster start on boot
@@ -602,7 +671,7 @@ docker.linuxserver.nextcloud:
 
 <addon id="docker.linuxserver.nginx"
        name="Nginx (LinuxServer.io)"
-       version="1.0.3"
+       version="1.0.4"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -628,6 +697,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.nginx:
 -------------------------
+
+1.0.4
+- Support *elec
 
 1.0.3
 - Use updater addon for image updates
@@ -655,7 +727,7 @@ docker.linuxserver.nginx:
 
 <addon id="docker.linuxserver.oscam"
        name="Oscam (LinuxServer.io)"
-       version="1.0.5"
+       version="1.0.6"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -679,6 +751,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.oscam:
 -------------------------
+
+1.0.6
+- Support *elec
 
 1.0.5
 - Use updater addon for image updates
@@ -711,7 +786,7 @@ docker.linuxserver.oscam:
 
 <addon id="docker.linuxserver.photoshow"
        name="Photoshow (LinuxServer.io)"
-       version="1.0.4"
+       version="1.0.5"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -735,6 +810,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.photoshow:
 -----------------------------
+
+1.0.5
+- Support *elec
 
 1.0.4
 - Use updater addon for image updates
@@ -765,7 +843,7 @@ docker.linuxserver.photoshow:
 
 <addon id="docker.linuxserver.pi-hole"
        name="Pi-hole (LinuxServer.io)"
-       version="1.0.5"
+       version="1.0.6"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -794,6 +872,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.pi-hole:
 -------------------------
+
+1.0.6
+- Support *elec
 
 1.0.5
 - Revert to the v3 branch as v4 seems to have a bunch of bugs currently
@@ -829,7 +910,7 @@ docker.linuxserver.pi-hole:
 
 <addon id="docker.linuxserver.plex"
        name="Plex (LinuxServer.io)"
-       version="1.0.6"
+       version="1.0.7"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -853,6 +934,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.plex:
 ------------------------
+
+1.0.7
+- Support *elec
 
 1.0.6
 - Use updater addon for image updates
@@ -945,7 +1029,7 @@ docker.linuxserver.portainer:
 
 <addon id="docker.linuxserver.quassel-core"
        name="Quassel Core (LinuxServer.io)"
-       version="1.0.5"
+       version="1.0.6"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -971,6 +1055,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.quassel-core:
 --------------------------------
+
+1.0.6
+- Support *elec
 
 1.0.5
 - Use updater addon for image updates
@@ -1004,7 +1091,7 @@ docker.linuxserver.quassel-core:
 
 <addon id="docker.linuxserver.resilio-sync"
        name="Resilio Sync (LinuxServer.io)"
-       version="1.0.5"
+       version="1.0.6"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -1028,6 +1115,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.resilio-sync:
 --------------------------------
+
+1.0.6
+- Support *elec
 
 1.0.5
 - Use updater addon for image updates
@@ -1060,7 +1150,7 @@ docker.linuxserver.resilio-sync:
 
 <addon id="docker.linuxserver.tautulli"
        name="Tautulli (LinuxServer.io)"
-       version="1.0.0"
+       version="1.0.1"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -1085,6 +1175,9 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.tautulli:
 --------------------------
 
+1.0.1
+- Support *elec
+
 1.0.0
 - Initial release
     </news>
@@ -1099,7 +1192,7 @@ docker.linuxserver.tautulli:
 
 <addon id="docker.linuxserver.thelounge"
        name="TheLounge (LinuxServer.io)"
-       version="1.0.4"
+       version="1.0.5"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -1123,6 +1216,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.thelounge:
 -----------------------------
+
+1.0.5
+- Support *elec
 
 1.0.4
 - Use updater addon for image updates
@@ -1153,7 +1249,7 @@ docker.linuxserver.thelounge:
 
 <addon id="docker.linuxserver.tvheadend"
        name="TVheadend (LinuxServer.io)"
-       version="1.0.5"
+       version="1.0.6"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -1177,6 +1273,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.tvheadend:
 -----------------------------
+
+1.0.6
+- Support *elec
 
 1.0.5
 - Use updater addon for image updates
@@ -1254,7 +1353,7 @@ docker.linuxserver.updater:
 
 <addon id="docker.linuxserver.webgrabplus"
        name="WebGrab+Plus (LinuxServer.io)"
-       version="1.0.0"
+       version="1.0.1"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -1288,6 +1387,9 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.webgrabplus:
 -------------------------------
 
+1.0.1
+- Support *elec
+
 1.0.0
 - Initial release
     </news>
@@ -1302,7 +1404,7 @@ docker.linuxserver.webgrabplus:
 
 <addon id="docker.linuxserver.znc"
        name="ZNC (LinuxServer.io)"
-       version="1.0.5"
+       version="1.0.6"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -1329,6 +1431,9 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.znc:
 -----------------------
 
+1.0.6
+- Support *elec
+
 1.0.5
 - Use updater addon for image updates
 - Faster start on boot
@@ -1346,45 +1451,6 @@ docker.linuxserver.znc:
 
 1.0.1
 - Fix default settings
-
-1.0.0
-- Initial release
-    </news>
-    <platform>all</platform>
-    <website>http://linuxserver.io/</website>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="docker.linuxserver.heimdall"
-       name="Heimdall (LinuxServer.io)"
-       version="1.0.0"
-       provider-name="LinuxServer.io">
-  <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="service.system.docker" version="0.0.0" />
-    <import addon="docker.linuxserver.updater" version="0.0.0"/>
-  </requires>
-  <extension point="xbmc.service" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Heimdall landing page in a docker container</summary>
-    <description>
-Heimdall is a way to organise all those links to your most used web sites and web applications in a simple way. Simplicity is the key to Heimdall. Why not use it as your browser start page? It even has the ability to include a search bar using either Google, Bing or DuckDuckGo.
-
-This is a docker container brought to you by the LinuxServer.io team.
-Please visit https://linuxserver.io for more information.
-    </description>
-    <disclaimer>
-    </disclaimer>
-    <news>
-docker.linuxserver.heimdall:
--------------------------
 
 1.0.0
 - Initial release

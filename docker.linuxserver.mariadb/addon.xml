@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="docker.linuxserver.mariadb"
        name="MariaDB (LinuxServer.io)"
-       version="1.0.10"
+       version="1.0.11"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -29,6 +29,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.mariadb:
 ---------------------------
+
+1.0.11
+- Support *elec
 
 1.0.10
 - Enable required root password during database creation
