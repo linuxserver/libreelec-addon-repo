@@ -11,17 +11,8 @@ fi
 
 oe_setup_addon "$name"
 
-#get arch variable from os
-LEARCHVAR=`sed -e '/EELEC_ARCH/ !d' -e 's/[^.]*\.\([^"]*\).*/\1/' /etc/os-release`
-
-#figure out which docker hub image to use
-if [ "$LEARCHVAR" = "x86_64" ]; then
-  DOCKERIMAGE="linuxserver/duckdns"
-elif [ "$LEARCHVAR" = "arm" ]; then
-  DOCKERIMAGE="lsioarmhf/duckdns"
-elif [ "$LEARCHVAR" = "aarch64" ]; then
-  DOCKERIMAGE="lsioarmhf/duckdns-aarch64"
-fi
+# set docker image
+DOCKERIMAGE="linuxserver/duckdns"
 
 while [ "$E_TOKEN" = "token" ]; do
   echo "Enter duckdns subdomain and token in addon settings to continue"
