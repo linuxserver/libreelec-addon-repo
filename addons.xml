@@ -115,7 +115,7 @@ docker.linuxserver.domoticz:
 
 <addon id="docker.linuxserver.duckdns"
        name="DuckDNS (LinuxServer.io)"
-       version="1.0.11"
+       version="1.0.12"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -140,6 +140,9 @@ Please visit www.duckdns.org to get a custom url and token
     <news>
 docker.linuxserver.duckdns:
 ---------------------------
+
+1.0.12
+- Switch to multi-arch images
 
 1.0.11
 - Support *elec
