@@ -674,7 +674,7 @@ docker.linuxserver.nextcloud:
 
 <addon id="docker.linuxserver.nginx"
        name="Nginx (LinuxServer.io)"
-       version="1.0.4"
+       version="1.0.5"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -700,6 +700,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.nginx:
 -------------------------
+
+1.0.5
+- Switch to multi-arch images
 
 1.0.4
 - Support *elec
