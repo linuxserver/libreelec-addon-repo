@@ -32,8 +32,8 @@ fi
 
 docker rm "$name" 2>/dev/null
 docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
-mkdir -p "$V_data_tvshows" "$V_data_movies" "$V_transcode"
-chown -R nobody:users "$V_data_tvshows" "$V_data_movies" "$V_transcode"
+mkdir -p "$V_data_tvshows" "$V_data_movies" "$V_transcode" "$V_data_photos"
+chown -R nobody:users "$V_data_tvshows" "$V_data_movies" "$V_transcode" "$V_data_photos"
 docker run --name="$name" \
            --rm \
            --net=host \
@@ -45,5 +45,7 @@ docker run --name="$name" \
            -v "$V_config":/config \
            -v "$V_data_tvshows":/data/tvshows \
            -v "$V_data_movies":/data/movies \
+           -v "$V_data_photos":/data/photos \
            -v "$V_transcode":/transcode \
+           $E_PARAMS \
            "$DOCKERIMAGE":latest /bin/bash -c "s6-svc -O /var/run/s6/services/avahi; sleep infinity"

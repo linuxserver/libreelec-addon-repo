@@ -32,3 +32,11 @@ msgstr ""
 msgctxt "#30008"
 msgid "Map /transcode"
 msgstr ""
+
+msgctxt "#30009"
+msgid "Map /data/photos"
+msgstr ""
+
+msgctxt "#30010"
+msgid "Additional docker parameters (optional)"
+msgstr ""
