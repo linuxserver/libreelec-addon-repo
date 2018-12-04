@@ -1365,7 +1365,7 @@ docker.linuxserver.updater:
 
 <addon id="docker.linuxserver.webgrabplus"
        name="WebGrab+Plus (LinuxServer.io)"
-       version="1.0.1"
+       version="1.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -1398,6 +1398,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.webgrabplus:
 -------------------------------
+
+1.0.2
+- Fix armhf image name
 
 1.0.1
 - Support *elec

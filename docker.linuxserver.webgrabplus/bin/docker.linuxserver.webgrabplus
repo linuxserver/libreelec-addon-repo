@@ -18,7 +18,7 @@ LEARCHVAR=`sed -e '/EELEC_ARCH/ !d' -e 's/[^.]*\.\([^"]*\).*/\1/' /etc/os-releas
 if [ "$LEARCHVAR" = "x86_64" ]; then
   DOCKERIMAGE="linuxserver/webgrabplus"
 elif [ "$LEARCHVAR" = "arm" ]; then
-  DOCKERIMAGE="lsioarmhf/webgrabplus-armhf"
+  DOCKERIMAGE="lsioarmhf/webgrabplus"
 elif [ "$LEARCHVAR" = "aarch64" ]; then
   DOCKERIMAGE="lsioarmhf/webgrabplus-aarch64"
 fi
