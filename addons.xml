@@ -1478,4 +1478,43 @@ docker.linuxserver.znc:
     </assets>
   </extension>
 </addon>
+
+<addon id="docker.linuxserver.netdata"
+       name="Netdata (LinuxServer.io)"
+       version="1.0.0"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Netdata in a docker container</summary>
+    <description>
+Netdata is distributed, real-time, performance and health monitoring for systems and applications. It is a highly optimized monitoring agent you install on all your systems and containers.
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.netdata:
+---------------------------
+
+1.0.0
+- Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
 </addons>
