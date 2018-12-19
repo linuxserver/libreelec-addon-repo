@@ -1,0 +1,40 @@
+#!/bin/sh
+
+name="$(basename $0)"
+. /etc/profile
+
+if [ -f /storage/.cache/timezone ]; then
+ . /storage/.cache/timezone
+else
+ TIMEZONE="America/New_York"
+fi
+
+oe_setup_addon "$name"
+
+# set docker image
+DOCKERIMAGE="netdata/netdata"
+
+# add image to cron updater list
+if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh ]; then
+  sleep 10
+fi
+
+if ! grep -q "$DOCKERIMAGE" /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh; then
+  echo "/storage/.kodi/addons/service.system.docker/bin/docker pull $DOCKERIMAGE" >> /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
+fi
+
+docker rm "$name" 2>/dev/null
+docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
+docker run --name="$name" \
+           --rm \
+           -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
+           -e TZ="$TIMEZONE" \
+           -p "$P_port":19999 \
+           -v /proc:/host/proc:ro \
+           -v /sys:/host/sys:ro \
+           -v /var/run/docker.sock:/var/run/docker.sock:ro \
+           --cap-add SYS_PTRACE \
+           --security-opt apparmor=unconfined \
+           --network=lsio \
+           --network-alias=netdata \
+           "$DOCKERIMAGE"
