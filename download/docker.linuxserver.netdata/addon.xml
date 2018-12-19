@@ -17,7 +17,7 @@
     <description>
 Netdata is distributed, real-time, performance and health monitoring for systems and applications. It is a highly optimized monitoring agent you install on all your systems and containers.
 
-This is a docker container brought to you by the LinuxServer.io team.
+This is a docker addon brought to you by the LinuxServer.io team.
 Please visit https://linuxserver.io for more information.
     </description>
     <disclaimer>
