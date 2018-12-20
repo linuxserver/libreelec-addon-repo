@@ -11,6 +11,9 @@ fi
 
 oe_setup_addon "$name"
 
+# set hostname
+HOSTNAME=$(cat /proc/sys/kernel/hostname)
+
 # set docker image
 DOCKERIMAGE="netdata/netdata"
 
@@ -37,4 +40,5 @@ docker run --name="$name" \
            --security-opt apparmor=unconfined \
            --network=lsio \
            --network-alias=netdata \
+           --hostname="$HOSTNAME" \
            "$DOCKERIMAGE"
