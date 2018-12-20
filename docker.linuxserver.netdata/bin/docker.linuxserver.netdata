@@ -11,9 +11,6 @@ fi
 
 oe_setup_addon "$name"
 
-# set hostname
-HOSTNAME=$(cat /proc/sys/kernel/hostname)
-
 # set docker image
 DOCKERIMAGE="netdata/netdata"
 
