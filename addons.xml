@@ -1,7 +1,198 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="docker.linuxserver.nextcloud"
-       name="Nextcloud (LinuxServer.io)"
+<addon id="docker.linuxserver.beets"
+       name="Beets (LinuxServer.io)"
+       version="1.0.7"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Beets in a docker container</summary>
+    <description>
+Beets is a music library manager and not, for the most part, a music player. It does include a simple player plugin and an experimental Web-based player, but it generally leaves actual sound-reproduction to specialized tools.
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.beets:
+-------------------------
+
+1.0.7
+- Support *elec
+
+1.0.6
+- Use the updater addon for image updates
+- Faster start on boot
+- Enable aarch64 image
+- Enable direct communication between containers
+
+1.0.5
+- Wait for network
+
+1.0.4
+- Fix timezone bug
+
+1.0.3
+- Add aarch64 support
+
+1.0.2
+- Fix port mapping typo
+
+1.0.1
+- Run as user nobody
+
+1.0.0
+- Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="docker.linuxserver.domoticz"
+       name="Domoticz (LinuxServer.io)"
+       version="1.0.2"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Domoticz in a docker container</summary>
+    <description>
+Domoticz is a Home Automation System that lets you monitor and configure various devices like: Lights, Switches, various sensors/meters like Temperature, Rain, Wind, UV, Electra, Gas, Water and much more. Notifications/Alerts can be sent to any mobile device.
+
+Notice: The first time it is started, the container generates DHPARAMS, which can take a while especially on low powered systems (up to 2 hours), during which time the webserver will not be up. Be patient.
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.domoticz:
+-----------------------------
+
+1.0.2
+- Support *elec
+
+1.0.1
+- Use updater addon for image updates
+- Faster start on boot
+- Enable aarch64 build
+- Enable direct communication between containers
+
+1.0.0
+- Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="docker.linuxserver.duckdns"
+       name="DuckDNS (LinuxServer.io)"
+       version="1.0.12"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>DuckDNS dynamic dns updater as a Docker container</summary>
+    <description>
+Duckdns is a free dynamic DNS service hosted on Amazon VPC. Unlike most other free dynamic DNS providers, DuckDNS accounts do not require periodic user action to keep them alive. Visit www.duckdns.org to register your domain.
+
+This docker container is brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+Please visit www.duckdns.org to get a custom url and token
+    </disclaimer>
+    <news>
+docker.linuxserver.duckdns:
+---------------------------
+
+1.0.12
+- Switch to multi-arch images
+
+1.0.11
+- Support *elec
+
+1.0.10
+- Open settings window during initial install
+
+1.0.9
+- Use updater addon for image updates
+- Faster start on boot
+- Enable aarch64 image
+
+1.0.8
+- Wait for network
+
+1.0.7
+- Fix timezone bug
+
+1.0.6
+- Added aarch64 support
+
+1.0.5
+- Update image links
+
+1.0.4
+- Change default settings so container doesn't continuously restart
+
+1.0.3
+- Run as user nobody
+
+1.0.2
+- Unified addon for x86_64 and arm
+
+1.0.1
+- Switch logging to local file for easy access
+
+1.0.0
+- Initial addon
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="docker.linuxserver.duplicati"
+       name="Duplicati (LinuxServer.io)"
        version="1.0.3"
        provider-name="LinuxServer.io">
   <requires>
@@ -14,11 +205,9 @@
     <provides></provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>Nextcloud in a docker container</summary>
+    <summary>Duplicati in a docker container</summary>
     <description>
-Nextcloud gives you access to all your files wherever you are.
-
-Where are your photos and documents? With Nextcloud you pick a server of your choice, at home, in a data center or at a provider. And that is where your files will be. Nextcloud runs on that server, protecting your data and giving you access from your desktop or mobile devices. Through Nextcloud you also access, sync and share your existing data on that FTP drive at the office, a Dropbox or a NAS you have at home.
+Duplicati works with standard protocols like FTP, SSH, WebDAV as well as popular services like Microsoft OneDrive, Amazon Cloud Drive and S3, Google Drive, box.com, Mega, hubiC and many others.
 
 This is a docker container brought to you by the LinuxServer.io team.
 Please visit https://linuxserver.io for more information.
@@ -26,20 +215,19 @@ Please visit https://linuxserver.io for more information.
     <disclaimer>
     </disclaimer>
     <news>
-docker.linuxserver.nextcloud:
+docker.linuxserver.duplicati:
 -----------------------------
 
 1.0.3
-- Support *elec
+- Switch to multi-arch images
 
 1.0.2
-- Use updater addon for image updates
-- Faster start on boot
-- Enable aarch64 build
-- Enable direct communication between containers
+- Support *elec
 
 1.0.1
-- Wait for network
+- Use updater addon to update images
+- Faster start on boot
+- Enable direct communication between containers
 
 1.0.0
 - Initial release
@@ -109,9 +297,9 @@ docker.linuxserver.emby:
   </extension>
 </addon>
 
-<addon id="docker.linuxserver.quassel-core"
-       name="Quassel Core (LinuxServer.io)"
-       version="1.0.6"
+<addon id="docker.linuxserver.heimdall"
+       name="Heimdall (LinuxServer.io)"
+       version="1.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -123,11 +311,9 @@ docker.linuxserver.emby:
     <provides></provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>Quassel Core in a docker container</summary>
+    <summary>Heimdall landing page in a docker container</summary>
     <description>
-Quassel IRC is a modern, cross-platform, distributed IRC client, meaning that one (or multiple) client(s) can attach to and detach from a central core.
-
-This container handles the IRC connection (quasselcore) and requires a desktop client (quasselclient) to be used and configured. It is designed to be always on and will keep your identity present in IRC even when your clients cannot be online. Backlog (history) is downloaded by your client upon reconnection allowing infinite scrollback through time.
+Heimdall is a way to organise all those links to your most used web sites and web applications in a simple way. Simplicity is the key to Heimdall. Why not use it as your browser start page? It even has the ability to include a search bar using either Google, Bing or DuckDuckGo.
 
 This is a docker container brought to you by the LinuxServer.io team.
 Please visit https://linuxserver.io for more information.
@@ -135,29 +321,95 @@ Please visit https://linuxserver.io for more information.
     <disclaimer>
     </disclaimer>
     <news>
-docker.linuxserver.quassel-core:
---------------------------------
+docker.linuxserver.heimdall:
+-------------------------
 
-1.0.6
+1.0.0
+- Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="docker.linuxserver.letsencrypt"
+       name="Nginx Letsencrypt (LinuxServer.io)"
+       version="1.0.12"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Nginx Letsencrypt in a docker container</summary>
+    <description>
+This container sets up an Nginx webserver and reverse proxy with php support and a built-in letsencrypt client that automates free SSL server certificate generation and renewal processes. It also contains fail2ban for intrusion prevention.
+
+***Port 443 on the router has to be forwarded to this machine.
+***Port 80 on the router has to be forwarded to this machine if using http validation.
+***During first run, dhparams are generated before the webserver is up, which may take over an hour especially on arm.
+
+For dns validation, go to the config folder and edit the relevant ini file under /config/dns-conf with your settings
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.letsencrypt:
+-------------------------------
+
+1.0.12
+- Add dns validation support for ovh
+
+1.0.11
 - Support *elec
 
-1.0.5
+1.0.10
+- Open settings window if first install
+- Silence docker stop error
+
+1.0.9
 - Use updater addon for image updates
 - Faster start on boot
-- Enable aarch64 build
 - Enable direct communication between containers
+- Enable aarch64 image
 
-1.0.4
+1.0.8
+- Add validation parameter
+- Add dns validation support
+- Add port 80 mapping (required for http validation, optional for dns)
+
+1.0.7
 - Wait for network
 
-1.0.3
+1.0.6
 - Fix timezone bug
 
-1.0.2
+1.0.5
 - Added aarch64 support
 
+1.0.4
+- Stall systemd if variables are not set
+
+1.0.3
+- Update dockerhub image links
+
+1.0.2
+- Change group to users
+
 1.0.1
-- Fix default settings
+- Change user to nobody
 
 1.0.0
 - Initial release
@@ -250,9 +502,9 @@ docker.linuxserver.mariadb:
   </extension>
 </addon>
 
-<addon id="docker.linuxserver.duckdns"
-       name="DuckDNS (LinuxServer.io)"
-       version="1.0.12"
+<addon id="docker.linuxserver.minisatip"
+       name="Minisatip (LinuxServer.io)"
+       version="1.0.9"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -264,60 +516,262 @@ docker.linuxserver.mariadb:
     <provides></provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>DuckDNS dynamic dns updater as a Docker container</summary>
+    <summary>Minisatip in a docker container</summary>
     <description>
-Duckdns is a free dynamic DNS service hosted on Amazon VPC. Unlike most other free dynamic DNS providers, DuckDNS accounts do not require periodic user action to keep them alive. Visit www.duckdns.org to register your domain.
+Minisatip is a multi-threaded satip server version 1.2 that runs under Linux and it was tested with DVB-S, DVB-S2, DVB-T, DVB-T2, DVB-C, DVB-C2, ATSC and ISDB-T cards.
 
-This docker container is brought to you by the LinuxServer.io team.
+This is a docker container brought to you by the LinuxServer.io team.
 Please visit https://linuxserver.io for more information.
     </description>
     <disclaimer>
-Please visit www.duckdns.org to get a custom url and token
     </disclaimer>
     <news>
-docker.linuxserver.duckdns:
----------------------------
-
-1.0.12
-- Switch to multi-arch images
-
-1.0.11
-- Support *elec
-
-1.0.10
-- Open settings window during initial install
+docker.linuxserver.minisatip:
+-----------------------------
 
 1.0.9
-- Use updater addon for image updates
-- Faster start on boot
-- Enable aarch64 image
+- Switch to multi-arch builds
 
 1.0.8
-- Wait for network
+- Support *elec
 
 1.0.7
-- Fix timezone bug
+- Use updater addon to update images
+- Faster start on boot
+- Enable aarch64 image
+- Enable direct communication between containers
 
 1.0.6
-- Added aarch64 support
+- Wait for network
 
 1.0.5
-- Update image links
+- Fix timezone bug
 
 1.0.4
-- Change default settings so container doesn't continuously restart
+- Added aarch64 support
 
 1.0.3
-- Run as user nobody
+- Fix default settings
 
 1.0.2
-- Unified addon for x86_64 and arm
+- Add device setting
 
 1.0.1
-- Switch logging to local file for easy access
+- Run as user nobody
 
 1.0.0
-- Initial addon
+- Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="docker.linuxserver.muximux"
+       name="Muximux (LinuxServer.io)"
+       version="1.0.5"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Muximux in a docker container</summary>
+    <description>
+Muximux is a lightweight portal to view and manage your HTPC apps without having to run anything more than a PHP enabled webserver. With Muximux you don't need to keep multiple tabs open, or bookmark the URL to all of your apps.
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.muximux:
+---------------------------
+
+1.0.5
+- Support *elec
+
+1.0.4
+- Use updater addon to update images
+- Faster start on boot
+- Enable aarch64 image
+- Enable direct communication between containers
+
+1.0.3
+- Wait for network
+
+1.0.2
+- Fix timezone bug
+
+1.0.1
+- Added aarch64 support
+
+1.0.0
+- Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="docker.linuxserver.netdata"
+       name="Netdata (LinuxServer.io)"
+       version="1.0.1"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Netdata in a docker container</summary>
+    <description>
+Netdata is distributed, real-time, performance and health monitoring for systems and applications. It is a highly optimized monitoring agent you install on all your systems and containers.
+
+This is a docker addon brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.netdata:
+---------------------------
+
+1.0.1
+- Set hostname to LibreELEC's
+
+1.0.0
+- Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="docker.linuxserver.nextcloud"
+       name="Nextcloud (LinuxServer.io)"
+       version="1.0.3"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Nextcloud in a docker container</summary>
+    <description>
+Nextcloud gives you access to all your files wherever you are.
+
+Where are your photos and documents? With Nextcloud you pick a server of your choice, at home, in a data center or at a provider. And that is where your files will be. Nextcloud runs on that server, protecting your data and giving you access from your desktop or mobile devices. Through Nextcloud you also access, sync and share your existing data on that FTP drive at the office, a Dropbox or a NAS you have at home.
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.nextcloud:
+-----------------------------
+
+1.0.3
+- Support *elec
+
+1.0.2
+- Use updater addon for image updates
+- Faster start on boot
+- Enable aarch64 build
+- Enable direct communication between containers
+
+1.0.1
+- Wait for network
+
+1.0.0
+- Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="docker.linuxserver.nginx"
+       name="Nginx (LinuxServer.io)"
+       version="1.0.5"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Nginx webserver in a docker container</summary>
+    <description>
+This container sets up an Nginx webserver and reverse proxy with ssl(self-signed) and php support. The config and web files reside on the /config folder mapping.
+
+It is best paired with the MariaDB docker addon.
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.nginx:
+-------------------------
+
+1.0.5
+- Switch to multi-arch images
+
+1.0.4
+- Support *elec
+
+1.0.3
+- Use updater addon for image updates
+- Faster start on boot
+- Enable aarch64 build
+- Enable direct communication between containers
+
+1.0.2
+- Change repo for armhf
+
+1.0.1
+- Wait for network
+
+1.0.0
+- Initial release
     </news>
     <platform>all</platform>
     <website>http://linuxserver.io/</website>
@@ -387,225 +841,8 @@ docker.linuxserver.oscam:
   </extension>
 </addon>
 
-<addon id="docker.linuxserver.heimdall"
-       name="Heimdall (LinuxServer.io)"
-       version="1.0.0"
-       provider-name="LinuxServer.io">
-  <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="service.system.docker" version="0.0.0" />
-    <import addon="docker.linuxserver.updater" version="0.0.0"/>
-  </requires>
-  <extension point="xbmc.service" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Heimdall landing page in a docker container</summary>
-    <description>
-Heimdall is a way to organise all those links to your most used web sites and web applications in a simple way. Simplicity is the key to Heimdall. Why not use it as your browser start page? It even has the ability to include a search bar using either Google, Bing or DuckDuckGo.
-
-This is a docker container brought to you by the LinuxServer.io team.
-Please visit https://linuxserver.io for more information.
-    </description>
-    <disclaimer>
-    </disclaimer>
-    <news>
-docker.linuxserver.heimdall:
--------------------------
-
-1.0.0
-- Initial release
-    </news>
-    <platform>all</platform>
-    <website>http://linuxserver.io/</website>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="docker.linuxserver.domoticz"
-       name="Domoticz (LinuxServer.io)"
-       version="1.0.2"
-       provider-name="LinuxServer.io">
-  <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="service.system.docker" version="0.0.0" />
-    <import addon="docker.linuxserver.updater" version="0.0.0"/>
-  </requires>
-  <extension point="xbmc.service" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Domoticz in a docker container</summary>
-    <description>
-Domoticz is a Home Automation System that lets you monitor and configure various devices like: Lights, Switches, various sensors/meters like Temperature, Rain, Wind, UV, Electra, Gas, Water and much more. Notifications/Alerts can be sent to any mobile device.
-
-Notice: The first time it is started, the container generates DHPARAMS, which can take a while especially on low powered systems (up to 2 hours), during which time the webserver will not be up. Be patient.
-
-This is a docker container brought to you by the LinuxServer.io team.
-Please visit https://linuxserver.io for more information.
-    </description>
-    <disclaimer>
-    </disclaimer>
-    <news>
-docker.linuxserver.domoticz:
------------------------------
-
-1.0.2
-- Support *elec
-
-1.0.1
-- Use updater addon for image updates
-- Faster start on boot
-- Enable aarch64 build
-- Enable direct communication between containers
-
-1.0.0
-- Initial release
-    </news>
-    <platform>all</platform>
-    <website>http://linuxserver.io/</website>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="docker.linuxserver.znc"
-       name="ZNC (LinuxServer.io)"
-       version="1.0.6"
-       provider-name="LinuxServer.io">
-  <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="service.system.docker" version="0.0.0" />
-    <import addon="docker.linuxserver.updater" version="0.0.0"/>
-  </requires>
-  <extension point="xbmc.service" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>ZNC in a docker container</summary>
-    <description>
-ZNC is an IRC network bouncer or BNC. It can detach the client from the actual IRC server, and also from selected channels. Multiple clients from different locations can connect to a single ZNC account simultaneously and therefore appear under the same nickname on IRC.
-
-***Default username:password are admin:admin (Change password ASAP)
-
-This is a docker container brought to you by the LinuxServer.io team.
-Please visit https://linuxserver.io for more information.
-    </description>
-    <disclaimer>
-    </disclaimer>
-    <news>
-docker.linuxserver.znc:
------------------------
-
-1.0.6
-- Support *elec
-
-1.0.5
-- Use updater addon for image updates
-- Faster start on boot
-- Enable aarch64 build
-- Enable direct communication between containers
-
-1.0.4
-- Wait for network
-
-1.0.3
-- Fix timezone bug
-
-1.0.2
-- Added aarch64 support
-
-1.0.1
-- Fix default settings
-
-1.0.0
-- Initial release
-    </news>
-    <platform>all</platform>
-    <website>http://linuxserver.io/</website>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="docker.linuxserver.minisatip"
-       name="Minisatip (LinuxServer.io)"
-       version="1.0.8"
-       provider-name="LinuxServer.io">
-  <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="service.system.docker" version="0.0.0" />
-    <import addon="docker.linuxserver.updater" version="0.0.0"/>
-  </requires>
-  <extension point="xbmc.service" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Minisatip in a docker container</summary>
-    <description>
-Minisatip is a multi-threaded satip server version 1.2 that runs under Linux and it was tested with DVB-S, DVB-S2, DVB-T, DVB-T2, DVB-C, DVB-C2, ATSC and ISDB-T cards.
-
-This is a docker container brought to you by the LinuxServer.io team.
-Please visit https://linuxserver.io for more information.
-    </description>
-    <disclaimer>
-    </disclaimer>
-    <news>
-docker.linuxserver.minisatip:
------------------------------
-
-1.0.8
-- Support *elec
-
-1.0.7
-- Use updater addon to update images
-- Faster start on boot
-- Enable aarch64 image
-- Enable direct communication between containers
-
-1.0.6
-- Wait for network
-
-1.0.5
-- Fix timezone bug
-
-1.0.4
-- Added aarch64 support
-
-1.0.3
-- Fix default settings
-
-1.0.2
-- Add device setting
-
-1.0.1
-- Run as user nobody
-
-1.0.0
-- Initial release
-    </news>
-    <platform>all</platform>
-    <website>http://linuxserver.io/</website>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="docker.linuxserver.portainer"
-       name="Portainer (LinuxServer.io)"
+<addon id="docker.linuxserver.photoshow"
+       name="Photoshow (LinuxServer.io)"
        version="1.0.5"
        provider-name="LinuxServer.io">
   <requires>
@@ -618,67 +855,9 @@ docker.linuxserver.minisatip:
     <provides></provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>Portainer as an addon</summary>
+    <summary>Photoshow in a docker container</summary>
     <description>
-Portainer is a simple management solution for Docker. It consists of a web UI that allows you to easily manage your Docker containers, images, networks and volumes.
-
-This addon uses the official Portainer docker images. Please visit https://portainer.io for app specific questions.
-Please visit https://linuxserver.io for info regarding this wrapper addon.
-
-Please use Portainer to manage only containers created through Portainer. Containers generated by other LinuxServer.io addons have automated mechanisms for starting and stopping and will not cooperate with Portainer.
-    </description>
-    <disclaimer>
-Please do not use portainer to manage other LinuxServer.io addon generated containers. Their status are automated.
-    </disclaimer>
-    <news>
-docker.linuxserver.portainer:
---------------------------
-
-1.0.5
-- Use updater addon to update image
-- Faster start on boot
-
-1.0.4
-- Wait for network
-
-1.0.3
-- Fix localtime for logs
-
-1.0.2
-- Switch to multi-arch image for latest
-
-1.0.1
-- Fix timezone bug
-
-1.0.0
-- Initial release
-    </news>
-    <platform>all</platform>
-    <website>http://linuxserver.io/</website>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="docker.linuxserver.tvheadend"
-       name="TVheadend (LinuxServer.io)"
-       version="1.0.6"
-       provider-name="LinuxServer.io">
-  <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="service.system.docker" version="0.0.0" />
-    <import addon="docker.linuxserver.updater" version="0.0.0"/>
-  </requires>
-  <extension point="xbmc.service" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>TVheadend in a docker container</summary>
-    <description>
-Tvheadend is a TV streaming server and recorder for Linux, FreeBSD and Android supporting DVB-S, DVB-S2, DVB-C, DVB-T, ATSC, ISDB-T, IPTV, SAT>IP and HDHomeRun as input sources. Tvheadend offers the HTTP (VLC, MPlayer), HTSP (Kodi, Movian) and SAT>IP streaming. Multiple EPG sources are supported (over-the-air DVB and ATSC including OpenTV DVB extensions, XMLTV, PyXML).
+Photoshow is gallery software at its easiest, it doesn't even require a database.
 
 This is a docker container brought to you by the LinuxServer.io team.
 Please visit https://linuxserver.io for more information.
@@ -686,29 +865,26 @@ Please visit https://linuxserver.io for more information.
     <disclaimer>
     </disclaimer>
     <news>
-docker.linuxserver.tvheadend:
+docker.linuxserver.photoshow:
 -----------------------------
 
-1.0.6
+1.0.5
 - Support *elec
 
-1.0.5
+1.0.4
 - Use updater addon for image updates
 - Faster start on boot
 - Enable aarch64 build
 - Enable direct communication between containers
 
-1.0.4
+1.0.3
 - Wait for network
 
-1.0.3
+1.0.2
 - Fix timezone bug
 
-1.0.2
-- Added aarch64 support
-
 1.0.1
-- Fix config location
+- Added aarch64 support
 
 1.0.0
 - Initial release
@@ -789,6 +965,190 @@ docker.linuxserver.pi-hole:
   </extension>
 </addon>
 
+<addon id="docker.linuxserver.plex"
+       name="Plex (LinuxServer.io)"
+       version="1.0.8"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Plex Media Server as a Docker container</summary>
+    <description>
+Plex organizes video, music and photos from personal media libraries and streams them to smart televisions, streaming boxes and mobile devices.
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.plex:
+------------------------
+
+1.0.8
+- Add mount point for photos
+
+1.0.7
+- Support *elec
+
+1.0.6
+- Use updater addon for image updates
+- Faster start on boot
+
+1.0.5
+- Wait for network
+
+1.0.4
+- Fix timezone bug
+
+1.0.3
+- Added aarch64 support
+
+1.0.2
+- Run as user nobody
+
+1.0.1
+- Unified addon for x86_64 and arm
+
+1.0.0
+- Initial addon
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="docker.linuxserver.portainer"
+       name="Portainer (LinuxServer.io)"
+       version="1.0.5"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Portainer as an addon</summary>
+    <description>
+Portainer is a simple management solution for Docker. It consists of a web UI that allows you to easily manage your Docker containers, images, networks and volumes.
+
+This addon uses the official Portainer docker images. Please visit https://portainer.io for app specific questions.
+Please visit https://linuxserver.io for info regarding this wrapper addon.
+
+Please use Portainer to manage only containers created through Portainer. Containers generated by other LinuxServer.io addons have automated mechanisms for starting and stopping and will not cooperate with Portainer.
+    </description>
+    <disclaimer>
+Please do not use portainer to manage other LinuxServer.io addon generated containers. Their status are automated.
+    </disclaimer>
+    <news>
+docker.linuxserver.portainer:
+--------------------------
+
+1.0.5
+- Use updater addon to update image
+- Faster start on boot
+
+1.0.4
+- Wait for network
+
+1.0.3
+- Fix localtime for logs
+
+1.0.2
+- Switch to multi-arch image for latest
+
+1.0.1
+- Fix timezone bug
+
+1.0.0
+- Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="docker.linuxserver.quassel-core"
+       name="Quassel Core (LinuxServer.io)"
+       version="1.0.6"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Quassel Core in a docker container</summary>
+    <description>
+Quassel IRC is a modern, cross-platform, distributed IRC client, meaning that one (or multiple) client(s) can attach to and detach from a central core.
+
+This container handles the IRC connection (quasselcore) and requires a desktop client (quasselclient) to be used and configured. It is designed to be always on and will keep your identity present in IRC even when your clients cannot be online. Backlog (history) is downloaded by your client upon reconnection allowing infinite scrollback through time.
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.quassel-core:
+--------------------------------
+
+1.0.6
+- Support *elec
+
+1.0.5
+- Use updater addon for image updates
+- Faster start on boot
+- Enable aarch64 build
+- Enable direct communication between containers
+
+1.0.4
+- Wait for network
+
+1.0.3
+- Fix timezone bug
+
+1.0.2
+- Added aarch64 support
+
+1.0.1
+- Fix default settings
+
+1.0.0
+- Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
 <addon id="docker.linuxserver.resilio-sync"
        name="Resilio Sync (LinuxServer.io)"
        version="1.0.6"
@@ -848,9 +1208,9 @@ docker.linuxserver.resilio-sync:
   </extension>
 </addon>
 
-<addon id="docker.linuxserver.plex"
-       name="Plex (LinuxServer.io)"
-       version="1.0.8"
+<addon id="docker.linuxserver.tautulli"
+       name="Tautulli (LinuxServer.io)"
+       version="1.0.1"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -862,9 +1222,9 @@ docker.linuxserver.resilio-sync:
     <provides></provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>Plex Media Server as a Docker container</summary>
+    <summary>Tautulli in a docker container</summary>
     <description>
-Plex organizes video, music and photos from personal media libraries and streams them to smart televisions, streaming boxes and mobile devices.
+Tautulli is a python based web application for monitoring, analytics and notifications for Plex Media Server.
 
 This is a docker container brought to you by the LinuxServer.io team.
 Please visit https://linuxserver.io for more information.
@@ -872,36 +1232,14 @@ Please visit https://linuxserver.io for more information.
     <disclaimer>
     </disclaimer>
     <news>
-docker.linuxserver.plex:
-------------------------
-
-1.0.8
-- Add mount point for photos
-
-1.0.7
-- Support *elec
-
-1.0.6
-- Use updater addon for image updates
-- Faster start on boot
-
-1.0.5
-- Wait for network
-
-1.0.4
-- Fix timezone bug
-
-1.0.3
-- Added aarch64 support
-
-1.0.2
-- Run as user nobody
+docker.linuxserver.tautulli:
+--------------------------
 
 1.0.1
-- Unified addon for x86_64 and arm
+- Support *elec
 
 1.0.0
-- Initial addon
+- Initial release
     </news>
     <platform>all</platform>
     <website>http://linuxserver.io/</website>
@@ -969,9 +1307,9 @@ docker.linuxserver.thelounge:
   </extension>
 </addon>
 
-<addon id="docker.linuxserver.netdata"
-       name="Netdata (LinuxServer.io)"
-       version="1.0.1"
+<addon id="docker.linuxserver.tvheadend"
+       name="TVheadend (LinuxServer.io)"
+       version="1.0.6"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -983,51 +1321,9 @@ docker.linuxserver.thelounge:
     <provides></provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>Netdata in a docker container</summary>
+    <summary>TVheadend in a docker container</summary>
     <description>
-Netdata is distributed, real-time, performance and health monitoring for systems and applications. It is a highly optimized monitoring agent you install on all your systems and containers.
-
-This is a docker addon brought to you by the LinuxServer.io team.
-Please visit https://linuxserver.io for more information.
-    </description>
-    <disclaimer>
-    </disclaimer>
-    <news>
-docker.linuxserver.netdata:
----------------------------
-
-1.0.1
-- Set hostname to LibreELEC's
-
-1.0.0
-- Initial release
-    </news>
-    <platform>all</platform>
-    <website>http://linuxserver.io/</website>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="docker.linuxserver.muximux"
-       name="Muximux (LinuxServer.io)"
-       version="1.0.5"
-       provider-name="LinuxServer.io">
-  <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="service.system.docker" version="0.0.0" />
-    <import addon="docker.linuxserver.updater" version="0.0.0"/>
-  </requires>
-  <extension point="xbmc.service" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Muximux in a docker container</summary>
-    <description>
-Muximux is a lightweight portal to view and manage your HTPC apps without having to run anything more than a PHP enabled webserver. With Muximux you don't need to keep multiple tabs open, or bookmark the URL to all of your apps.
+Tvheadend is a TV streaming server and recorder for Linux, FreeBSD and Android supporting DVB-S, DVB-S2, DVB-C, DVB-T, ATSC, ISDB-T, IPTV, SAT>IP and HDHomeRun as input sources. Tvheadend offers the HTTP (VLC, MPlayer), HTSP (Kodi, Movian) and SAT>IP streaming. Multiple EPG sources are supported (over-the-air DVB and ATSC including OpenTV DVB extensions, XMLTV, PyXML).
 
 This is a docker container brought to you by the LinuxServer.io team.
 Please visit https://linuxserver.io for more information.
@@ -1035,26 +1331,29 @@ Please visit https://linuxserver.io for more information.
     <disclaimer>
     </disclaimer>
     <news>
-docker.linuxserver.muximux:
----------------------------
+docker.linuxserver.tvheadend:
+-----------------------------
 
-1.0.5
+1.0.6
 - Support *elec
 
-1.0.4
-- Use updater addon to update images
+1.0.5
+- Use updater addon for image updates
 - Faster start on boot
-- Enable aarch64 image
+- Enable aarch64 build
 - Enable direct communication between containers
 
-1.0.3
+1.0.4
 - Wait for network
 
-1.0.2
+1.0.3
 - Fix timezone bug
 
-1.0.1
+1.0.2
 - Added aarch64 support
+
+1.0.1
+- Fix config location
 
 1.0.0
 - Initial release
@@ -1068,141 +1367,37 @@ docker.linuxserver.muximux:
   </extension>
 </addon>
 
-<addon id="docker.linuxserver.duplicati"
-       name="Duplicati (LinuxServer.io)"
+<addon id="docker.linuxserver.updater"
+       name="Docker Image Updater (LinuxServer.io)"
        version="1.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
-    <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
   <extension point="xbmc.service" library="default.py">
     <provides></provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>Duplicati in a docker container</summary>
+    <summary>Docker image updater for LinuxServer.io addons</summary>
     <description>
-Duplicati works with standard protocols like FTP, SSH, WebDAV as well as popular services like Microsoft OneDrive, Amazon Cloud Drive and S3, Google Drive, box.com, Mega, hubiC and many others.
+This addon sets up a cron job to update the docker images for LinuxServer.io docker container addons once a week and performs an image clean up once a day.
 
-This is a docker container brought to you by the LinuxServer.io team.
+This is an addon brought to you by the LinuxServer.io team.
 Please visit https://linuxserver.io for more information.
     </description>
     <disclaimer>
     </disclaimer>
     <news>
-docker.linuxserver.duplicati:
------------------------------
-
-1.0.2
-- Support *elec
-
-1.0.1
-- Use updater addon to update images
-- Faster start on boot
-- Enable direct communication between containers
-
-1.0.0
-- Initial release
-    </news>
-    <platform>all</platform>
-    <website>http://linuxserver.io/</website>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="docker.linuxserver.tautulli"
-       name="Tautulli (LinuxServer.io)"
-       version="1.0.1"
-       provider-name="LinuxServer.io">
-  <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="service.system.docker" version="0.0.0" />
-    <import addon="docker.linuxserver.updater" version="0.0.0"/>
-  </requires>
-  <extension point="xbmc.service" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Tautulli in a docker container</summary>
-    <description>
-Tautulli is a python based web application for monitoring, analytics and notifications for Plex Media Server.
-
-This is a docker container brought to you by the LinuxServer.io team.
-Please visit https://linuxserver.io for more information.
-    </description>
-    <disclaimer>
-    </disclaimer>
-    <news>
-docker.linuxserver.tautulli:
---------------------------
-
-1.0.1
-- Support *elec
-
-1.0.0
-- Initial release
-    </news>
-    <platform>all</platform>
-    <website>http://linuxserver.io/</website>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="docker.linuxserver.nginx"
-       name="Nginx (LinuxServer.io)"
-       version="1.0.5"
-       provider-name="LinuxServer.io">
-  <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="service.system.docker" version="0.0.0" />
-    <import addon="docker.linuxserver.updater" version="0.0.0"/>
-  </requires>
-  <extension point="xbmc.service" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Nginx webserver in a docker container</summary>
-    <description>
-This container sets up an Nginx webserver and reverse proxy with ssl(self-signed) and php support. The config and web files reside on the /config folder mapping.
-
-It is best paired with the MariaDB docker addon.
-
-This is a docker container brought to you by the LinuxServer.io team.
-Please visit https://linuxserver.io for more information.
-    </description>
-    <disclaimer>
-    </disclaimer>
-    <news>
-docker.linuxserver.nginx:
+docker.linuxserver.updater:
 -------------------------
 
-1.0.5
-- Switch to multi-arch images
-
-1.0.4
-- Support *elec
-
-1.0.3
-- Use updater addon for image updates
-- Faster start on boot
-- Enable aarch64 build
-- Enable direct communication between containers
-
 1.0.2
-- Change repo for armhf
+- Add container and image prune options to settings dialog
 
 1.0.1
-- Wait for network
+- Fix prune.sh script
 
 1.0.0
 - Initial release
@@ -1270,9 +1465,9 @@ docker.linuxserver.webgrabplus:
   </extension>
 </addon>
 
-<addon id="docker.linuxserver.photoshow"
-       name="Photoshow (LinuxServer.io)"
-       version="1.0.5"
+<addon id="docker.linuxserver.znc"
+       name="ZNC (LinuxServer.io)"
+       version="1.0.6"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -1284,9 +1479,11 @@ docker.linuxserver.webgrabplus:
     <provides></provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>Photoshow in a docker container</summary>
+    <summary>ZNC in a docker container</summary>
     <description>
-Photoshow is gallery software at its easiest, it doesn't even require a database.
+ZNC is an IRC network bouncer or BNC. It can detach the client from the actual IRC server, and also from selected channels. Multiple clients from different locations can connect to a single ZNC account simultaneously and therefore appear under the same nickname on IRC.
+
+***Default username:password are admin:admin (Change password ASAP)
 
 This is a docker container brought to you by the LinuxServer.io team.
 Please visit https://linuxserver.io for more information.
@@ -1294,220 +1491,29 @@ Please visit https://linuxserver.io for more information.
     <disclaimer>
     </disclaimer>
     <news>
-docker.linuxserver.photoshow:
------------------------------
+docker.linuxserver.znc:
+-----------------------
 
-1.0.5
+1.0.6
 - Support *elec
 
-1.0.4
+1.0.5
 - Use updater addon for image updates
 - Faster start on boot
 - Enable aarch64 build
 - Enable direct communication between containers
 
-1.0.3
+1.0.4
 - Wait for network
 
-1.0.2
+1.0.3
 - Fix timezone bug
 
-1.0.1
+1.0.2
 - Added aarch64 support
 
-1.0.0
-- Initial release
-    </news>
-    <platform>all</platform>
-    <website>http://linuxserver.io/</website>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="docker.linuxserver.updater"
-       name="Docker Image Updater (LinuxServer.io)"
-       version="1.0.2"
-       provider-name="LinuxServer.io">
-  <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="service.system.docker" version="0.0.0" />
-  </requires>
-  <extension point="xbmc.service" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Docker image updater for LinuxServer.io addons</summary>
-    <description>
-This addon sets up a cron job to update the docker images for LinuxServer.io docker container addons once a week and performs an image clean up once a day.
-
-This is an addon brought to you by the LinuxServer.io team.
-Please visit https://linuxserver.io for more information.
-    </description>
-    <disclaimer>
-    </disclaimer>
-    <news>
-docker.linuxserver.updater:
--------------------------
-
-1.0.2
-- Add container and image prune options to settings dialog
-
 1.0.1
-- Fix prune.sh script
-
-1.0.0
-- Initial release
-    </news>
-    <platform>all</platform>
-    <website>http://linuxserver.io/</website>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="docker.linuxserver.beets"
-       name="Beets (LinuxServer.io)"
-       version="1.0.7"
-       provider-name="LinuxServer.io">
-  <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="service.system.docker" version="0.0.0" />
-    <import addon="docker.linuxserver.updater" version="0.0.0"/>
-  </requires>
-  <extension point="xbmc.service" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Beets in a docker container</summary>
-    <description>
-Beets is a music library manager and not, for the most part, a music player. It does include a simple player plugin and an experimental Web-based player, but it generally leaves actual sound-reproduction to specialized tools.
-
-This is a docker container brought to you by the LinuxServer.io team.
-Please visit https://linuxserver.io for more information.
-    </description>
-    <disclaimer>
-    </disclaimer>
-    <news>
-docker.linuxserver.beets:
--------------------------
-
-1.0.7
-- Support *elec
-
-1.0.6
-- Use the updater addon for image updates
-- Faster start on boot
-- Enable aarch64 image
-- Enable direct communication between containers
-
-1.0.5
-- Wait for network
-
-1.0.4
-- Fix timezone bug
-
-1.0.3
-- Add aarch64 support
-
-1.0.2
-- Fix port mapping typo
-
-1.0.1
-- Run as user nobody
-
-1.0.0
-- Initial release
-    </news>
-    <platform>all</platform>
-    <website>http://linuxserver.io/</website>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="docker.linuxserver.letsencrypt"
-       name="Nginx Letsencrypt (LinuxServer.io)"
-       version="1.0.12"
-       provider-name="LinuxServer.io">
-  <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="service.system.docker" version="0.0.0" />
-    <import addon="docker.linuxserver.updater" version="0.0.0"/>
-  </requires>
-  <extension point="xbmc.service" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Nginx Letsencrypt in a docker container</summary>
-    <description>
-This container sets up an Nginx webserver and reverse proxy with php support and a built-in letsencrypt client that automates free SSL server certificate generation and renewal processes. It also contains fail2ban for intrusion prevention.
-
-***Port 443 on the router has to be forwarded to this machine.
-***Port 80 on the router has to be forwarded to this machine if using http validation.
-***During first run, dhparams are generated before the webserver is up, which may take over an hour especially on arm.
-
-For dns validation, go to the config folder and edit the relevant ini file under /config/dns-conf with your settings
-
-This is a docker container brought to you by the LinuxServer.io team.
-Please visit https://linuxserver.io for more information.
-    </description>
-    <disclaimer>
-    </disclaimer>
-    <news>
-docker.linuxserver.letsencrypt:
--------------------------------
-
-1.0.12
-- Add dns validation support for ovh
-
-1.0.11
-- Support *elec
-
-1.0.10
-- Open settings window if first install
-- Silence docker stop error
-
-1.0.9
-- Use updater addon for image updates
-- Faster start on boot
-- Enable direct communication between containers
-- Enable aarch64 image
-
-1.0.8
-- Add validation parameter
-- Add dns validation support
-- Add port 80 mapping (required for http validation, optional for dns)
-
-1.0.7
-- Wait for network
-
-1.0.6
-- Fix timezone bug
-
-1.0.5
-- Added aarch64 support
-
-1.0.4
-- Stall systemd if variables are not set
-
-1.0.3
-- Update dockerhub image links
-
-1.0.2
-- Change group to users
-
-1.0.1
-- Change user to nobody
+- Fix default settings
 
 1.0.0
 - Initial release
