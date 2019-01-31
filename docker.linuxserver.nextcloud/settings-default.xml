@@ -2,4 +2,5 @@
     <setting id="V_config" value="/storage/.kodi/userdata/addon_data/docker.linuxserver.nextcloud/config" />
     <setting id="V_data"   value="/storage/.kodi/userdata/addon_data/docker.linuxserver.nextcloud/data" />
     <setting id="P_port"   value="443" />
+    <setting id="E_extraparam"   value="" />
 </settings>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="docker.linuxserver.nextcloud"
        name="Nextcloud (LinuxServer.io)"
-       version="1.0.3"
+       version="1.0.4"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -19,6 +19,12 @@ Nextcloud gives you access to all your files wherever you are.
 
 Where are your photos and documents? With Nextcloud you pick a server of your choice, at home, in a data center or at a provider. And that is where your files will be. Nextcloud runs on that server, protecting your data and giving you access from your desktop or mobile devices. Through Nextcloud you also access, sync and share your existing data on that FTP drive at the office, a Dropbox or a NAS you have at home.
 
+Nextcloud in this container runs as nobody:users (65534:100). Make sure that your files are accessible by that user. The addon automatically attempts to chown the data folder, but that operation may fail on mounted shares.
+
+If you'd like to add more mount points, you can use the optional docker parameters in the addons settings to do so. To map Libreelec folder /storage/Pictures in the container as /Pictures, add the following to that setting:
+-v /storage/Pictures:/Pictures
+Then you can access that folder at /Pictures in nextcloud.
+
 This is a docker container brought to you by the LinuxServer.io team.
 Please visit https://linuxserver.io for more information.
     </description>
@@ -27,6 +33,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.nextcloud:
 -----------------------------
+
+1.0.4
+- Added optional docker parameters field to addon settings to allow for additional mount points
 
 1.0.3
 - Support *elec
