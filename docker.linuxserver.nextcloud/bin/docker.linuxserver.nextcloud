@@ -34,8 +34,16 @@ fi
 
 docker rm "$name" 2>/dev/null
 docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
+
 mkdir -p "$V_data"
-chown -R nobody:users "$V_data"
+if [ ! "$(stat -c %u $V_data)" = "65534" ]; then
+  echo "attempting chown nobody:users on $V_data"
+  chown -R nobody:users "$V_data" 2>&1 >/dev/null
+  echo "chown attempt completed, moving on"
+else
+  echo "skipping chown, make sure the folder $V_data is accessible by the user nobody:users (65534:100)"
+fi
+
 docker run --name="$name" \
            --rm \
            -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
@@ -47,4 +55,5 @@ docker run --name="$name" \
            -p "$P_port":443 \
            --network=lsio \
            --network-alias=nextcloud \
+           ${E_extraparam} \
            "$DOCKERIMAGE":latest

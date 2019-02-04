@@ -5,5 +5,6 @@
       <setting label="30005" type="folder" id="V_config"  default="/storage/.kodi/userdata/addon_data/docker.linuxserver.nextcloud/config" option="writeable" />
       <setting label="30006" type="folder" id="V_data"    default="/storage/.kodi/userdata/addon_data/docker.linuxserver.nextcloud/data"   option="writeable" />
       <setting label="30008" type="number" id="P_port"    default="443" />
+      <setting label="30009" type="text"   id="E_extraparam"    default="" />
    </category>
 </settings>
