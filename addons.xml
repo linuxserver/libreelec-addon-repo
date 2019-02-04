@@ -338,7 +338,7 @@ docker.linuxserver.heimdall:
 
 <addon id="docker.linuxserver.letsencrypt"
        name="Nginx Letsencrypt (LinuxServer.io)"
-       version="1.0.12"
+       version="1.1.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -368,6 +368,11 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.letsencrypt:
 -------------------------------
+
+1.1.0
+- Switch to multi-arch builds
+- Add duckdns validation
+- Wail until settings are entered before starting container
 
 1.0.12
 - Add dns validation support for ovh

@@ -11,21 +11,22 @@ fi
 
 oe_setup_addon "$name"
 
-#get arch variable from os
-LEARCHVAR=`sed -e '/EELEC_ARCH/ !d' -e 's/[^.]*\.\([^"]*\).*/\1/' /etc/os-release`
+#set docker image
+DOCKERIMAGE="linuxserver/letsencrypt"
 
-#figure out which docker hub image to use
-if [ "$LEARCHVAR" = "x86_64" ]; then
-  DOCKERIMAGE="linuxserver/letsencrypt"
-elif [ "$LEARCHVAR" = "arm" ]; then
-  DOCKERIMAGE="lsioarmhf/letsencrypt"
-elif [ "$LEARCHVAR" = "aarch64" ]; then
-  DOCKERIMAGE="lsioarmhf/letsencrypt-aarch64"
-fi
+while [ "$E_url" = "" ]; do
+  echo "Complete addon settings to continue"
+  sleep 60
+done
 
 #figure out if dns plugin should be selected
 if [ "$E_validation" = "dns" ]; then
   OPTDNSPLUGIN="-e DNSPLUGIN=${E_dnsplugin}"
+fi
+
+#add duckdns token if duckdns validation is selected
+if [ "$E_validation" = "duckdns" ]; then
+  OPTDNSPLUGIN="-e DUCKDNSTOKEN=${E_duckdnstoken}"
 fi
 
 #figure out if email should be used
