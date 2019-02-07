@@ -50,9 +50,13 @@ msgid "DNS plugin"
 msgstr ""
 
 msgctxt "#30015"
-msgid "E-mail notifications?"
+msgid "DuckDNS token"
 msgstr ""
 
 msgctxt "#30016"
+msgid "E-mail notifications?"
+msgstr ""
+
+msgctxt "#30017"
 msgid "Email"
 msgstr ""
