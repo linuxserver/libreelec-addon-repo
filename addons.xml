@@ -430,7 +430,7 @@ docker.linuxserver.letsencrypt:
 
 <addon id="docker.linuxserver.mariadb"
        name="MariaDB (LinuxServer.io)"
-       version="1.0.11"
+       version="1.1.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -458,6 +458,10 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.mariadb:
 ---------------------------
+
+1.1.0
+- Switch to multi-arch builds
+- Fix opening settings window on first install
 
 1.0.11
 - Support *elec
