@@ -985,7 +985,7 @@ docker.linuxserver.pi-hole:
 
 <addon id="docker.linuxserver.plex"
        name="Plex (LinuxServer.io)"
-       version="1.0.8"
+       version="1.1.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -1009,6 +1009,11 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.plex:
 ------------------------
+
+1.1.0
+- Switch to multi-arch builds
+- fix chown logic of external data
+- add support for specific versions
 
 1.0.8
 - Add mount point for photos
