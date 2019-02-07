@@ -681,7 +681,7 @@ docker.linuxserver.netdata:
 
 <addon id="docker.linuxserver.nextcloud"
        name="Nextcloud (LinuxServer.io)"
-       version="1.0.4"
+       version="1.0.5"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -713,6 +713,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.nextcloud:
 -----------------------------
+
+1.0.5
+- Fixed the chown logic (busybox stat doesn't support -c)
 
 1.0.4
 - Added optional docker parameters field to addon settings to allow for additional mount points
