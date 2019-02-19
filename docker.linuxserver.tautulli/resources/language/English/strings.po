@@ -18,6 +18,6 @@ msgid "Map plex /logs"
 msgstr ""
 
 msgctxt "#30008"
-msgid "Listening port for webgui"
+msgid "WebUI port"
 msgstr ""
 

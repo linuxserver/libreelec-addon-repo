@@ -26,7 +26,15 @@ fi
 docker rm "$name" 2>/dev/null
 docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
 mkdir -p "$V_backups" "$V_source"
-chown -R nobody:users "$V_backups" "$V_source"
+for i in "$V_backups" "$V_source"; do
+  if [ ! "$(ls -ld $i | awk '{print $3}')" = "nobody" ]; then
+    echo "attempting chown nobody:users on $i"
+    chown -R nobody:users "$i" 2>&1 >/dev/null
+    echo "chown attempt completed, moving on"
+  else
+    echo "skipping chown, make sure the folder $i is accessible by the user nobody:users (65534:100)"
+  fi
+done
 docker run --name="$name" \
            --rm \
            -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
@@ -39,4 +47,5 @@ docker run --name="$name" \
            -p "$P_port":8200 \
            --network=lsio \
            --network-alias=duplicati \
+           ${E_extraparam} \
            "$DOCKERIMAGE":latest
