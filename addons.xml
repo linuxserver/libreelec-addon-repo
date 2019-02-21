@@ -2,7 +2,7 @@
 <addons>
 <addon id="docker.linuxserver.beets"
        name="Beets (LinuxServer.io)"
-       version="1.0.7"
+       version="1.1.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -26,6 +26,10 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.beets:
 -------------------------
+
+1.1.0
+- Switch to multi-arch image
+- Improve chown logic for data folders
 
 1.0.7
 - Support *elec
@@ -65,7 +69,7 @@ docker.linuxserver.beets:
 
 <addon id="docker.linuxserver.domoticz"
        name="Domoticz (LinuxServer.io)"
-       version="1.0.2"
+       version="1.1.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -92,6 +96,9 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.domoticz:
 -----------------------------
 
+1.1.0
+- Switch to multi-arch image
+
 1.0.2
 - Support *elec
 
@@ -115,7 +122,7 @@ docker.linuxserver.domoticz:
 
 <addon id="docker.linuxserver.duckdns"
        name="DuckDNS (LinuxServer.io)"
-       version="1.0.12"
+       version="1.1.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -140,6 +147,9 @@ Please visit www.duckdns.org to get a custom url and token
     <news>
 docker.linuxserver.duckdns:
 ---------------------------
+
+1.1.0
+- Fix opening of gui settings during first start
 
 1.0.12
 - Switch to multi-arch images
@@ -193,7 +203,7 @@ docker.linuxserver.duckdns:
 
 <addon id="docker.linuxserver.duplicati"
        name="Duplicati (LinuxServer.io)"
-       version="1.0.3"
+       version="1.1.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -217,6 +227,10 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.duplicati:
 -----------------------------
+
+1.1.0
+- Add support for additional docker arguments
+- Improve chown logic for data folders
 
 1.0.3
 - Switch to multi-arch images
@@ -243,7 +257,7 @@ docker.linuxserver.duplicati:
 
 <addon id="docker.linuxserver.emby"
        name="Emby (LinuxServer.io)"
-       version="1.0.5"
+       version="1.1.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -267,6 +281,9 @@ Please visit https://linuxserver.io for more info on the wrapper addon.
     <news>
 docker.linuxserver.emby:
 ------------------------
+
+1.1.0
+- Improve chown logic
 
 1.0.5
 - Support *elec
@@ -582,7 +599,7 @@ docker.linuxserver.minisatip:
 
 <addon id="docker.linuxserver.muximux"
        name="Muximux (LinuxServer.io)"
-       version="1.0.5"
+       version="1.1.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -606,6 +623,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.muximux:
 ---------------------------
+
+1.1.0
+- Switch to multi-arch image
 
 1.0.5
 - Support *elec
@@ -681,7 +701,7 @@ docker.linuxserver.netdata:
 
 <addon id="docker.linuxserver.nextcloud"
        name="Nextcloud (LinuxServer.io)"
-       version="1.0.5"
+       version="1.1.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -713,6 +733,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.nextcloud:
 -----------------------------
+
+1.1.0
+- Switch to multi-arch image
 
 1.0.5
 - Fixed the chown logic (busybox stat doesn't support -c)
@@ -864,7 +887,7 @@ docker.linuxserver.oscam:
 
 <addon id="docker.linuxserver.photoshow"
        name="Photoshow (LinuxServer.io)"
-       version="1.0.5"
+       version="1.1.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -888,6 +911,10 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.photoshow:
 -----------------------------
+
+1.1.0
+- Switch to multi-arch image
+- Improve chown logic
 
 1.0.5
 - Support *elec
@@ -1115,7 +1142,7 @@ docker.linuxserver.portainer:
 
 <addon id="docker.linuxserver.quassel-core"
        name="Quassel Core (LinuxServer.io)"
-       version="1.0.6"
+       version="1.1.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -1141,6 +1168,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.quassel-core:
 --------------------------------
+
+1.1.0
+- Switch to multi-arch image
 
 1.0.6
 - Support *elec
@@ -1177,7 +1207,7 @@ docker.linuxserver.quassel-core:
 
 <addon id="docker.linuxserver.resilio-sync"
        name="Resilio Sync (LinuxServer.io)"
-       version="1.0.6"
+       version="1.1.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -1201,6 +1231,10 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.resilio-sync:
 --------------------------------
+
+1.1.0
+- Switch to multi-arch image
+- Improve chown logic
 
 1.0.6
 - Support *elec
@@ -1236,7 +1270,7 @@ docker.linuxserver.resilio-sync:
 
 <addon id="docker.linuxserver.tautulli"
        name="Tautulli (LinuxServer.io)"
-       version="1.0.1"
+       version="1.1.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -1261,6 +1295,9 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.tautulli:
 --------------------------
 
+1.1.0
+- Switch to multi-arch image
+
 1.0.1
 - Support *elec
 
@@ -1278,7 +1315,7 @@ docker.linuxserver.tautulli:
 
 <addon id="docker.linuxserver.thelounge"
        name="TheLounge (LinuxServer.io)"
-       version="1.0.5"
+       version="1.1.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -1302,6 +1339,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.thelounge:
 -----------------------------
+
+1.1.0
+- switch to multi-arch image
 
 1.0.5
 - Support *elec
@@ -1335,7 +1375,7 @@ docker.linuxserver.thelounge:
 
 <addon id="docker.linuxserver.tvheadend"
        name="TVheadend (LinuxServer.io)"
-       version="1.0.6"
+       version="1.1.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -1359,6 +1399,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.tvheadend:
 -----------------------------
+
+1.1.0
+- switch to multi-arch image
 
 1.0.6
 - Support *elec
@@ -1493,7 +1536,7 @@ docker.linuxserver.webgrabplus:
 
 <addon id="docker.linuxserver.znc"
        name="ZNC (LinuxServer.io)"
-       version="1.0.6"
+       version="1.1.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -1519,6 +1562,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.znc:
 -----------------------
+
+1.1.0
+- Switch to multi-arch
 
 1.0.6
 - Support *elec

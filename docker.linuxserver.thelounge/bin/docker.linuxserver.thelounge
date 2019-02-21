@@ -11,17 +11,8 @@ fi
 
 oe_setup_addon "$name"
 
-#get arch variable from os
-LEARCHVAR=`sed -e '/EELEC_ARCH/ !d' -e 's/[^.]*\.\([^"]*\).*/\1/' /etc/os-release`
-
-#figure out which docker hub image to use
-if [ "$LEARCHVAR" = "x86_64" ]; then
-  DOCKERIMAGE="linuxserver/thelounge"
-elif [ "$LEARCHVAR" = "arm" ]; then
-  DOCKERIMAGE="lsioarmhf/thelounge"
-elif [ "$LEARCHVAR" = "aarch64" ]; then
-  DOCKERIMAGE="lsioarmhf/thelounge-aarch64"
-fi
+# set docker image
+DOCKERIMAGE="linuxserver/thelounge"
 
 # add image to cron updater list
 if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh ]; then

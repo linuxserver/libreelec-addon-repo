@@ -11,17 +11,8 @@ fi
 
 oe_setup_addon "$name"
 
-#get arch variable from os
-LEARCHVAR=`sed -e '/EELEC_ARCH/ !d' -e 's/[^.]*\.\([^"]*\).*/\1/' /etc/os-release`
-
-#figure out which docker hub image to use
-if [ "$LEARCHVAR" = "x86_64" ]; then
-  DOCKERIMAGE="linuxserver/photoshow"
-elif [ "$LEARCHVAR" = "arm" ]; then
-  DOCKERIMAGE="lsioarmhf/photoshow"
-elif [ "$LEARCHVAR" = "aarch64" ]; then
-  DOCKERIMAGE="lsioarmhf/photoshow-aarch64"
-fi
+# set docker image
+DOCKERIMAGE="linuxserver/photoshow"
 
 # add image to cron updater list
 if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh ]; then
@@ -35,7 +26,15 @@ fi
 docker rm "$name" 2>/dev/null
 docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
 mkdir -p "$V_pictures" "$V_thumbs"
-chown -R nobody:users "$V_pictures" "$V_thumbs"
+for i in "$V_pictures" "$V_thumbs"; do
+  if [ ! "$(ls -ld $i | awk '{print $3}')" = "nobody" ]; then
+    echo "attempting chown nobody:users on $i"
+    chown -R nobody:users "$i" 2>&1 >/dev/null
+    echo "chown attempt completed, moving on"
+  else
+    echo "skipping chown, make sure the folder $i is accessible by the user nobody:users (65534:100)"
+  fi
+done
 docker run --name="$name" \
            --rm \
            -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \

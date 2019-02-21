@@ -34,7 +34,15 @@ fi
 docker rm "$name" 2>/dev/null
 docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
 mkdir -p "$V_data_tvshows" "$V_data_movies"
-chown -R nobody:users "$V_data_tvshows" "$V_data_movies"
+for i in "$V_data_tvshows" "$V_data_movies"; do
+  if [ ! "$(ls -ld $i | awk '{print $3}')" = "nobody" ]; then
+    echo "attempting chown nobody:users on $i"
+    chown -R nobody:users "$i" 2>&1 >/dev/null
+    echo "chown attempt completed, moving on"
+  else
+    echo "skipping chown, make sure the folder $i is accessible by the user nobody:users (65534:100)"
+  fi
+done
 docker run --name="$name" \
            --rm \
            --net=host \

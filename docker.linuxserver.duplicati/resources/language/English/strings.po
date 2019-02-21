@@ -24,3 +24,7 @@ msgstr ""
 msgctxt "#30009"
 msgid "Port"
 msgstr ""
+
+msgctxt "#30010"
+msgid "Additional docker arguments"
+msgstr ""
