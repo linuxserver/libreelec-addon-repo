@@ -203,7 +203,7 @@ docker.linuxserver.duckdns:
 
 <addon id="docker.linuxserver.duplicati"
        name="Duplicati (LinuxServer.io)"
-       version="1.1.0"
+       version="1.1.1"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -227,6 +227,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.duplicati:
 -----------------------------
+
+1.1.1
+- Fix typo in source location setting
 
 1.1.0
 - Add support for additional docker arguments
