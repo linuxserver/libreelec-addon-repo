@@ -8,5 +8,6 @@
       <setting label="30008" type="number" id="P_port"       default="9981" enable="eq(-1,true)" />
       <setting label="30009" type="number" id="P_port2"      default="9982" enable="eq(-2,true)" />
       <setting label="30010" type="text"   id="D_device"     default="/dev/dvb" enable="eq(-3,true)" />
+      <setting label="30012" type="text"   id="E_PARAMS"    default="" />
    </category>
 </settings>

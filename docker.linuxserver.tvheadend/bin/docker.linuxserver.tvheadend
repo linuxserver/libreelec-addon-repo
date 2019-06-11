@@ -43,4 +43,5 @@ docker run --name="$name" \
            -v "$V_config":/config \
            -v "$V_record":/recordings \
            ${DOCKEROPTS} \
+           ${E_PARAMS} \
            "$DOCKERIMAGE":"$E_version"

@@ -6,4 +6,5 @@
     <setting id="P_port"     value="9981" />
     <setting id="P_port2"    value="9982" />
     <setting id="D_device"   value="/dev/dvb" />
+    <setting id="E_PARAMS"  value="" />
 </settings>
