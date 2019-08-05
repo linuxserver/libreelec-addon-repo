@@ -1,0 +1,38 @@
+msgid ""
+msgstr ""
+
+msgctxt "#30000"
+msgid "Configuration"
+msgstr ""
+
+msgctxt "#30001"
+msgid "Note: Kodi remote sources can not be used as Docker volume host sources"
+msgstr ""
+
+msgctxt "#30005"
+msgid "Map config folder"
+msgstr ""
+
+msgctxt "#30006"
+msgid "Map data folder"
+msgstr ""
+
+msgctxt "#30007"
+msgid "http gui port"
+msgstr ""
+
+msgctxt "#30008"
+msgid "initial set up gui port (3000)"
+msgstr ""
+
+msgctxt "#30009"
+msgid "Port 53 must be open on LibreELEC for dns service"
+msgstr ""
+
+msgctxt "#30010"
+msgid "Ports 67 & 68 must be open if DHCP is enabled"
+msgstr ""
+
+msgctxt "#30011"
+msgid "Enable DHCP"
+msgstr ""
