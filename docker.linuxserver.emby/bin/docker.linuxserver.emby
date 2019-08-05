@@ -19,7 +19,7 @@ if [ "$LEARCHVAR" = "x86_64" ]; then
   DOCKERIMAGE="emby/embyserver"
   $E_vaapi="--device /dev/dri/renderD128"
 elif [ "$LEARCHVAR" = "arm" ] || [ "$LEARCHVAR" = "aarch64" ]; then
-  DOCKERIMAGE="emby/embyserver_arm32v7_neon"
+  DOCKERIMAGE="emby/embyserver_arm32v7"
 fi
 
 # add image to cron updater list
