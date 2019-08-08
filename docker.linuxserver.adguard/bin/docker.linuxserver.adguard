@@ -11,6 +11,18 @@ fi
 
 oe_setup_addon "$name"
 
+#get arch variable from os
+LEARCHVAR=`sed -e '/EELEC_ARCH/ !d' -e 's/[^.]*\.\([^"]*\).*/\1/' /etc/os-release`
+
+#figure out which docker hub image to use
+if [ "$LEARCHVAR" = "x86_64" ]; then
+  DOCKERIMAGETAG="latest"
+elif [ "$LEARCHVAR" = "arm" ]; then
+  DOCKERIMAGETAG="armhf-latest"
+else
+  DOCKERIMAGETAG="arm64-latest"
+fi
+
 # set docker image
 DOCKERIMAGE="adguard/adguardhome"
 
@@ -25,7 +37,7 @@ if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.s
 fi
 
 if ! grep -q "$DOCKERIMAGE" /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh; then
-  echo "/storage/.kodi/addons/service.system.docker/bin/docker pull $DOCKERIMAGE" >> /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
+  echo "/storage/.kodi/addons/service.system.docker/bin/docker pull ${DOCKERIMAGE}:${DOCKERIMAGETAG}" >> /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
 fi
 
 docker rm "$name" 2>/dev/null
@@ -45,4 +57,4 @@ docker run --name="$name" \
            ${DHCP_ENABLE} \
            --network=lsio \
            --network-alias=adguard \
-           "$DOCKERIMAGE":latest
+           "$DOCKERIMAGE":"$DOCKERIMAGETAG"
