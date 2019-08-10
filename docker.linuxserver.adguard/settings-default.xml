@@ -1,0 +1,7 @@
+<settings>
+    <setting id="V_config" value="/storage/.kodi/userdata/addon_data/docker.linuxserver.adguard/config" />
+    <setting id="V_data"   value="/storage/.kodi/userdata/addon_data/docker.linuxserver.adguard/data" />
+    <setting id="P_port"   value="80" />
+    <setting id="P_port2"  value="3000" />
+    <setting id="E_dhcp"   value="false" />
+</settings>

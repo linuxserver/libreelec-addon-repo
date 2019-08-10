@@ -1,0 +1,60 @@
+#!/bin/sh
+
+name="$(basename $0)"
+. /etc/profile
+
+if [ -f /storage/.cache/timezone ]; then
+ . /storage/.cache/timezone
+else
+ TIMEZONE="America/New_York"
+fi
+
+oe_setup_addon "$name"
+
+#get arch variable from os
+LEARCHVAR=`sed -e '/EELEC_ARCH/ !d' -e 's/[^.]*\.\([^"]*\).*/\1/' /etc/os-release`
+
+#figure out which docker hub image to use
+if [ "$LEARCHVAR" = "x86_64" ]; then
+  DOCKERIMAGETAG="latest"
+elif [ "$LEARCHVAR" = "arm" ]; then
+  DOCKERIMAGETAG="armhf-latest"
+else
+  DOCKERIMAGETAG="arm64-latest"
+fi
+
+# set docker image
+DOCKERIMAGE="adguard/adguardhome"
+
+# map ports for DHCP if enabled
+if [ "$E_dhcp" = "true" ]; then
+  DHCP_ENABLE="-p 67:67/udp -p 68:68/tcp -p 68:68/udp"
+fi
+
+# add image to cron updater list
+if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh ]; then
+  sleep 10
+fi
+
+if ! grep -q "$DOCKERIMAGE" /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh; then
+  echo "/storage/.kodi/addons/service.system.docker/bin/docker pull ${DOCKERIMAGE}:${DOCKERIMAGETAG}" >> /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
+fi
+
+docker rm "$name" 2>/dev/null
+docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
+docker run --name="$name" \
+           --rm \
+           -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
+           -e PUID="65534" \
+           -e PGID="100" \
+           -e TZ="$TIMEZONE" \
+           -v "$V_config":/opt/adguardhome/conf \
+           -v "$V_data":/opt/adguardhome/work \
+           -p "$P_port":80 \
+           -p "$P_port2":3000 \
+           -p 53:53 \
+           -p 53:53/udp \
+           ${DHCP_ENABLE} \
+           --network=lsio \
+           --network-alias=adguard \
+           "$DOCKERIMAGE":"$DOCKERIMAGETAG"

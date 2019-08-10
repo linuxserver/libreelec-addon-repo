@@ -1,0 +1,20 @@
+[Unit]
+Description=%p container
+Requires=service.system.docker.service
+After=service.system.docker.service
+Requires=network-online.service
+After=network-online.service
+Requires=docker.linuxserver.updater.service
+After=docker.linuxserver.updater.service
+
+[Service]
+Restart=always
+RestartSec=10s
+StartLimitInterval=86400
+StartLimitBurst=3
+TimeoutStartSec=0
+ExecStart=/bin/sh /storage/.kodi/addons/%p/bin/%p
+ExecStop=/bin/sh /storage/.kodi/addons/%p/bin/stop
+
+[Install]
+WantedBy=multi-user.target
