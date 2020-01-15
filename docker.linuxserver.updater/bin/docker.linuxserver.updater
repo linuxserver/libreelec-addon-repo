@@ -36,5 +36,3 @@ fi
 
 sleep 600
 /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
-
-while :; do sleep 2073600; done

@@ -2,9 +2,10 @@
 Description=%p container
 Requires=service.system.docker.service
 After=service.system.docker.service
+After=cron.service
 
 [Service]
-Restart=always
+Restart=on-failure
 RestartSec=10s
 StartLimitInterval=86400
 StartLimitBurst=3
