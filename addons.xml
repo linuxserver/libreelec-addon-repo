@@ -1495,7 +1495,7 @@ docker.linuxserver.tvheadend:
 
 <addon id="docker.linuxserver.updater"
        name="Docker Image Updater (LinuxServer.io)"
-       version="1.0.3"
+       version="1.0.4"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -1518,6 +1518,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.updater:
 -------------------------
+
+1.0.4
+- Fix settings menu
 
 1.0.3
 - Wait for cron to start first
