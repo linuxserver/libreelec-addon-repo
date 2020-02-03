@@ -2,4 +2,7 @@
     <setting id="V_config" value="/storage/.kodi/userdata/addon_data/docker.linuxserver.mariadb/config" />
     <setting id="P_port" value="3306" />
     <setting id="E_password" value="" />
+    <setting id="E_mysqldatabase" value="" />
+    <setting id="E_mysqluser" value="" />
+    <setting id="E_mysqlpassword" value="" />
 </settings>

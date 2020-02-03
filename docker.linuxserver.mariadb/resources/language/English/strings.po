@@ -17,14 +17,30 @@ msgctxt "#30006"
 msgid "Listening port"
 msgstr ""
 
-msgctxt "#30008"
-msgid "Note: Mysql won't start unless a root password is set below"
-msgstr ""
-
 msgctxt "#30009"
-msgid "Password can only be set during creation of mysql library, changing it here later will have no effect. You can change it later through the mysql interface"
+msgid "Click for important info on root password"
 msgstr ""
 
 msgctxt "#30010"
 msgid "Mysql root password"
+msgstr ""
+
+msgctxt "#30015"
+msgid "OPTIONAL DB/User creation"
+msgstr ""
+
+msgctxt "#30016"
+msgid "Click for important info on DB/User creation"
+msgstr ""
+
+msgctxt "#30020"
+msgid "Database name"
+msgstr ""
+
+msgctxt "#30021"
+msgid "User name"
+msgstr ""
+
+msgctxt "#30022"
+msgid "User password"
 msgstr ""
