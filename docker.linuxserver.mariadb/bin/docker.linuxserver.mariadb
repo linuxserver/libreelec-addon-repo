@@ -39,6 +39,9 @@ docker run --name="$name" \
            -e PGID="100" \
            -e TZ="$TIMEZONE" \
            -e MYSQL_ROOT_PASSWORD="$E_password" \
+           -e MYSQL_DATABASE="$E_mysqldatabase" \
+           -e MYSQL_USER="$E_mysqluser" \
+           -e MYSQL_PASSWORD="$E_mysqlpassword" \
            -v "$V_config":/config \
            -p "$P_port":3306 \
            --network=lsio \

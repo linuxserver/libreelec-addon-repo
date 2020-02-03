@@ -4,9 +4,12 @@
       <setting label="30001" type="lsep" />
       <setting label="30005" type="folder" id="V_config"       default="/storage/.kodi/userdata/addon_data/docker.linuxserver.mariadb/config"  option="writeable" />
       <setting label="30006" type="number" id="P_port"         default="3306" />
-      <setting label="30007" type="sep" />
-      <setting label="30008" type="lsep" />
-      <setting label="30009" type="lsep" />
+      <setting label="30009" type="action" action="Notification(Root Password,Mariadb will not start unless a root password longer than 4 characters is entered. Once set the password can not be changed through changing this setting,20000)" />
       <setting label="30010" type="text"   id="E_password"     default="" option="hidden" />
+      <setting label="30015" type="lsep" />
+      <setting label="30016" type="action" action="Notification(DB/USER creation,Database and User are only created during first start of the container with no existing data,20000)" />
+      <setting label="30020" type="text" id="E_mysqldatabase"  default="" />
+      <setting label="30021" type="text" id="E_mysqluser"      default="" />
+      <setting label="30022" type="text" id="E_mysqlpassword"  default="" option="hidden" />
    </category>
 </settings>
