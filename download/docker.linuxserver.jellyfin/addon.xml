@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="docker.linuxserver.jellyfin"
        name="Jellyfin (LinuxServer.io)"
-       version="1.0.0"
+       version="1.0.1"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -24,6 +24,9 @@ Please visit https://linuxserver.io for more info on this image and addon.
     <news>
 docker.linuxserver.jellyfin:
 ------------------------
+
+1.0.1
+- Fix openmax detection
 
 1.0.0
 - Initial release

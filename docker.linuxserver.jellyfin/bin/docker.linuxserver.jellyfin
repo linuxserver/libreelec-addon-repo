@@ -20,10 +20,10 @@ if [ "$D_vaapi" = "true" ] && [ -d "/dev/dri" ]; then
 elif [ "$D_vaapi" = "true" ] && [ ! -d "/dev/dri" ]; then
   echo "/dev/dri not found, skipping vaapi hw transcode"
 fi
-if [ "$D_openmax" = "true" ] && [ -d "/dev/vchiq" ]; then
+if [ "$D_openmax" = "true" ] && [ -c "/dev/vchiq" ]; then
   chmod g+rw /dev/vchiq /opt/vc/lib/libopenmaxil.so /opt/vc/lib/libbcm_host.so
   D_openmax_args="--device /dev/vchiq:/dev/vchiq -v /opt/vc/lib/libopenmaxil.so:/opt/vc/lib/libopenmaxil.so -v /opt/vc/lib/libbcm_host.so:/opt/vc/lib/libbcm_host.so"
-elif [ "$D_openmax" = "true" ] && [ ! -d "/dev/vchiq" ]; then
+elif [ "$D_openmax" = "true" ] && [ ! -c "/dev/vchiq" ]; then
   echo "/dev/vchiq not found, skipping openmax hw transcode"
 fi
 
