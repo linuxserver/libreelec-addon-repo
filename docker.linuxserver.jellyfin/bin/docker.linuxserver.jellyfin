@@ -1,0 +1,66 @@
+#!/bin/sh
+
+name="$(basename $0)"
+. /etc/profile
+
+if [ -f /storage/.cache/timezone ]; then
+ . /storage/.cache/timezone
+else
+ TIMEZONE="America/New_York"
+fi
+
+oe_setup_addon "$name"
+
+#set image name
+DOCKERIMAGE="linuxserver/jellyfin"
+
+#set hw transcode options
+if [ "$D_vaapi" = "true" ] && [ -d "/dev/dri" ]; then
+  D_vaapi_args="--device /dev/dri:/dev/dri"
+elif [ "$D_vaapi" = "true" ] && [ ! -d "/dev/dri" ]; then
+  echo "/dev/dri not found, skipping vaapi hw transcode"
+fi
+if [ "$D_openmax" = "true" ] && [ -c "/dev/vchiq" ]; then
+  chmod g+rw /dev/vchiq /opt/vc/lib/libopenmaxil.so /opt/vc/lib/libbcm_host.so
+  D_openmax_args="--device /dev/vchiq:/dev/vchiq -v /opt/vc/lib/libopenmaxil.so:/opt/vc/lib/libopenmaxil.so -v /opt/vc/lib/libbcm_host.so:/opt/vc/lib/libbcm_host.so"
+elif [ "$D_openmax" = "true" ] && [ ! -c "/dev/vchiq" ]; then
+  echo "/dev/vchiq not found, skipping openmax hw transcode"
+fi
+
+# add image to cron updater list
+if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh ]; then
+  sleep 10
+fi
+
+if ! grep -q "$DOCKERIMAGE" /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh; then
+  echo "/storage/.kodi/addons/service.system.docker/bin/docker pull $DOCKERIMAGE" >> /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
+fi
+
+docker rm "$name" 2>/dev/null
+docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
+mkdir -p "$V_data_tvshows" "$V_data_movies"
+for i in "$V_data_tvshows" "$V_data_movies"; do
+  if [ ! "$(ls -ld $i | awk '{print $3}')" = "nobody" ]; then
+    echo "attempting chown nobody:users on $i"
+    chown -R nobody:users "$i" 2>&1 >/dev/null
+    echo "chown attempt completed, moving on"
+  else
+    echo "skipping chown, make sure the folder $i is accessible by the user nobody:users (65534:100)"
+  fi
+done
+docker run --name="$name" \
+           --rm \
+           --net=lsio \
+           -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
+           -e UID="65534" \
+           -e GID="100" \
+           -e GIDLIST="39" \
+           -e TZ="$TIMEZONE" \
+           -p "$P_port":8096 \
+           -v "$V_config":/config \
+           -v "$V_data_tvshows":/data/tvshows \
+           -v "$V_data_movies":/data/movies \
+           $D_vaapi_args \
+           $D_openmax_args \
+           $E_additional \
+           "$DOCKERIMAGE":latest
