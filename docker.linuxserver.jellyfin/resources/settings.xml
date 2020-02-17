@@ -3,7 +3,8 @@
    <category   label="30000">
       <setting label="30001" type="lsep" />
       <setting label="30005" type="folder" id="V_config"       default="/storage/.kodi/userdata/addon_data/docker.linuxserver.jellyfin" option="writeable" />
-      <setting label="30011" type="number" id="P_port"         default="8096" />
+      <setting label="30011" type="bool"   id="E_net_host"     default="false" />
+      <setting label="30012" type="number" id="P_port"         default="8096" enable="eq(-1,false)" />
       <setting label="30006" type="folder" id="V_data_tvshows" default="/storage/tvshows"                                               option="writeable" />
       <setting label="30007" type="folder" id="V_data_movies"  default="/storage/videos"                                                option="writeable" />
       <setting label="30008" type="bool"   id="D_vaapi"        default="false" />
