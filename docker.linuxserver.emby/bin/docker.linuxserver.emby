@@ -11,15 +11,27 @@ fi
 
 oe_setup_addon "$name"
 
-#get arch variable from os
-LEARCHVAR=`sed -e '/EELEC_ARCH/ !d' -e 's/[^.]*\.\([^"]*\).*/\1/' /etc/os-release`
+#set docker image
+DOCKERIMAGE="linuxserver/emby"
 
-#figure out which docker hub image to use
-if [ "$LEARCHVAR" = "x86_64" ]; then
-  DOCKERIMAGE="emby/embyserver"
-  $E_vaapi="--device /dev/dri/renderD128"
-elif [ "$LEARCHVAR" = "arm" ] || [ "$LEARCHVAR" = "aarch64" ]; then
-  DOCKERIMAGE="emby/embyserver_arm32v7"
+#set hw transcode options
+if [ "$D_vaapi" = "true" ] && [ -d "/dev/dri" ]; then
+  D_vaapi_args="--device /dev/dri:/dev/dri"
+elif [ "$D_vaapi" = "true" ] && [ ! -d "/dev/dri" ]; then
+  echo "/dev/dri not found, skipping vaapi hw transcode"
+fi
+if [ "$D_openmax" = "true" ] && [ -c "/dev/vchiq" ]; then
+  chmod g+rw /dev/vchiq /opt/vc/lib/libopenmaxil.so /opt/vc/lib/libbcm_host.so
+  D_openmax_args="--device /dev/vchiq:/dev/vchiq -v /opt/vc/lib/libopenmaxil.so:/opt/vc/lib/libopenmaxil.so -v /opt/vc/lib/libbcm_host.so:/opt/vc/lib/libbcm_host.so"
+elif [ "$D_openmax" = "true" ] && [ ! -c "/dev/vchiq" ]; then
+  echo "/dev/vchiq not found, skipping openmax hw transcode"
+fi
+
+#set networking
+if [ "$E_net_host" = "true" ]; then
+  E_net_arg="--net=host"
+else
+  E_net_arg="--net=lsio"
 fi
 
 # add image to cron updater list
@@ -45,15 +57,16 @@ for i in "$V_data_tvshows" "$V_data_movies"; do
 done
 docker run --name="$name" \
            --rm \
-           --net=host \
+           $E_net_arg \
            -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
-           -e UID="65534" \
-           -e GID="100" \
-           -e GIDLIST="39" \
+           -e PUID="65534" \
+           -e PGID="100" \
            -e TZ="$TIMEZONE" \
+           -p "$P_port":8096 \
            -v "$V_config":/config \
            -v "$V_data_tvshows":/data/tvshows \
            -v "$V_data_movies":/data/movies \
-           $E_vaapi \
+           $D_vaapi_args \
+           $D_openmax_args \
            $E_additional \
            "$DOCKERIMAGE":latest

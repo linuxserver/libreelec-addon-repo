@@ -34,5 +34,9 @@ msgid "Additional docker parameters (optional)"
 msgstr ""
 
 msgctxt "#30011"
+msgid "Use host networking"
+msgstr ""
+
+msgctxt "#30012"
 msgid "Http gui port"
 msgstr ""

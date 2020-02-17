@@ -1,6 +1,7 @@
 <settings>
     <setting id="V_config"       value="/storage/.kodi/userdata/addon_data/docker.linuxserver.jellyfin" />
     <setting id="P_port"         value="8096" />
+    <setting id="E_net_host"     value="false" />
     <setting id="V_data_movies"  value="/storage/videos" />
     <setting id="V_data_tvshows" value="/storage/tvshows" />
     <setting id="D_vaapi"        value="false" />

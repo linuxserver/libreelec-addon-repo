@@ -27,6 +27,13 @@ elif [ "$D_openmax" = "true" ] && [ ! -c "/dev/vchiq" ]; then
   echo "/dev/vchiq not found, skipping openmax hw transcode"
 fi
 
+#set networking
+if [ "$E_net_host" = "true" ]; then
+  E_net_arg="--net=host"
+else
+  E_net_arg="--net=lsio"
+fi
+
 # add image to cron updater list
 if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh ]; then
   sleep 10
@@ -50,11 +57,10 @@ for i in "$V_data_tvshows" "$V_data_movies"; do
 done
 docker run --name="$name" \
            --rm \
-           --net=lsio \
+           $E_net_arg \
            -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
-           -e UID="65534" \
-           -e GID="100" \
-           -e GIDLIST="39" \
+           -e PUID="65534" \
+           -e PGID="100" \
            -e TZ="$TIMEZONE" \
            -p "$P_port":8096 \
            -v "$V_config":/config \

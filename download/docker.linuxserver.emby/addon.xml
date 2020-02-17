@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="docker.linuxserver.emby"
        name="Emby (LinuxServer.io)"
-       version="1.1.1"
+       version="1.1.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -26,8 +26,13 @@ Please visit https://linuxserver.io for more info on the wrapper addon.
 docker.linuxserver.emby:
 ------------------------
 
+1.1.2
+- Switch to  Linuxserver.io images
+- Default to bridge network with optional host networking
+- Enable OpenMax for hw transcoding on arm devices
+
 1.1.1
- - Replace deprecated NEON variant with the regular arm32v7 image (now contains NEON optimizations)
+- Replace deprecated NEON variant with the regular arm32v7 image (now contains NEON optimizations)
 
 1.1.0
 - Improve chown logic
