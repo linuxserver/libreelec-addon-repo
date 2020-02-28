@@ -27,6 +27,7 @@
 # *  - (assumed) zips reside in folder "download"
 # *  - md5 checksum creation added for zips
 # *  - Skip moving files and zip creation if zip file for the same version already exists
+# *  - alphabetical sorting
 
 """ addons.xml generator """
 
@@ -65,7 +66,7 @@ class Generator:
  
     def _generate_addons_file(self):
         # addon list
-        addons = os.listdir(".")
+        addons = sorted(os.listdir("."))
         # final addons text
         addons_xml = u("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<addons>\n")
         # loop thru and add each addons addon.xml file
@@ -143,7 +144,7 @@ if (__name__ == "__main__"):
         print('Starting zip file creation...')
         rootdir = sys.path[0]
         zipsdir = rootdir + os.sep + 'download'   
-        filesinrootdir = os.listdir(rootdir)
+        filesinrootdir = sorted(os.listdir(rootdir))
         
         for x in filesinrootdir:
             if re.search("^(context|plugin|script|service|skin|repository|docker)" , x) and not re.search('.zip', x):
@@ -152,7 +153,7 @@ if (__name__ == "__main__"):
                 zipfilenamelastpart = zipfilename[len(zipfilename) - 4:]
                 zipsfolder = os.path.normpath(os.path.join('download', x)) + os.sep
                 foldertozip = rootdir + os.sep + x
-                filesinfoldertozip = os.listdir(foldertozip)        
+                filesinfoldertozip = sorted(os.listdir(foldertozip))        
                 # #check if download folder exists
                 if not os.path.exists(zipsfolder):
                     os.makedirs(zipsfolder)
