@@ -4,7 +4,6 @@
     <setting id="E_net_host"     value="false" />
     <setting id="V_data_movies"  value="/storage/videos" />
     <setting id="V_data_tvshows" value="/storage/tvshows" />
-    <setting id="D_vaapi"        value="false" />
-    <setting id="D_openmax"      value="false" />
     <setting id="E_additional"   value="" />
+    <setting id="E_beta"         value="false" />
 </settings>

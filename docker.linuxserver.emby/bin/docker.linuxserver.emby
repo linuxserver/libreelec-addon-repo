@@ -14,17 +14,32 @@ oe_setup_addon "$name"
 #set docker image
 DOCKERIMAGE="linuxserver/emby"
 
+#set image tag
+if [ "$E_beta" = "true" ]; then
+  IMAGETAG="beta"
+else
+  IMAGETAG="latest"
+fi
+
 #set hw transcode options
-if [ "$D_vaapi" = "true" ] && [ -d "/dev/dri" ]; then
+if [ -d "/dev/dri" ]; then
   D_vaapi_args="--device /dev/dri:/dev/dri"
-elif [ "$D_vaapi" = "true" ] && [ ! -d "/dev/dri" ]; then
+  echo "/dev/dri found, mapping device"
+else
   echo "/dev/dri not found, skipping vaapi hw transcode"
 fi
-if [ "$D_openmax" = "true" ] && [ -c "/dev/vchiq" ]; then
-  chmod g+rw /dev/vchiq /opt/vc/lib/libopenmaxil.so /opt/vc/lib/libbcm_host.so
+if [ -c "/dev/vchiq" ] && [ -f "/opt/vc/lib/libopenmaxil.so" ] && [ -f "/opt/vc/lib/libbcm_host.so" ]; then
+  echo "OpenMax (omx) libraries and device found, enabling"
+  chmod g+rw /dev/vchiq
   D_openmax_args="--device /dev/vchiq:/dev/vchiq -v /opt/vc/lib/libopenmaxil.so:/opt/vc/lib/libopenmaxil.so -v /opt/vc/lib/libbcm_host.so:/opt/vc/lib/libbcm_host.so"
-elif [ "$D_openmax" = "true" ] && [ ! -c "/dev/vchiq" ]; then
-  echo "/dev/vchiq not found, skipping openmax hw transcode"
+else
+  echo "OpenMax (omx) libraries and device not found, skipping"
+fi
+if [ -c "/dev/video10" ] && [ -c "/dev/video11" ] && [ -c "/dev/video12" ]; then
+  echo "V4L2 devices found, enabling"
+  D_v4l2_args="--device /dev/video10 --device /dev/video11 --device /dev/video12"
+else
+  echo "V4L2 devices not found, skipping"
 fi
 
 #set networking
@@ -58,6 +73,7 @@ done
 docker run --name="$name" \
            --rm \
            $E_net_arg \
+           --hostname="Emby-LibreELEC" \
            -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
            -e PUID="65534" \
            -e PGID="100" \
@@ -68,5 +84,6 @@ docker run --name="$name" \
            -v "$V_data_movies":/data/movies \
            $D_vaapi_args \
            $D_openmax_args \
+           $D_v4l2_args \
            $E_additional \
-           "$DOCKERIMAGE":latest
+           "$DOCKERIMAGE":"$IMAGETAG"

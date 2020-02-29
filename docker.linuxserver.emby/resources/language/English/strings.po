@@ -21,14 +21,6 @@ msgctxt "#30007"
 msgid "Map /data/movies"
 msgstr ""
 
-msgctxt "#30008"
-msgid "Enable iGPU HW transcode (x86 only)"
-msgstr ""
-
-msgctxt "#30009"
-msgid "Enable OpenMax HW transcode"
-msgstr ""
-
 msgctxt "#30010"
 msgid "Additional docker parameters (optional)"
 msgstr ""
@@ -39,4 +31,8 @@ msgstr ""
 
 msgctxt "#30012"
 msgid "Http gui port"
+msgstr ""
+
+msgctxt "#30013"
+msgid "Install beta build"
 msgstr ""
