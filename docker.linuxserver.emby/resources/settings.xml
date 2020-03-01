@@ -7,8 +7,7 @@
       <setting label="30012" type="number" id="P_port"         default="8096" enable="eq(-1,false)" />
       <setting label="30006" type="folder" id="V_data_tvshows" default="/storage/tvshows"                                           option="writeable" />
       <setting label="30007" type="folder" id="V_data_movies"  default="/storage/videos"                                            option="writeable" />
-      <setting label="30008" type="bool"   id="D_vaapi"        default="false" />
-      <setting label="30009" type="bool"   id="D_openmax"      default="false" />
       <setting label="30010" type="text"   id="E_additional"   default="" />
+      <setting label="30013" type="bool"   id="E_beta"         default="false" />
    </category>
 </settings>

@@ -304,7 +304,7 @@ docker.linuxserver.duplicati:
 
 <addon id="docker.linuxserver.emby"
        name="Emby (LinuxServer.io)"
-       version="1.1.2"
+       version="1.2.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -320,8 +320,7 @@ docker.linuxserver.duplicati:
     <description>
 Emby organizes video, music and photos from personal media libraries and streams them to smart televisions, streaming boxes and mobile devices.
 
-This addon uses the official Emby Server docker images. Please visit https://emby.media for emby related support.
-Please visit https://linuxserver.io for more info on the wrapper addon.
+Please visit https://linuxserver.io for more info on this image and addon.
     </description>
     <disclaimer>
     </disclaimer>
@@ -329,10 +328,15 @@ Please visit https://linuxserver.io for more info on the wrapper addon.
 docker.linuxserver.emby:
 ------------------------
 
+1.2.0
+- Add beta builds as an option
+- Enable V4L2 for hw transcoding on Raspberry Pi
+- Remove settings for vaapi and openmax, auto detect instead
+
 1.1.2
 - Switch to  Linuxserver.io images
 - Default to bridge network with optional host networking
-- Enable OpenMax for hw transcoding on arm devices
+- Enable OpenMax for hw transcoding on Raspberry Pi
 
 1.1.1
 - Replace deprecated NEON variant with the regular arm32v7 image (now contains NEON optimizations)
