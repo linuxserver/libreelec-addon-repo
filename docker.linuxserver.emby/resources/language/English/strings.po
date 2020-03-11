@@ -36,3 +36,19 @@ msgstr ""
 msgctxt "#30013"
 msgid "Install beta build"
 msgstr ""
+
+msgctxt "#30020"
+msgid "Advanced Settings (there be dragons)"
+msgstr ""
+
+msgctxt "#30021"
+msgid "UID/GID override (0/root not supported)"
+msgstr ""
+
+msgctxt "#30022"
+msgid "UID"
+msgstr ""
+
+msgctxt "#30023"
+msgid "GID"
+msgstr ""

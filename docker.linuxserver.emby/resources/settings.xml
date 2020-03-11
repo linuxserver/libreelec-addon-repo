@@ -9,5 +9,9 @@
       <setting label="30007" type="folder" id="V_data_movies"  default="/storage/videos"                                            option="writeable" />
       <setting label="30010" type="text"   id="E_additional"   default="" />
       <setting label="30013" type="bool"   id="E_beta"         default="false" />
+      <setting label="30020" type="lsep" />
+      <setting label="30021" type="bool"   id="E_manual_uid"   default="false" />
+      <setting label="30022" type="number" id="E_PUID"         default="65534" enable="eq(-1,true)" />
+      <setting label="30023" type="number" id="E_PGID"         default="100" enable="eq(-2,true)" />
    </category>
 </settings>

@@ -6,4 +6,7 @@
     <setting id="V_data_tvshows" value="/storage/tvshows" />
     <setting id="E_additional"   value="" />
     <setting id="E_beta"         value="false" />
+    <setting id="E_manual_uid"   value="false" />
+    <setting id="E_PUID"         value="65534" />
+    <setting id="E_PGID"         value="100" />
 </settings>
