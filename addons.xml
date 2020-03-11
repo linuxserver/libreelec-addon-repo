@@ -1135,7 +1135,7 @@ docker.linuxserver.pi-hole:
 
 <addon id="docker.linuxserver.plex"
        name="Plex (LinuxServer.io)"
-       version="1.1.0"
+       version="1.2.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -1159,6 +1159,10 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.plex:
 ------------------------
+
+1.2.0
+- Add uid/gid override for remote mount users (0/root not supported)
+- Auto-detect vaapi
 
 1.1.0
 - Switch to multi-arch builds

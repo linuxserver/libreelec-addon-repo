@@ -1,9 +1,12 @@
 <settings>
-    <setting id="E_VERSION" value="public" />
-    <setting id="V_config" value="/storage/.kodi/userdata/addon_data/docker.linuxserver.plex" />
-    <setting id="V_data_movies" value="/storage/videos" />
+    <setting id="E_VERSION"      value="latest" />
+    <setting id="V_config"       value="/storage/.kodi/userdata/addon_data/docker.linuxserver.plex" />
+    <setting id="V_data_movies"  value="/storage/videos" />
     <setting id="V_data_tvshows" value="/storage/tvshows" />
-    <setting id="V_data_photos" value="/storage/pictures" />
-    <setting id="V_transcode" value="/storage/downloads/plextemp" />
-    <setting id="E_PARAMS" value="" />
+    <setting id="V_data_photos"  value="/storage/pictures" />
+    <setting id="V_transcode"    value="/storage/downloads/plextemp" />
+    <setting id="E_PARAMS"       value="" />
+    <setting id="E_manual_uid"   value="false" />
+    <setting id="E_PUID"         value="65534" />
+    <setting id="E_PGID"         value="100" />
 </settings>

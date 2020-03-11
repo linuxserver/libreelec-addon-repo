@@ -14,6 +14,20 @@ oe_setup_addon "$name"
 #set docker image
 DOCKERIMAGE="linuxserver/plex"
 
+#set uid/gid
+if [ "$E_manual_uid" = "false" ]; then
+  E_PUID="65534"
+  E_PGID="100"
+fi
+
+#set hw transcode options
+if [ -d "/dev/dri" ]; then
+  D_vaapi_args="--device /dev/dri:/dev/dri"
+  echo "/dev/dri found, mapping device"
+else
+  echo "/dev/dri not found, skipping vaapi hw transcode"
+fi
+
 # add image to cron updater list
 if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh ]; then
   sleep 10
@@ -25,29 +39,31 @@ fi
 
 docker rm "$name" 2>/dev/null
 docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
-mkdir -p "$V_data_tvshows" "$V_data_movies" "$V_transcode" "$V_data_photos"
-for i in "$V_data_tvshows" "$V_data_movies" "$V_transcode" "$V_data_photos"; do
-  if [ ! "$(ls -ld $i | awk '{print $3}')" = "nobody" ]; then
-    echo "attempting chown nobody:users on $i"
-    chown -R nobody:users "$i" 2>&1 >/dev/null
+mkdir -p "$V_config" "$V_data_tvshows" "$V_data_movies" "$V_transcode" "$V_data_photos"
+for i in "$V_config" "$V_data_tvshows" "$V_data_movies" "$V_transcode" "$V_data_photos"; do
+  if [ ! "$(ls -nd $i | awk '{print $3}')" = "$E_PUID" ]; then
+    echo "attempting chown ${E_PUID}/${E_PGID} on $i"
+    chown -R "${E_PUID}":"${E_PGID}" "$i" 2>&1 >/dev/null
     echo "chown attempt completed, moving on"
   else
-    echo "skipping chown, make sure the folder $i is accessible by the user nobody:users (65534:100)"
+    echo "skipping chown, make sure the folder $i is accessible by the user ${E_PUID}:${E_PGID}"
   fi
 done
 
 docker run --name="$name" \
            --rm \
            --net=host \
+           --hostname="Plex-LibreELEC" \
            -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
            -e VERSION="$E_VERSION" \
-           -e PUID="65534" \
-           -e PGID="100" \
+           -e PUID="$E_PUID" \
+           -e PGID="$E_PGID" \
            -e TZ="$TIMEZONE" \
            -v "$V_config":/config \
            -v "$V_data_tvshows":/data/tvshows \
            -v "$V_data_movies":/data/movies \
            -v "$V_data_photos":/data/photos \
            -v "$V_transcode":/transcode \
+           $D_vaapi_args \
            $E_PARAMS \
            "$DOCKERIMAGE":latest
