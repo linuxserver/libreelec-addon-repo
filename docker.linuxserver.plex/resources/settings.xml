@@ -3,12 +3,16 @@
    <category   label="30000">
       <setting label="30001" type="lsep" />
       <setting label="30002" type="lsep" />
-      <setting label="30004" type="text"   id="E_VERSION"      default="public" />
+      <setting label="30004" type="text"   id="E_VERSION"      default="latest" />
       <setting label="30005" type="folder" id="V_config"       default="/storage/.kodi/userdata/addon_data/docker.linuxserver.plex" option="writeable" />
       <setting label="30006" type="folder" id="V_data_tvshows" default="/storage/tvshows" option="writeable" />
       <setting label="30007" type="folder" id="V_data_movies"  default="/storage/videos" option="writeable" />
       <setting label="30009" type="folder" id="V_data_photos"  default="/storage/pictures" option="writeable" />
       <setting label="30008" type="folder" id="V_transcode"    default="/storage/downloads/plextemp" option="writeable" />
       <setting label="30010" type="text"   id="E_PARAMS"       default="" />
+      <setting label="30020" type="lsep" />
+      <setting label="30021" type="bool"   id="E_manual_uid"   default="false" />
+      <setting label="30022" type="number" id="E_PUID"         default="65534" enable="eq(-1,true)" />
+      <setting label="30023" type="number" id="E_PGID"         default="100" enable="eq(-2,true)" />
    </category>
 </settings>
