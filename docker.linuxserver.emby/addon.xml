@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="docker.linuxserver.emby"
        name="Emby (LinuxServer.io)"
-       version="1.2.1"
+       version="1.2.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -24,6 +24,9 @@ Please visit https://linuxserver.io for more info on this image and addon.
     <news>
 docker.linuxserver.emby:
 ------------------------
+
+1.2.2
+- Fix image updates for betas
 
 1.2.1
 - Add uid/gid override for remote mount users (0/root is not supported)

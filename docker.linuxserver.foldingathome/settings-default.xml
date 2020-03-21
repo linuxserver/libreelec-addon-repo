@@ -1,0 +1,6 @@
+<settings>
+    <setting id="V_config"       value="/storage/.kodi/userdata/addon_data/docker.linuxserver.foldingathome" />
+    <setting id="P_port"         value="7396" />
+    <setting id="P_port2"        value="36330" />
+    <setting id="E_additional"   value="" />
+</settings>

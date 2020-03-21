@@ -1,0 +1,5 @@
+<settings>
+    <setting id="V_config"       value="/storage/.kodi/userdata/addon_data/docker.linuxserver.boinc" />
+    <setting id="P_port"         value="8088" />
+    <setting id="E_additional"   value="" />
+</settings>
