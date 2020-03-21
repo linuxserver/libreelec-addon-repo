@@ -1,0 +1,48 @@
+#!/bin/sh
+
+name="$(basename $0)"
+. /etc/profile
+
+if [ -f /storage/.cache/timezone ]; then
+ . /storage/.cache/timezone
+else
+ TIMEZONE="America/New_York"
+fi
+
+oe_setup_addon "$name"
+
+#set image name
+DOCKERIMAGE="linuxserver/boinc"
+
+#set hw transcode options
+if [ -d "/dev/dri" ]; then
+  D_vaapi_args="--device /dev/dri:/dev/dri"
+  echo "/dev/dri found, mapping device"
+else
+  echo "/dev/dri not found, skipping gpu access"
+fi
+
+# add image to cron updater list
+if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh ]; then
+  sleep 10
+fi
+
+if ! grep -q "$DOCKERIMAGE" /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh; then
+  echo "/storage/.kodi/addons/service.system.docker/bin/docker pull $DOCKERIMAGE" >> /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
+fi
+
+docker rm "$name" 2>/dev/null
+docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
+docker run --name="$name" \
+           --rm \
+           --net=lsio \
+           --hostname="Boinc-LibreELEC" \
+           -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
+           -e PUID="65534" \
+           -e PGID="100" \
+           -e TZ="$TIMEZONE" \
+           -p "$P_port":8080 \
+           -v "$V_config":/config \
+           $D_vaapi_args \
+           $E_additional \
+           "$DOCKERIMAGE"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="docker.linuxserver.jellyfin"
-       name="Jellyfin (LinuxServer.io)"
-       version="1.1.1"
+<addon id="docker.linuxserver.boinc"
+       name="Boinc (LinuxServer.io)"
+       version="1.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -13,33 +13,21 @@
     <provides></provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>Jellyfin as a Docker container</summary>
+    <summary>Boinc as a Docker container</summary>
     <description>
-Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps.
+BOINC is a platform for high-throughput computing on a large scale (thousands or millions of computers). It can be used for volunteer computing (using consumer devices) or grid computing (using organizational resources). It supports virtualized, parallel, and GPU-based applications.
+
+Default port: 8088
+
+This addon automatically sets up QuickSync enabled Intel GPUs when present. Keep in mind that not all projects hand out GPU jobs.
 
 Please visit https://linuxserver.io for more info on this image and addon.
     </description>
     <disclaimer>
     </disclaimer>
     <news>
-docker.linuxserver.jellyfin:
+docker.linuxserver.boinc:
 ------------------------
-
-1.1.1
-- Fix image updates for betas
-
-1.1.0
-- Add nightly builds as an option
-- Enable V4L2 for hw transcoding on Raspberry Pi
-- Remove settings for vaapi and openmax, auto detect instead
-- Add uid/gid override for remote mount users (0/root is not supported)
-
-1.0.2
-- Fix uid/gid
-- Add host networking option (for dlna)
-
-1.0.1
-- Fix openmax detection
 
 1.0.0
 - Initial release

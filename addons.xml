@@ -111,6 +111,48 @@ docker.linuxserver.beets:
   </extension>
 </addon>
 
+<addon id="docker.linuxserver.boinc"
+       name="Boinc (LinuxServer.io)"
+       version="1.0.0"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Boinc as a Docker container</summary>
+    <description>
+BOINC is a platform for high-throughput computing on a large scale (thousands or millions of computers). It can be used for volunteer computing (using consumer devices) or grid computing (using organizational resources). It supports virtualized, parallel, and GPU-based applications.
+
+Default port: 8088
+
+This addon automatically sets up QuickSync enabled Intel GPUs when present. Keep in mind that not all projects hand out GPU jobs.
+
+Please visit https://linuxserver.io for more info on this image and addon.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.boinc:
+------------------------
+
+1.0.0
+- Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
 <addon id="docker.linuxserver.domoticz"
        name="Domoticz (LinuxServer.io)"
        version="1.1.0"
@@ -304,7 +346,7 @@ docker.linuxserver.duplicati:
 
 <addon id="docker.linuxserver.emby"
        name="Emby (LinuxServer.io)"
-       version="1.2.1"
+       version="1.2.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -327,6 +369,9 @@ Please visit https://linuxserver.io for more info on this image and addon.
     <news>
 docker.linuxserver.emby:
 ------------------------
+
+1.2.2
+- Fix image updates for betas
 
 1.2.1
 - Add uid/gid override for remote mount users (0/root is not supported)
@@ -366,6 +411,48 @@ docker.linuxserver.emby:
 
 1.0.0
 - Initial addon
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="docker.linuxserver.foldingathome"
+       name="Folding@home (LinuxServer.io)"
+       version="1.0.0"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Folding@home as a Docker container</summary>
+    <description>
+Folding@home is a distributed computing project for simulating protein dynamics, including the process of protein folding and the movements of proteins implicated in a variety of diseases. It brings together citizen scientists who volunteer to run simulations of protein dynamics on their personal computers. Insights from this data are helping scientists to better understand biology, and providing new opportunities for developing therapeutics.
+
+IMPORTANT: This addon is for x86_64 devices only.
+
+Default port: 7396
+
+Please visit https://linuxserver.io for more info on this image and addon.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.foldingathome:
+------------------------
+
+1.0.0
+- Initial release
     </news>
     <platform>all</platform>
     <website>http://linuxserver.io/</website>
@@ -417,7 +504,7 @@ docker.linuxserver.heimdall:
 
 <addon id="docker.linuxserver.jellyfin"
        name="Jellyfin (LinuxServer.io)"
-       version="1.1.0"
+       version="1.1.1"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -440,6 +527,9 @@ Please visit https://linuxserver.io for more info on this image and addon.
     <news>
 docker.linuxserver.jellyfin:
 ------------------------
+
+1.1.1
+- Fix image updates for betas
 
 1.1.0
 - Add nightly builds as an option

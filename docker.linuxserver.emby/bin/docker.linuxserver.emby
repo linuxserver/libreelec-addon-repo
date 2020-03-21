@@ -60,8 +60,8 @@ if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.s
   sleep 10
 fi
 
-if ! grep -q "$DOCKERIMAGE" /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh; then
-  echo "/storage/.kodi/addons/service.system.docker/bin/docker pull $DOCKERIMAGE" >> /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
+if ! grep -q "$DOCKERIMAGE":"$IMAGETAG" /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh; then
+  echo "/storage/.kodi/addons/service.system.docker/bin/docker pull $DOCKERIMAGE":"$IMAGETAG" >> /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
 fi
 
 docker rm "$name" 2>/dev/null
