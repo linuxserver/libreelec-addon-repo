@@ -504,7 +504,7 @@ docker.linuxserver.heimdall:
 
 <addon id="docker.linuxserver.jellyfin"
        name="Jellyfin (LinuxServer.io)"
-       version="1.1.1"
+       version="1.1.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -527,6 +527,9 @@ Please visit https://linuxserver.io for more info on this image and addon.
     <news>
 docker.linuxserver.jellyfin:
 ------------------------
+
+1.1.2
+- Enable hardware decode of h264 on Raspberry Pi (enabled in the gui via OpenMax H264 decode)
 
 1.1.1
 - Fix image updates for betas

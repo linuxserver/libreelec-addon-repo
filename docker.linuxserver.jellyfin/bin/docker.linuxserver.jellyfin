@@ -37,7 +37,7 @@ fi
 if [ -c "/dev/vchiq" ] && [ -f "/opt/vc/lib/libopenmaxil.so" ] && [ -f "/opt/vc/lib/libbcm_host.so" ]; then
   echo "OpenMax (omx) libraries and device found, enabling"
   chmod g+rw /dev/vchiq
-  D_openmax_args="--device /dev/vchiq:/dev/vchiq -v /opt/vc/lib/libopenmaxil.so:/opt/vc/lib/libopenmaxil.so -v /opt/vc/lib/libbcm_host.so:/opt/vc/lib/libbcm_host.so"
+  D_openmax_args="--device /dev/vchiq:/dev/vchiq --device /dev/vc-mem:/dev/vc-mem -v /opt/vc/lib/libopenmaxil.so:/opt/vc/lib/libopenmaxil.so -v /opt/vc/lib/libbcm_host.so:/opt/vc/lib/libbcm_host.so"
 else
   echo "OpenMax (omx) libraries and device not found, skipping"
 fi
