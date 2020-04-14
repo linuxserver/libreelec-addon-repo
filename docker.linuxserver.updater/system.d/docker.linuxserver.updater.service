@@ -5,7 +5,11 @@ After=service.system.docker.service
 After=cron.service
 
 [Service]
-Type=oneshot
+Restart=on-failure
+RestartSec=10s
+StartLimitInterval=86400
+StartLimitBurst=3
+TimeoutStartSec=0
 RemainAfterExit=true
 ExecStart=/bin/sh /storage/.kodi/addons/%p/bin/%p
 ExecStop=/bin/sh /storage/.kodi/addons/%p/bin/stop
