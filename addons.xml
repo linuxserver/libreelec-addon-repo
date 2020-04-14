@@ -1658,7 +1658,7 @@ docker.linuxserver.tvheadend:
 
 <addon id="docker.linuxserver.updater"
        name="Docker Image Updater (LinuxServer.io)"
-       version="1.0.5"
+       version="1.0.6"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
@@ -1681,6 +1681,11 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.updater:
 -------------------------
+
+1.0.6
+- Revert systemd to simple (with RemainAfterExit added) to prevent boot delay
+- Switch image updates to nightly
+- Chain updates and prune
 
 1.0.5
 - Fix systemd, switch to oneshot

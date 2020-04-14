@@ -22,17 +22,8 @@ echo "/storage/.kodi/addons/service.system.docker/bin/docker image prune -f" >> 
 chmod +x /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/prune.sh
 
 
-# add update.sh to cron
+# add update.sh & prune.sh to cron
 if ! grep -q 'docker.linuxserver.updater/update.sh' /storage/.cache/cron/crontabs/root; then
-  echo '5 1 * * 0 /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh > /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.log' >> /storage/.cache/cron/crontabs/root
+  echo '5 4 * * * /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh > /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.log && /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/prune.sh > /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/prune.log' >> /storage/.cache/cron/crontabs/root
   systemctl restart cron
 fi
-
-# add prune.sh to cron
-if ! grep -q 'docker.linuxserver.updater/prune.sh' /storage/.cache/cron/crontabs/root; then
-  echo '5 2 * * * /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/prune.sh > /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/prune.log' >> /storage/.cache/cron/crontabs/root
-  systemctl restart cron
-fi
-
-sleep 600
-/storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
