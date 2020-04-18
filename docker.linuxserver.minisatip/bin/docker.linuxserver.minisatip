@@ -1,6 +1,7 @@
 #!/bin/sh
 
-name="$(basename $0)"
+name="minisatip"
+servicename="$(basename $0)"
 . /etc/profile
 
 if [ -f /storage/.cache/timezone ]; then
@@ -9,7 +10,7 @@ else
  TIMEZONE="America/New_York"
 fi
 
-oe_setup_addon "$name"
+oe_setup_addon "$servicename"
 
 # set docker image
 DOCKERIMAGE="linuxserver/minisatip"
@@ -27,6 +28,7 @@ docker rm "$name" 2>/dev/null
 docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
 docker run --name="$name" \
            --rm \
+           --network=lsio \
            -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
            -e PUID="65534" \
            -e PGID="100" \
@@ -36,6 +38,4 @@ docker run --name="$name" \
            -p "$P_port3":1900/udp \
            -e RUN_OPTS="$E_opt" \
            --device="$D_device" \
-           --network=lsio \
-           --network-alias=minisatip \
            "$DOCKERIMAGE":latest

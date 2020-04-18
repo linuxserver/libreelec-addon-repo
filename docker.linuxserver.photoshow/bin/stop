@@ -3,7 +3,7 @@
 . /etc/profile
 
 # stop and remove container
-docker stop docker.linuxserver.photoshow
+docker stop photoshow
 
 # remove image from cron updater list
 sed -i '/photoshow/d' /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh

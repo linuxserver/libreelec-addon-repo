@@ -1,6 +1,7 @@
 #!/bin/sh
 
-name="$(basename $0)"
+name="emby"
+servicename="$(basename $0)"
 . /etc/profile
 
 if [ -f /storage/.cache/timezone ]; then
@@ -9,7 +10,7 @@ else
  TIMEZONE="America/New_York"
 fi
 
-oe_setup_addon "$name"
+oe_setup_addon "$servicename"
 
 #set docker image
 DOCKERIMAGE="linuxserver/emby"

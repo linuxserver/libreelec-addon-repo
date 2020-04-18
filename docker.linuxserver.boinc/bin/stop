@@ -3,7 +3,7 @@
 . /etc/profile
 
 # stop and remove container
-docker stop docker.linuxserver.boinc
+docker stop boinc
 
 # remove image from cron updater list
 sed -i '/boinc/d' /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh

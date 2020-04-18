@@ -3,7 +3,7 @@
 . /etc/profile
 
 # stop and remove container
-docker stop docker.linuxserver.domoticz
+docker stop domoticz
 
 # remove image from cron updater list
 sed -i '/domoticz/d' /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh

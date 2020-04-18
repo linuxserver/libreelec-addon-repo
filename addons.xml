@@ -2,11 +2,10 @@
 <addons>
 <addon id="docker.linuxserver.adguard"
        name="AdGuardHome (LinuxServer.io)"
-       version="1.0.0"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -32,6 +31,9 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.adguard:
 ---------------------------
 
+2.0.0
+- Kodi Matrix compatibility
+
 1.0.0
 - Initial release
     </news>
@@ -46,11 +48,10 @@ docker.linuxserver.adguard:
 
 <addon id="docker.linuxserver.beets"
        name="Beets (LinuxServer.io)"
-       version="1.1.0"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -70,6 +71,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.beets:
 -------------------------
+
+2.0.0
+- Kodi Matrix compatibility
 
 1.1.0
 - Switch to multi-arch image
@@ -113,11 +117,10 @@ docker.linuxserver.beets:
 
 <addon id="docker.linuxserver.boinc"
        name="Boinc (LinuxServer.io)"
-       version="1.0.0"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -141,6 +144,9 @@ Please visit https://linuxserver.io for more info on this image and addon.
 docker.linuxserver.boinc:
 ------------------------
 
+2.0.0
+- Kodi Matrix compatibility
+
 1.0.0
 - Initial release
     </news>
@@ -155,11 +161,10 @@ docker.linuxserver.boinc:
 
 <addon id="docker.linuxserver.domoticz"
        name="Domoticz (LinuxServer.io)"
-       version="1.1.0"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -181,6 +186,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.domoticz:
 -----------------------------
+
+2.0.0
+- Kodi Matrix compatibility
 
 1.1.0
 - Switch to multi-arch image
@@ -208,11 +216,10 @@ docker.linuxserver.domoticz:
 
 <addon id="docker.linuxserver.duckdns"
        name="DuckDNS (LinuxServer.io)"
-       version="1.1.0"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -233,6 +240,9 @@ Please visit www.duckdns.org to get a custom url and token
     <news>
 docker.linuxserver.duckdns:
 ---------------------------
+
+2.0.0
+- Kodi Matrix compatibility
 
 1.1.0
 - Fix opening of gui settings during first start
@@ -289,11 +299,10 @@ docker.linuxserver.duckdns:
 
 <addon id="docker.linuxserver.duplicati"
        name="Duplicati (LinuxServer.io)"
-       version="1.1.1"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -313,6 +322,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.duplicati:
 -----------------------------
+
+2.0.0
+- Kodi Matrix compatibility
 
 1.1.1
 - Fix typo in source location setting
@@ -346,11 +358,10 @@ docker.linuxserver.duplicati:
 
 <addon id="docker.linuxserver.emby"
        name="Emby (LinuxServer.io)"
-       version="1.2.2"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -369,6 +380,9 @@ Please visit https://linuxserver.io for more info on this image and addon.
     <news>
 docker.linuxserver.emby:
 ------------------------
+
+2.0.0
+- Kodi Matrix compatibility
 
 1.2.2
 - Fix image updates for betas
@@ -423,11 +437,10 @@ docker.linuxserver.emby:
 
 <addon id="docker.linuxserver.foldingathome"
        name="Folding@home (LinuxServer.io)"
-       version="1.0.0"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -451,6 +464,9 @@ Please visit https://linuxserver.io for more info on this image and addon.
 docker.linuxserver.foldingathome:
 ------------------------
 
+2.0.0
+- Kodi Matrix compatibility
+
 1.0.0
 - Initial release
     </news>
@@ -465,11 +481,10 @@ docker.linuxserver.foldingathome:
 
 <addon id="docker.linuxserver.heimdall"
        name="Heimdall (LinuxServer.io)"
-       version="1.0.0"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -490,6 +505,9 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.heimdall:
 -------------------------
 
+2.0.0
+- Kodi Matrix compatibility
+
 1.0.0
 - Initial release
     </news>
@@ -504,11 +522,10 @@ docker.linuxserver.heimdall:
 
 <addon id="docker.linuxserver.jellyfin"
        name="Jellyfin (LinuxServer.io)"
-       version="1.1.2"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -527,6 +544,9 @@ Please visit https://linuxserver.io for more info on this image and addon.
     <news>
 docker.linuxserver.jellyfin:
 ------------------------
+
+2.0.0
+- Kodi Matrix compatibility
 
 1.1.2
 - Enable hardware decode of h264 on Raspberry Pi (enabled in the gui via OpenMax H264 decode)
@@ -561,11 +581,10 @@ docker.linuxserver.jellyfin:
 
 <addon id="docker.linuxserver.letsencrypt"
        name="Nginx Letsencrypt (LinuxServer.io)"
-       version="1.1.1"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -591,6 +610,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.letsencrypt:
 -------------------------------
+
+2.0.0
+- Kodi Matrix compatibility
 
 1.1.1
 - Add new dns plugin options (domeneshop, gandi, inwx, linode, transip)
@@ -657,11 +679,10 @@ docker.linuxserver.letsencrypt:
 
 <addon id="docker.linuxserver.mariadb"
        name="MariaDB (LinuxServer.io)"
-       version="1.1.1"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -685,6 +706,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.mariadb:
 ---------------------------
+
+2.0.0
+- Kodi Matrix compatibility
 
 1.1.1
 - Allow new database and user creation via settings (only during first start with no existing data)
@@ -743,11 +767,10 @@ docker.linuxserver.mariadb:
 
 <addon id="docker.linuxserver.minisatip"
        name="Minisatip (LinuxServer.io)"
-       version="1.0.9"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -767,6 +790,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.minisatip:
 -----------------------------
+
+2.0.0
+- Kodi Matrix compatibility
 
 1.0.9
 - Switch to multi-arch builds
@@ -812,11 +838,10 @@ docker.linuxserver.minisatip:
 
 <addon id="docker.linuxserver.muximux"
        name="Muximux (LinuxServer.io)"
-       version="1.1.0"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -836,6 +861,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.muximux:
 ---------------------------
+
+2.0.0
+- Kodi Matrix compatibility
 
 1.1.0
 - Switch to multi-arch image
@@ -872,11 +900,10 @@ docker.linuxserver.muximux:
 
 <addon id="docker.linuxserver.netdata"
        name="Netdata (LinuxServer.io)"
-       version="1.0.1"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -897,6 +924,9 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.netdata:
 ---------------------------
 
+2.0.0
+- Kodi Matrix compatibility
+
 1.0.1
 - Set hostname to LibreELEC's
 
@@ -914,11 +944,10 @@ docker.linuxserver.netdata:
 
 <addon id="docker.linuxserver.nextcloud"
        name="Nextcloud (LinuxServer.io)"
-       version="1.1.0"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -946,6 +975,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.nextcloud:
 -----------------------------
+
+2.0.0
+- Kodi Matrix compatibility
 
 1.1.0
 - Switch to multi-arch image
@@ -982,11 +1014,10 @@ docker.linuxserver.nextcloud:
 
 <addon id="docker.linuxserver.nginx"
        name="Nginx (LinuxServer.io)"
-       version="1.0.5"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -1008,6 +1039,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.nginx:
 -------------------------
+
+2.0.0
+- Kodi Matrix compatibility
 
 1.0.5
 - Switch to multi-arch images
@@ -1041,11 +1075,10 @@ docker.linuxserver.nginx:
 
 <addon id="docker.linuxserver.oscam"
        name="Oscam (LinuxServer.io)"
-       version="1.0.6"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -1065,6 +1098,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.oscam:
 -------------------------
+
+2.0.0
+- Kodi Matrix compatibility
 
 1.0.6
 - Support *elec
@@ -1100,11 +1136,10 @@ docker.linuxserver.oscam:
 
 <addon id="docker.linuxserver.photoshow"
        name="Photoshow (LinuxServer.io)"
-       version="1.1.0"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -1124,6 +1159,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.photoshow:
 -----------------------------
+
+2.0.0
+- Kodi Matrix compatibility
 
 1.1.0
 - Switch to multi-arch image
@@ -1161,11 +1199,10 @@ docker.linuxserver.photoshow:
 
 <addon id="docker.linuxserver.pi-hole"
        name="Pi-hole (LinuxServer.io)"
-       version="1.0.6"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -1176,6 +1213,8 @@ docker.linuxserver.photoshow:
     <summary>Pi-hole in a docker container</summary>
     <description>
 The Pi-hole is a DNS sinkhole that protects your devices from unwanted content, without installing any client-side software.
+
+IMPORTANT: This addon will install an older version of pi-hole and will not update due to upstream changes that made maintenance very difficult.
 
 On initial install, enter an admin password. Port 53 must be open.
 By default only IPv4 is enabled. IPv6 can be enabled in addon settings.
@@ -1190,6 +1229,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.pi-hole:
 -------------------------
+
+2.0.0
+- Kodi Matrix compatibility
 
 1.0.6
 - Support *elec
@@ -1228,11 +1270,10 @@ docker.linuxserver.pi-hole:
 
 <addon id="docker.linuxserver.plex"
        name="Plex (LinuxServer.io)"
-       version="1.2.0"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -1252,6 +1293,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.plex:
 ------------------------
+
+2.0.0
+- Kodi Matrix compatibility
 
 1.2.0
 - Add uid/gid override for remote mount users (0/root not supported)
@@ -1301,11 +1345,10 @@ docker.linuxserver.plex:
 
 <addon id="docker.linuxserver.portainer"
        name="Portainer (LinuxServer.io)"
-       version="1.0.5"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -1328,6 +1371,9 @@ Please do not use portainer to manage other LinuxServer.io addon generated conta
     <news>
 docker.linuxserver.portainer:
 --------------------------
+
+2.0.0
+- Kodi Matrix compatibility
 
 1.0.5
 - Use updater addon to update image
@@ -1359,11 +1405,10 @@ docker.linuxserver.portainer:
 
 <addon id="docker.linuxserver.quassel-core"
        name="Quassel Core (LinuxServer.io)"
-       version="1.1.0"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -1385,6 +1430,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.quassel-core:
 --------------------------------
+
+2.0.0
+- Kodi Matrix compatibility
 
 1.1.0
 - Switch to multi-arch image
@@ -1424,11 +1472,10 @@ docker.linuxserver.quassel-core:
 
 <addon id="docker.linuxserver.resilio-sync"
        name="Resilio Sync (LinuxServer.io)"
-       version="1.1.0"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -1448,6 +1495,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.resilio-sync:
 --------------------------------
+
+2.0.0
+- Kodi Matrix compatibility
 
 1.1.0
 - Switch to multi-arch image
@@ -1487,11 +1537,10 @@ docker.linuxserver.resilio-sync:
 
 <addon id="docker.linuxserver.tautulli"
        name="Tautulli (LinuxServer.io)"
-       version="1.1.0"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -1511,6 +1560,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.tautulli:
 --------------------------
+
+2.0.0
+- Kodi Matrix compatibility
 
 1.1.0
 - Switch to multi-arch image
@@ -1532,11 +1584,10 @@ docker.linuxserver.tautulli:
 
 <addon id="docker.linuxserver.thelounge"
        name="TheLounge (LinuxServer.io)"
-       version="1.1.0"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -1556,6 +1607,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.thelounge:
 -----------------------------
+
+2.0.0
+- Kodi Matrix compatibility
 
 1.1.0
 - switch to multi-arch image
@@ -1592,11 +1646,10 @@ docker.linuxserver.thelounge:
 
 <addon id="docker.linuxserver.tvheadend"
        name="TVheadend (LinuxServer.io)"
-       version="1.1.1"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -1616,6 +1669,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.tvheadend:
 -----------------------------
+
+2.0.0
+- Kodi Matrix compatibility
 
 1.1.1
 - Add optional extra docker parameter support (hw transcode can be enabled by adding --device=/dev/dri there)
@@ -1658,11 +1714,10 @@ docker.linuxserver.tvheadend:
 
 <addon id="docker.linuxserver.updater"
        name="Docker Image Updater (LinuxServer.io)"
-       version="1.0.6"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
   </requires>
   <extension point="xbmc.service" library="default.py">
@@ -1681,6 +1736,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.updater:
 -------------------------
+
+2.0.0
+- Kodi Matrix compatibility
 
 1.0.6
 - Revert systemd to simple (with RemainAfterExit added) to prevent boot delay
@@ -1716,11 +1774,10 @@ docker.linuxserver.updater:
 
 <addon id="docker.linuxserver.webgrabplus"
        name="WebGrab+Plus (LinuxServer.io)"
-       version="1.0.2"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -1750,6 +1807,10 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.webgrabplus:
 -------------------------------
 
+2.0.0
+- Kodi Matrix compatibility
+- Switch to multi-arch images
+
 1.0.2
 - Fix armhf image name
 
@@ -1770,11 +1831,10 @@ docker.linuxserver.webgrabplus:
 
 <addon id="docker.linuxserver.znc"
        name="ZNC (LinuxServer.io)"
-       version="1.1.0"
+       version="2.0.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="os.libreelec.tv" version="7.0"/>
-    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -1796,6 +1856,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.znc:
 -----------------------
+
+2.0.0
+- Kodi Matrix compatibility
 
 1.1.0
 - Switch to multi-arch

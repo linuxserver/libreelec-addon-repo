@@ -3,7 +3,7 @@
 . /etc/profile
 
 # stop and remove container
-docker stop docker.linuxserver.minisatip
+docker stop minisatip
 
 # remove image from cron updater list
 sed -i '/minisatip/d' /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh

@@ -3,7 +3,7 @@
 . /etc/profile
 
 # stop and remove container
-docker stop docker.linuxserver.muximux
+docker stop muximux
 
 # remove image from cron updater list
 sed -i '/muximux/d' /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh

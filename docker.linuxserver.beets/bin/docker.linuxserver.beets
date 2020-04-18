@@ -1,6 +1,7 @@
 #!/bin/sh
 
-name="$(basename $0)"
+name="beets"
+servicename="$(basename $0)"
 . /etc/profile
 
 if [ -f /storage/.cache/timezone ]; then
@@ -9,7 +10,7 @@ else
  TIMEZONE="America/New_York"
 fi
 
-oe_setup_addon "$name"
+oe_setup_addon "$servicename"
 
 # set the docker image
 DOCKERIMAGE="linuxserver/beets"
@@ -37,6 +38,7 @@ for i in "$V_downloads" "$V_music"; do
 done
 docker run --name="$name" \
            --rm \
+           --network=lsio \
            -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
            -e PUID="65534" \
            -e PGID="100" \
@@ -45,6 +47,4 @@ docker run --name="$name" \
            -v "$V_downloads":/downloads \
            -v "$V_music":/music \
            -p "$P_port":8337 \
-           --network=lsio \
-           --network-alias=beets \
            "$DOCKERIMAGE":latest

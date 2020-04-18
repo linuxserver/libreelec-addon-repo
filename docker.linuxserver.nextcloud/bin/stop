@@ -3,7 +3,7 @@
 . /etc/profile
 
 # stop and remove container
-docker stop docker.linuxserver.nextcloud
+docker stop nextcloud
 
 # remove image from cron updater list
 sed -i '/nextcloud/d' /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
