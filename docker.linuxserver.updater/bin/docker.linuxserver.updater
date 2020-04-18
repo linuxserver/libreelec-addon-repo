@@ -1,9 +1,10 @@
 #!/bin/sh
 
-name="$(basename $0)"
+name="updater"
+servicename="$(basename $0)"
 . /etc/profile
 
-oe_setup_addon "$name"
+oe_setup_addon "$servicename"
 
 # create lsio network
 if ! docker network list | grep -q lsio; then

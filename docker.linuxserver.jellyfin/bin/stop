@@ -3,7 +3,7 @@
 . /etc/profile
 
 # stop and remove container
-docker stop docker.linuxserver.jellyfin
+docker stop jellyfin
 
 # remove image from cron updater list
 sed -i '/jellyfin/d' /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh

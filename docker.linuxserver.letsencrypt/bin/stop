@@ -3,7 +3,7 @@
 . /etc/profile
 
 # stop and remove container
-docker stop docker.linuxserver.letsencrypt 2> /dev/null
+docker stop letsencrypt 2> /dev/null
 
 # remove image from cron updater list
 sed -i '/letsencrypt/d' /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh

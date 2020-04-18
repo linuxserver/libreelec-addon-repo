@@ -1,8 +1,9 @@
 #!/bin/sh
 
-name="$(basename $0)"
+name="portainer"
+servicename="$(basename $0)"
 . /etc/profile
-oe_setup_addon "$name"
+oe_setup_addon "$servicename"
 
 # add image to cron updater list
 if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh ]; then
@@ -17,6 +18,7 @@ docker rm "$name" 2>/dev/null
 docker rmi $(docker images | grep 'portainer' | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
 docker run --name="$name" \
            --rm \
+           --network=lsio \
            -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
            -v /etc/localtime:/etc/localtime:ro \
            -v "$V_config":/data \

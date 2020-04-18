@@ -1,6 +1,7 @@
 #!/bin/sh
 
-name="$(basename $0)"
+name="oscam"
+servicename="$(basename $0)"
 . /etc/profile
 
 if [ -f /storage/.cache/timezone ]; then
@@ -9,7 +10,7 @@ else
  TIMEZONE="America/New_York"
 fi
 
-oe_setup_addon "$name"
+oe_setup_addon "$servicename"
 
 #get arch variable from os
 LEARCHVAR=`sed -e '/EELEC_ARCH/ !d' -e 's/[^.]*\.\([^"]*\).*/\1/' /etc/os-release`
@@ -49,6 +50,7 @@ docker rm "$name" 2>/dev/null
 docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
 docker run --name="$name" \
            --rm \
+           --network=lsio \
            -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
            -e PUID="65534" \
            -e PGID="100" \
@@ -56,6 +58,4 @@ docker run --name="$name" \
            -v "$V_config":/config \
            -p "$P_port":8888 \
            ${D_devices} \
-           --network=lsio \
-           --network-alias=oscam \
            "$DOCKERIMAGE":latest

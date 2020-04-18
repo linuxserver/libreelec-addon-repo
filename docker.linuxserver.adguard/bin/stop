@@ -3,7 +3,7 @@
 . /etc/profile
 
 # stop and remove container
-docker stop docker.linuxserver.adguard
+docker stop adguard
 
 # remove image from cron updater list
 sed -i '/adguardhome/d' /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh

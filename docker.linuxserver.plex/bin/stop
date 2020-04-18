@@ -3,7 +3,7 @@
 . /etc/profile
 
 # stop and remove container
-docker stop docker.linuxserver.plex
+docker stop plex
 
 # remove image from cron updater list
 sed -i '/plex/d' /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh

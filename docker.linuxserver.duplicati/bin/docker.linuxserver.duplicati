@@ -1,6 +1,7 @@
 #!/bin/sh
 
-name="$(basename $0)"
+name="duplicati"
+servicename="$(basename $0)"
 . /etc/profile
 
 if [ -f /storage/.cache/timezone ]; then
@@ -9,7 +10,7 @@ else
  TIMEZONE="America/New_York"
 fi
 
-oe_setup_addon "$name"
+oe_setup_addon "$servicename"
 
 # set docker image
 DOCKERIMAGE="linuxserver/duplicati"
@@ -37,6 +38,7 @@ for i in "$V_backups" "$V_source"; do
 done
 docker run --name="$name" \
            --rm \
+           --network=lsio \
            -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
            -e PUID="65534" \
            -e PGID="100" \
@@ -45,7 +47,5 @@ docker run --name="$name" \
            -v "$V_backups":/backups \
            -v "$V_source":/source \
            -p "$P_port":8200 \
-           --network=lsio \
-           --network-alias=duplicati \
            ${E_extraparam} \
            "$DOCKERIMAGE":latest

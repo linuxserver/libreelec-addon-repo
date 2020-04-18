@@ -3,7 +3,7 @@
 . /etc/profile
 
 # stop and remove container
-docker stop docker.linuxserver.resilio-sync
+docker stop resilio-sync
 
 # remove image from cron updater list
 sed -i '/resilio-sync/d' /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh

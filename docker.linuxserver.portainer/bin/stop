@@ -3,7 +3,7 @@
 . /etc/profile
 
 # stop and remove container
-docker stop docker.linuxserver.portainer
+docker stop portainer
 
 # remove image from cron updater list
 sed -i '/portainer/d' /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
