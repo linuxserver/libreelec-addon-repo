@@ -2,10 +2,9 @@
 <addons>
 <addon id="docker.linuxserver.adguard"
        name="AdGuardHome (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -31,6 +30,9 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.adguard:
 ---------------------------
 
+2.0.1
+- Remove LibreELEC dependency
+
 2.0.0
 - Kodi Matrix compatibility
 
@@ -48,10 +50,9 @@ docker.linuxserver.adguard:
 
 <addon id="docker.linuxserver.beets"
        name="Beets (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -71,6 +72,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.beets:
 -------------------------
+
+2.0.1
+- Remove LibreELEC dependency
 
 2.0.0
 - Kodi Matrix compatibility
@@ -117,10 +121,9 @@ docker.linuxserver.beets:
 
 <addon id="docker.linuxserver.boinc"
        name="Boinc (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -144,6 +147,9 @@ Please visit https://linuxserver.io for more info on this image and addon.
 docker.linuxserver.boinc:
 ------------------------
 
+2.0.1
+- Remove LibreELEC dependency
+
 2.0.0
 - Kodi Matrix compatibility
 
@@ -161,10 +167,9 @@ docker.linuxserver.boinc:
 
 <addon id="docker.linuxserver.domoticz"
        name="Domoticz (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -186,6 +191,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.domoticz:
 -----------------------------
+
+2.0.1
+- Remove LibreELEC dependency
 
 2.0.0
 - Kodi Matrix compatibility
@@ -216,10 +224,9 @@ docker.linuxserver.domoticz:
 
 <addon id="docker.linuxserver.duckdns"
        name="DuckDNS (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -240,6 +247,9 @@ Please visit www.duckdns.org to get a custom url and token
     <news>
 docker.linuxserver.duckdns:
 ---------------------------
+
+2.0.1
+- Remove LibreELEC dependency
 
 2.0.0
 - Kodi Matrix compatibility
@@ -299,10 +309,9 @@ docker.linuxserver.duckdns:
 
 <addon id="docker.linuxserver.duplicati"
        name="Duplicati (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -322,6 +331,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.duplicati:
 -----------------------------
+
+2.0.1
+- Remove LibreELEC dependency
 
 2.0.0
 - Kodi Matrix compatibility
@@ -358,10 +370,9 @@ docker.linuxserver.duplicati:
 
 <addon id="docker.linuxserver.emby"
        name="Emby (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -380,6 +391,9 @@ Please visit https://linuxserver.io for more info on this image and addon.
     <news>
 docker.linuxserver.emby:
 ------------------------
+
+2.0.1
+- Remove LibreELEC dependency
 
 2.0.0
 - Kodi Matrix compatibility
@@ -437,10 +451,9 @@ docker.linuxserver.emby:
 
 <addon id="docker.linuxserver.foldingathome"
        name="Folding@home (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -464,6 +477,9 @@ Please visit https://linuxserver.io for more info on this image and addon.
 docker.linuxserver.foldingathome:
 ------------------------
 
+2.0.1
+- Remove LibreELEC dependency
+
 2.0.0
 - Kodi Matrix compatibility
 
@@ -481,10 +497,9 @@ docker.linuxserver.foldingathome:
 
 <addon id="docker.linuxserver.heimdall"
        name="Heimdall (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -505,6 +520,9 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.heimdall:
 -------------------------
 
+2.0.1
+- Remove LibreELEC dependency
+
 2.0.0
 - Kodi Matrix compatibility
 
@@ -522,10 +540,9 @@ docker.linuxserver.heimdall:
 
 <addon id="docker.linuxserver.jellyfin"
        name="Jellyfin (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -544,6 +561,9 @@ Please visit https://linuxserver.io for more info on this image and addon.
     <news>
 docker.linuxserver.jellyfin:
 ------------------------
+
+2.0.1
+- Remove LibreELEC dependency
 
 2.0.0
 - Kodi Matrix compatibility
@@ -581,10 +601,9 @@ docker.linuxserver.jellyfin:
 
 <addon id="docker.linuxserver.letsencrypt"
        name="Nginx Letsencrypt (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -610,6 +629,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.letsencrypt:
 -------------------------------
+
+2.0.1
+- Remove LibreELEC dependency
 
 2.0.0
 - Kodi Matrix compatibility
@@ -679,10 +701,9 @@ docker.linuxserver.letsencrypt:
 
 <addon id="docker.linuxserver.mariadb"
        name="MariaDB (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -706,6 +727,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.mariadb:
 ---------------------------
+
+2.0.1
+- Remove LibreELEC dependency
 
 2.0.0
 - Kodi Matrix compatibility
@@ -767,10 +791,9 @@ docker.linuxserver.mariadb:
 
 <addon id="docker.linuxserver.minisatip"
        name="Minisatip (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -790,6 +813,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.minisatip:
 -----------------------------
+
+2.0.1
+- Remove LibreELEC dependency
 
 2.0.0
 - Kodi Matrix compatibility
@@ -838,10 +864,9 @@ docker.linuxserver.minisatip:
 
 <addon id="docker.linuxserver.muximux"
        name="Muximux (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -861,6 +886,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.muximux:
 ---------------------------
+
+2.0.1
+- Remove LibreELEC dependency
 
 2.0.0
 - Kodi Matrix compatibility
@@ -900,10 +928,9 @@ docker.linuxserver.muximux:
 
 <addon id="docker.linuxserver.netdata"
        name="Netdata (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -923,6 +950,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.netdata:
 ---------------------------
+
+2.0.1
+- Remove LibreELEC dependency
 
 2.0.0
 - Kodi Matrix compatibility
@@ -944,10 +974,9 @@ docker.linuxserver.netdata:
 
 <addon id="docker.linuxserver.nextcloud"
        name="Nextcloud (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -975,6 +1004,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.nextcloud:
 -----------------------------
+
+2.0.1
+- Remove LibreELEC dependency
 
 2.0.0
 - Kodi Matrix compatibility
@@ -1014,10 +1046,9 @@ docker.linuxserver.nextcloud:
 
 <addon id="docker.linuxserver.nginx"
        name="Nginx (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -1039,6 +1070,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.nginx:
 -------------------------
+
+2.0.1
+- Remove LibreELEC dependency
 
 2.0.0
 - Kodi Matrix compatibility
@@ -1075,10 +1109,9 @@ docker.linuxserver.nginx:
 
 <addon id="docker.linuxserver.oscam"
        name="Oscam (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -1098,6 +1131,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.oscam:
 -------------------------
+
+2.0.1
+- Remove LibreELEC dependency
 
 2.0.0
 - Kodi Matrix compatibility
@@ -1136,10 +1172,9 @@ docker.linuxserver.oscam:
 
 <addon id="docker.linuxserver.photoshow"
        name="Photoshow (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -1159,6 +1194,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.photoshow:
 -----------------------------
+
+2.0.1
+- Remove LibreELEC dependency
 
 2.0.0
 - Kodi Matrix compatibility
@@ -1199,10 +1237,9 @@ docker.linuxserver.photoshow:
 
 <addon id="docker.linuxserver.pi-hole"
        name="Pi-hole (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -1229,6 +1266,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.pi-hole:
 -------------------------
+
+2.0.1
+- Remove LibreELEC dependency
 
 2.0.0
 - Kodi Matrix compatibility
@@ -1270,10 +1310,9 @@ docker.linuxserver.pi-hole:
 
 <addon id="docker.linuxserver.plex"
        name="Plex (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -1293,6 +1332,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.plex:
 ------------------------
+
+2.0.1
+- Remove LibreELEC dependency
 
 2.0.0
 - Kodi Matrix compatibility
@@ -1345,10 +1387,9 @@ docker.linuxserver.plex:
 
 <addon id="docker.linuxserver.portainer"
        name="Portainer (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -1371,6 +1412,9 @@ Please do not use portainer to manage other LinuxServer.io addon generated conta
     <news>
 docker.linuxserver.portainer:
 --------------------------
+
+2.0.1
+- Remove LibreELEC dependency
 
 2.0.0
 - Kodi Matrix compatibility
@@ -1405,10 +1449,9 @@ docker.linuxserver.portainer:
 
 <addon id="docker.linuxserver.quassel-core"
        name="Quassel Core (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -1430,6 +1473,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.quassel-core:
 --------------------------------
+
+2.0.1
+- Remove LibreELEC dependency
 
 2.0.0
 - Kodi Matrix compatibility
@@ -1472,10 +1518,9 @@ docker.linuxserver.quassel-core:
 
 <addon id="docker.linuxserver.resilio-sync"
        name="Resilio Sync (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -1495,6 +1540,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.resilio-sync:
 --------------------------------
+
+2.0.1
+- Remove LibreELEC dependency
 
 2.0.0
 - Kodi Matrix compatibility
@@ -1537,10 +1585,9 @@ docker.linuxserver.resilio-sync:
 
 <addon id="docker.linuxserver.tautulli"
        name="Tautulli (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -1560,6 +1607,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.tautulli:
 --------------------------
+
+2.0.1
+- Remove LibreELEC dependency
 
 2.0.0
 - Kodi Matrix compatibility
@@ -1584,10 +1634,9 @@ docker.linuxserver.tautulli:
 
 <addon id="docker.linuxserver.thelounge"
        name="TheLounge (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -1607,6 +1656,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.thelounge:
 -----------------------------
+
+2.0.1
+- Remove LibreELEC dependency
 
 2.0.0
 - Kodi Matrix compatibility
@@ -1646,10 +1698,9 @@ docker.linuxserver.thelounge:
 
 <addon id="docker.linuxserver.tvheadend"
        name="TVheadend (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -1669,6 +1720,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.tvheadend:
 -----------------------------
+
+2.0.1
+- Remove LibreELEC dependency
 
 2.0.0
 - Kodi Matrix compatibility
@@ -1714,10 +1768,9 @@ docker.linuxserver.tvheadend:
 
 <addon id="docker.linuxserver.updater"
        name="Docker Image Updater (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
   </requires>
   <extension point="xbmc.service" library="default.py">
@@ -1736,6 +1789,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.updater:
 -------------------------
+
+2.0.1
+- Remove LibreELEC dependency
 
 2.0.0
 - Kodi Matrix compatibility
@@ -1774,10 +1830,9 @@ docker.linuxserver.updater:
 
 <addon id="docker.linuxserver.webgrabplus"
        name="WebGrab+Plus (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -1807,6 +1862,9 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.webgrabplus:
 -------------------------------
 
+2.0.1
+- Remove LibreELEC dependency
+
 2.0.0
 - Kodi Matrix compatibility
 - Switch to multi-arch images
@@ -1831,10 +1889,9 @@ docker.linuxserver.webgrabplus:
 
 <addon id="docker.linuxserver.znc"
        name="ZNC (LinuxServer.io)"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="LinuxServer.io">
   <requires>
-    <import addon="os.libreelec.tv" version="7.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="docker.linuxserver.updater" version="0.0.0"/>
   </requires>
@@ -1856,6 +1913,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.znc:
 -----------------------
+
+2.0.1
+- Remove LibreELEC dependency
 
 2.0.0
 - Kodi Matrix compatibility
