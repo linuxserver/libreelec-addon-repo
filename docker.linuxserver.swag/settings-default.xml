@@ -1,0 +1,13 @@
+<settings>
+    <setting id="V_config" value="/storage/.kodi/userdata/addon_data/docker.linuxserver.swag/config" />
+    <setting id="P_port"   value="443" />
+    <setting id="P_port2_bool"   value="true" />
+    <setting id="P_port2"   value="80" />
+    <setting id="E_url"    value="" />
+    <setting id="E_subd"   value="www," />
+    <setting id="E_validation"   value="http" />
+    <setting id="E_dnsplugin"   value="cloudflare" />
+    <setting id="E_duckdnstoken"   value="" />
+    <setting id="E_email_bool"   value="false" />
+    <setting id="E_email"  value="" />
+</settings>
