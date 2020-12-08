@@ -1,0 +1,70 @@
+#!/bin/sh
+
+name="letsencrypt"
+servicename="$(basename $0)"
+. /etc/profile
+
+if [ -f /storage/.cache/timezone ]; then
+ . /storage/.cache/timezone
+else
+ TIMEZONE="America/New_York"
+fi
+
+oe_setup_addon "$servicename"
+
+#set docker image
+DOCKERIMAGE="linuxserver/swag"
+
+while [ "$E_url" = "" ]; do
+  echo "Complete addon settings to continue"
+  sleep 60
+done
+
+#figure out if dns plugin should be selected
+if [ "$E_validation" = "dns" ]; then
+  OPTDNSPLUGIN="-e DNSPLUGIN=${E_dnsplugin}"
+fi
+
+#add duckdns token if duckdns validation is selected
+if [ "$E_validation" = "duckdns" ]; then
+  OPTDNSPLUGIN="-e DUCKDNSTOKEN=${E_duckdnstoken}"
+fi
+
+#figure out if email should be used
+if [ "$E_email_bool" = "true" ]; then
+  OPTEMAIL="-e EMAIL=${E_email}"
+fi
+
+#figure out if port 80 should be mapped
+if [ "$P_port2_bool" = "true" ]; then
+  OPTPORT80="-p ${P_port2}:80"
+fi
+
+# add image to cron updater list
+if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh ]; then
+  sleep 10
+fi
+
+if ! grep -q "$DOCKERIMAGE" /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh; then
+  echo "/storage/.kodi/addons/service.system.docker/bin/docker pull $DOCKERIMAGE" >> /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
+fi
+
+docker rm "$name" 2>/dev/null
+docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
+docker run --name="$name" \
+           --rm \
+           --network=lsio \
+           --cap-add=NET_ADMIN \
+           -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
+           -e PUID="65534" \
+           -e PGID="100" \
+           -e TZ="$TIMEZONE" \
+           -v "$V_config":/config \
+           -p "$P_port":443 \
+           ${OPTPORT80} \
+           -e URL="$E_url" \
+           -e SUBDOMAINS="$E_subd" \
+           -e VALIDATION="$E_validation" \
+           ${OPTDNSPLUGIN} \
+           ${OPTEMAIL} \
+           "$DOCKERIMAGE":latest

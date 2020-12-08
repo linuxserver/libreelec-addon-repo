@@ -1,0 +1,9 @@
+#!/bin/sh
+
+. /etc/profile
+
+# stop and remove container
+docker stop swag 2> /dev/null
+
+# remove image from cron updater list
+sed -i '/swag/d' /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
