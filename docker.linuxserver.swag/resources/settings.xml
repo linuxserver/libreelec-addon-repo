@@ -13,7 +13,7 @@
       <setting label="30011" type="text"   id="E_url"     default="" />
       <setting label="30012" type="text"   id="E_subd"    default="www," />
       <setting label="30013" type="labelenum"   id="E_validation" values="http|dns|duckdns"   default="http" />
-      <setting label="30014" type="labelenum"   id="E_dnsplugin" values="aliyun|cloudflare|cloudxns|cpanel|digitalocean|dnsimple|dnsmadeeasy|domeneshop|gandi|google|inwx|linode|luadns|netcup|nsone|ovh|rfc2136|route53|transip"   default="cloudflare" enable="eq(-1,1)" />
+      <setting label="30014" type="labelenum"   id="E_dnsplugin" values="aliyun|cloudflare|cloudxns|cpanel|digitalocean|dnsimple|dnsmadeeasy|domeneshop|gandi|gehirn|google|inwx|linode|luadns|netcup|njalla|nsone|ovh|rfc2136|route53|sakuracloud|transip"   default="cloudflare" enable="eq(-1,1)" />
       <setting label="30015" type="text"   id="E_duckdnstoken"   default="" enable="eq(-2,2)" />
       <setting label="30016" type="bool"   id="E_email_bool"   default="false" />
       <setting label="30017" type="text"   id="E_email"   default="" enable="eq(-1,true)" />

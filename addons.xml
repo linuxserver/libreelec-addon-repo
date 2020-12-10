@@ -1585,7 +1585,7 @@ docker.linuxserver.resilio-sync:
 
 <addon id="docker.linuxserver.swag"
        name="SWAG - Secure Web Application Gateway (LinuxServer.io)"
-       version="1.0.0"
+       version="1.0.1"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -1612,6 +1612,10 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.swag:
 -------------------------------
+
+1.0.1
+- Add gehirn, njalla and sakuracloud dns validation options
+- Fix container name
 
 1.0.0
 - Initial release
