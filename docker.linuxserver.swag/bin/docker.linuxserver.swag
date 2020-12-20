@@ -1,6 +1,6 @@
 #!/bin/sh
 
-name="letsencrypt"
+name="swag"
 servicename="$(basename $0)"
 . /etc/profile
 
