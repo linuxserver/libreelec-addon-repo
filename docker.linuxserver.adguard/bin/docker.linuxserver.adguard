@@ -12,19 +12,8 @@ fi
 
 oe_setup_addon "$servicename"
 
-#get arch variable from os
-LEARCHVAR=`sed -e '/EELEC_ARCH/ !d' -e 's/[^.]*\.\([^"]*\).*/\1/' /etc/os-release`
-
-#figure out which docker hub image to use
-if [ "$LEARCHVAR" = "x86_64" ]; then
-  DOCKERIMAGETAG="latest"
-elif [ "$LEARCHVAR" = "arm" ]; then
-  DOCKERIMAGETAG="armhf-latest"
-else
-  DOCKERIMAGETAG="arm64-latest"
-fi
-
 # set docker image
+DOCKERIMAGETAG="latest"
 DOCKERIMAGE="adguard/adguardhome"
 
 # map ports for DHCP if enabled
