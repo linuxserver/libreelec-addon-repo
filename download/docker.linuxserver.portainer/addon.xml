@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="docker.linuxserver.portainer"
        name="Portainer (LinuxServer.io)"
-       version="2.0.1"
+       version="2.1.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -26,6 +26,9 @@ Please do not use portainer to manage other LinuxServer.io addon generated conta
     <news>
 docker.linuxserver.portainer:
 --------------------------
+
+2.1.0
+- Update to Portainer 2.0 at the new repo (see Portainer changelog for breaking changes)
 
 2.0.1
 - Remove LibreELEC dependency
