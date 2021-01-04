@@ -10,8 +10,8 @@ if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.s
   sleep 10
 fi
 
-if ! grep -q "portainer/portainer" /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh; then
-  echo "/storage/.kodi/addons/service.system.docker/bin/docker pull portainer/portainer" >> /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
+if ! grep -q "portainer/portainer-ce" /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh; then
+  echo "/storage/.kodi/addons/service.system.docker/bin/docker pull portainer/portainer-ce" >> /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
 fi
 
 docker rm "$name" 2>/dev/null
@@ -24,4 +24,4 @@ docker run --name="$name" \
            -v "$V_config":/data \
            -v /var/run/docker.sock:/var/run/docker.sock \
            -p "$P_port":9000 \
-           portainer/portainer
+           portainer/portainer-ce
