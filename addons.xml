@@ -2,7 +2,7 @@
 <addons>
 <addon id="docker.linuxserver.adguard"
        name="AdGuardHome (LinuxServer.io)"
-       version="2.0.1"
+       version="2.1.0"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -29,6 +29,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.adguard:
 ---------------------------
+
+2.1.0
+- Switch to new multi-arch images
 
 2.0.1
 - Remove LibreELEC dependency
