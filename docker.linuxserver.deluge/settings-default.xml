@@ -1,0 +1,6 @@
+<settings>
+    <setting id="V_config"     value="/storage/.kodi/userdata/addon_data/docker.linuxserver.deluge/config" />
+    <setting id="V_downloads"  value="/storage/.kodi/userdata/addon_data/docker.linuxserver.deluge/downloads" />
+    <setting id="P_port"       value="8112" />
+    <setting id="E_extraparam" value="" />
+</settings>

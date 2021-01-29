@@ -1,0 +1,50 @@
+#!/bin/sh
+
+name="deluge"
+servicename="$(basename $0)"
+. /etc/profile
+
+if [ -f /storage/.cache/timezone ]; then
+ . /storage/.cache/timezone
+else
+ TIMEZONE="America/New_York"
+fi
+
+oe_setup_addon "$servicename"
+
+# set docker image
+DOCKERIMAGE="linuxserver/deluge"
+
+# add image to cron updater list
+if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh ]; then
+  sleep 10
+fi
+
+if ! grep -q "$DOCKERIMAGE" /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh; then
+  echo "/storage/.kodi/addons/service.system.docker/bin/docker pull $DOCKERIMAGE" >> /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
+fi
+
+docker rm "$name" 2>/dev/null
+docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
+
+mkdir -p "$V_downloads"
+if [ ! "$(ls -ld $V_downloads | awk '{print $3}')" = "nobody" ]; then
+  echo "attempting chown nobody:users on $V_downloads"
+  chown -R nobody:users "$V_downloads" 2>&1 >/dev/null
+  echo "chown attempt completed, moving on"
+else
+  echo "skipping chown, make sure the folder $V_downloads is accessible by the user nobody:users (65534:100)"
+fi
+
+docker run --name="$name" \
+           --rm \
+           --net=host \
+           -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
+           -e PUID="65534" \
+           -e PGID="100" \
+           -e TZ="$TIMEZONE" \
+           -v "$V_config":/config \
+           -v "$V_downloads":/downloads \
+           -p "$P_port":8112 \
+           ${E_extraparam} \
+           "$DOCKERIMAGE":latest
