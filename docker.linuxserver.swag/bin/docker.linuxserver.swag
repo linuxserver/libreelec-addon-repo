@@ -40,6 +40,13 @@ if [ "$P_port2_bool" = "true" ]; then
   OPTPORT80="-p ${P_port2}:80"
 fi
 
+#figure out if CERTPROVIDER should be set
+if [ "$E_certprov" = "letsencrypt" ]; then
+  CERTPROV=""
+else
+  CERTPROV="-e CERTPROVIDER=${E_certprov}"
+fi
+
 # add image to cron updater list
 if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh ]; then
   sleep 10
@@ -67,4 +74,6 @@ docker run --name="$name" \
            -e VALIDATION="$E_validation" \
            ${OPTDNSPLUGIN} \
            ${OPTEMAIL} \
+           ${CERTPROV} \
+           -e MAXMINDDB_LICENSE_KEY="${E_maxmind}" \
            "$DOCKERIMAGE":latest
