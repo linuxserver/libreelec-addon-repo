@@ -10,4 +10,6 @@
     <setting id="E_duckdnstoken"   value="" />
     <setting id="E_email_bool"   value="false" />
     <setting id="E_email"  value="" />
+    <setting id="E_certprov"   value="letsencrypt" />
+    <setting id="E_maxmind"   value="" />
 </settings>

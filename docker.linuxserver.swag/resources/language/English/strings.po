@@ -54,9 +54,17 @@ msgid "DuckDNS token"
 msgstr ""
 
 msgctxt "#30016"
-msgid "E-mail notifications?"
+msgid "E-mail notifications? (Required for ZeroSSL)"
 msgstr ""
 
 msgctxt "#30017"
 msgid "Email"
+msgstr ""
+
+msgctxt "#30018"
+msgid "Cert Provider (ZeroSSL requires email set)"
+msgstr ""
+
+msgctxt "#30019"
+msgid "MaxMindDB license key (optional, for GeoIP)"
 msgstr ""
