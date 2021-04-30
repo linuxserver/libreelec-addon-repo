@@ -1628,7 +1628,7 @@ docker.linuxserver.resilio-sync:
 
 <addon id="docker.linuxserver.swag"
        name="SWAG - Secure Web Application Gateway (LinuxServer.io)"
-       version="1.1.0"
+       version="1.1.1"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -1655,6 +1655,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.swag:
 -------------------------------
+
+1.1.1
+- Add support for additional docker arguments
 
 1.1.0
 - Add option for using ZeroSSL instead of LetsEncrypt (requires e-mail set)
