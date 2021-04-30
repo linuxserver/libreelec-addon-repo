@@ -1,0 +1,21 @@
+name: Addon Builder
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  addon-builder:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build and Push
+        run: |
+          python addons_xml_generator3.py
+          git config --local user.email "ci@linuxserver.io"
+          git config --local user.name "LinuxServer-CI"
+          git add . || :
+          git commit -m '[bot] Packaging addons and updating addons.xml' || :
+          git push || :
