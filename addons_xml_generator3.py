@@ -179,13 +179,9 @@ if (__name__ == "__main__"):
                         zipfolder(zipfilenamefirstpart + version + zipfilenamelastpart, foldertozip, zipsfolder, x)
                         print('zipped with zipfolder')
                         # # #create md5 checksum for zips
+                        import hashlib
                         try:
-                            import md5
-                            m = md5.new(open("%s" % (zipsfolder + x + version + '.zip'), "r").read()).hexdigest()
-                        except ImportError:
-                            import hashlib
-                            m = hashlib.md5(open("%s" % (zipsfolder + x + version + '.zip'), "r", encoding="UTF-8").read().encode("UTF-8")).hexdigest()
-                        try:
+                            m = hashlib.md5(open("%s" % (zipsfolder + x + version + '.zip'), "rb").read()).hexdigest()
                             open("%s" % (zipsfolder + x + version + '.zip.md5'), "wb").write(m.encode("UTF-8"))
                             print("zip.md5 file created\n")
                         except Exception as e:
