@@ -12,4 +12,5 @@
     <setting id="E_email"  value="" />
     <setting id="E_certprov"   value="letsencrypt" />
     <setting id="E_maxmind"   value="" />
+    <setting id="E_additional"   value="" />
 </settings>

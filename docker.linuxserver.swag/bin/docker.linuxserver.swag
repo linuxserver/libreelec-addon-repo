@@ -76,4 +76,5 @@ docker run --name="$name" \
            ${OPTEMAIL} \
            ${CERTPROV} \
            -e MAXMINDDB_LICENSE_KEY="${E_maxmind}" \
+           $E_additional \
            "$DOCKERIMAGE":latest
