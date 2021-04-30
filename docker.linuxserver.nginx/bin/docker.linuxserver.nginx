@@ -36,4 +36,6 @@ docker run --name="$name" \
            -v "$V_config":/config \
            -p "$P_port":80 \
            -p "$P_port2":443 \
+           -e MAXMINDDB_LICENSE_KEY="${E_maxmind}" \
+           $E_additional \
            "$DOCKERIMAGE":latest

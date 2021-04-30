@@ -5,5 +5,7 @@
       <setting label="30005" type="folder" id="V_config"  default="/storage/.kodi/userdata/addon_data/docker.linuxserver.nginx/config"  option="writeable" />
       <setting label="30006" type="number" id="P_port"    default="80" />
       <setting label="30007" type="number" id="P_port2"   default="443" />
+      <setting label="30009" type="text"   id="E_maxmind"     default="" />
+      <setting label="30015" type="text"   id="E_additional"   default="" />
    </category>
 </settings>

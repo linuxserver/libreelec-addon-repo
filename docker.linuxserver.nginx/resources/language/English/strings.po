@@ -20,3 +20,11 @@ msgstr ""
 msgctxt "#30007"
 msgid "SSL port"
 msgstr ""
+
+msgctxt "#30009"
+msgid "MaxMindDB license key (optional, for GeoIP)"
+msgstr ""
+
+msgctxt "#30015"
+msgid "Additional docker parameters (optional)"
+msgstr ""
