@@ -19,5 +19,6 @@
       <setting label="30017" type="text"   id="E_email"   default="" enable="eq(-1,true)" />
       <setting label="30018" type="labelenum"   id="E_certprov"   values="letsencrypt|zerossl"   default="letsencrypt" />
       <setting label="30019" type="text"   id="E_maxmind"     default="" />
+      <setting label="30025" type="text"   id="E_additional"   default="" />
    </category>
 </settings>
