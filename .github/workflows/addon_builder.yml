@@ -16,6 +16,7 @@ jobs:
           python addons_xml_generator3.py
           git config --local user.email "ci@linuxserver.io"
           git config --local user.name "LinuxServer-CI"
+          sleep 5
           git add . || :
           git commit -m '[bot] Packaging addons and updating addons.xml' || :
           git push || :
