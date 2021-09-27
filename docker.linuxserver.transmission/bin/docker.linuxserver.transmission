@@ -38,8 +38,8 @@ docker run --name="$name" \
            -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
            -e TZ="$TIMEZONE" \
            -p "$P_port":9091 \
-           -p "$P_port2":51413 \
-           -p "$P_port2":51413/udp \
+           -p "$P_port2":"$P_port2" \
+           -p "$P_port2":"$P_port2"/udp \
            -v "$V_config":/config \
            -v "$V_downloads":/downloads \
            ${OPTUSER} \
