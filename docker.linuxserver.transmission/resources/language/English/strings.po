@@ -1,0 +1,34 @@
+msgid ""
+msgstr ""
+
+msgctxt "#30000"
+msgid "Configuration"
+msgstr ""
+
+msgctxt "#30005"
+msgid "Map /config"
+msgstr ""
+
+msgctxt "#30006"
+msgid "Map /downloads"
+msgstr ""
+
+msgctxt "#30008"
+msgid "WebUI port"
+msgstr ""
+
+msgctxt "#30009"
+msgid "Torrent port"
+msgstr ""
+
+msgctxt "#30011"
+msgid "Specify interface credentials"
+msgstr ""
+
+msgctxt "#30012"
+msgid "Username"
+msgstr ""
+
+msgctxt "#30013"
+msgid "Password"
+msgstr ""

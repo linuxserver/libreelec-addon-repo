@@ -1,0 +1,9 @@
+#!/bin/sh
+
+. /etc/profile
+
+# stop and remove container
+docker stop transmission
+
+# remove image from cron updater list
+sed -i '/transmission/d' /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh

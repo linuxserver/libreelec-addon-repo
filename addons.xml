@@ -1797,6 +1797,40 @@ docker.linuxserver.thelounge:
   </extension>
 </addon>
 
+<addon id="docker.linuxserver.transmission"
+       name="Transmission (LinuxServer.io)"
+       version="1.0.0"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="service.system.docker" version="0.0.0" />
+    <import addon="docker.linuxserver.updater" version="0.0.0"/>
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Transmission server in a docker container</summary>
+    <description>
+Transmission is a cross-platform BitTorrent client.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.transmission:
+---------------------------
+
+1.0.0
+- Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
 <addon id="docker.linuxserver.tvheadend"
        name="TVheadend (LinuxServer.io)"
        version="2.0.1"

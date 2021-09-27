@@ -1,0 +1,6 @@
+<settings>
+    <setting id="V_config" value="/storage/.kodi/userdata/addon_data/docker.linuxserver.transmission/config" />
+    <setting id="V_sync" value="/storage/.kodi/userdata/addon_data/docker.linuxserver.transmission/data" />
+    <setting id="P_port" value="9091" />
+    <setting id="P_port2" value="51413" />
+</settings>
