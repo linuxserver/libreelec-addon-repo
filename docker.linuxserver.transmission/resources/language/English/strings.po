@@ -5,12 +5,20 @@ msgctxt "#30000"
 msgid "Configuration"
 msgstr ""
 
+msgctxt "#30001"
+msgid "Note: Kodi remote sources can not be used as Docker volume host sources"
+msgstr ""
+
 msgctxt "#30005"
 msgid "Map /config"
 msgstr ""
 
 msgctxt "#30006"
 msgid "Map /downloads"
+msgstr ""
+
+msgctxt "#30007"
+msgid "Port Settings"
 msgstr ""
 
 msgctxt "#30008"
@@ -21,8 +29,12 @@ msgctxt "#30009"
 msgid "Torrent port"
 msgstr ""
 
+msgctxt "#30010"
+msgid "Interface authentication"
+msgstr ""
+
 msgctxt "#30011"
-msgid "Specify interface credentials"
+msgid "Specify interface credentials?"
 msgstr ""
 
 msgctxt "#30012"
@@ -32,3 +44,4 @@ msgstr ""
 msgctxt "#30013"
 msgid "Password"
 msgstr ""
+
