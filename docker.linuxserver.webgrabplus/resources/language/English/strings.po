@@ -16,3 +16,11 @@ msgstr ""
 msgctxt "#30006"
 msgid "Map /data"
 msgstr ""
+
+msgctxt "#30007"
+msgid "Hostname (for license check)"
+msgstr ""
+
+msgctxt "#30008"
+msgid "MAC address (for license check)"
+msgstr ""
