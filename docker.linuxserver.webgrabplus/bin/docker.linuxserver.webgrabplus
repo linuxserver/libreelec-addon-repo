@@ -29,6 +29,8 @@ docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\
 docker run --name="$name" \
            --rm \
            --network=lsio \
+           --hostname="$E_hostname" \
+           --mac-address="$E_mac_address" \
            -e WARNING_MSG="DO NOT CONTROL THIS IN PORTAINER!" \
            -e PUID="65534" \
            -e PGID="100" \

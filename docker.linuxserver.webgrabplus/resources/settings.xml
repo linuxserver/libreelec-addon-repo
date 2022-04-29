@@ -2,7 +2,9 @@
 <settings>
    <category   label="30000">
       <setting label="30001" type="lsep" />
-      <setting label="30005" type="folder" id="V_config"  default="/storage/.kodi/userdata/addon_data/docker.linuxserver.webgrabplus/config"  option="writeable" />
-      <setting label="30006" type="folder" id="V_data"    default="/storage/.kodi/userdata/addon_data/docker.linuxserver/webgrabplus/data"  option="writeable" />
+      <setting label="30005" type="folder" id="V_config"      default="/storage/.kodi/userdata/addon_data/docker.linuxserver.webgrabplus/config"  option="writeable" />
+      <setting label="30006" type="folder" id="V_data"        default="/storage/.kodi/userdata/addon_data/docker.linuxserver/webgrabplus/data"  option="writeable" />
+      <setting label="30007" type="text"   id="E_hostname"    default="webgrabplus" />
+      <setting label="30008" type="text"   id="E_mac_address" default="00:00:00:00:00:00" />
    </category>
 </settings>
