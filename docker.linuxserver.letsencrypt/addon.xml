@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="docker.linuxserver.letsencrypt"
        name="Nginx Letsencrypt (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -26,9 +26,16 @@ Please visit https://linuxserver.io for more information.
     </description>
     <disclaimer>
     </disclaimer>
+    <broken>
+Letsencrypt image has been superseded by the SWAG image. Please switch to the SWAG addon.
+    </broken>
     <news>
 docker.linuxserver.letsencrypt:
 -------------------------------
+
+2.0.2
+- Update systemd to not delay Kodi start
+- Mark as broken as addon is replaced by SWAG
 
 2.0.1
 - Remove LibreELEC dependency

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # *
 # *  Copyright (C) 2012-2013 Garrett Brown
 # *  Copyright (C) 2010      j48antialias

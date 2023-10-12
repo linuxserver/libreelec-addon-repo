@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="docker.linuxserver.duckdns"
        name="DuckDNS (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -24,6 +24,9 @@ Please visit www.duckdns.org to get a custom url and token
     <news>
 docker.linuxserver.duckdns:
 ---------------------------
+
+2.0.2
+- Update systemd to not delay Kodi start
 
 2.0.1
 - Remove LibreELEC dependency

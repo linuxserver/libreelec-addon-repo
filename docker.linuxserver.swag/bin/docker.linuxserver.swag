@@ -15,6 +15,20 @@ oe_setup_addon "$servicename"
 #set docker image
 DOCKERIMAGE="linuxserver/swag"
 
+ARCH=$(grep LIBREELEC_ARCH /etc/os-release | sed -E 's|.*\.(.*)"|\1|')
+if [ "${ARCH}" = "arm" ]; then
+  echo '
+  **************************************************************
+  **************************************************************
+  ****            You are using 32 bit userspace            ****
+  ****       Linuxserver has deprecated 32 bit images       ****
+  **** https://info.linuxserver.io/issues/2023-07-01-armhf/ ****
+  ****         This addon will not run on your system       ****
+  **************************************************************
+  **************************************************************'
+  sleep infinity
+fi
+
 while [ "$E_url" = "" ]; do
   echo "Complete addon settings to continue"
   sleep 60

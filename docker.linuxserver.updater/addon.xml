@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="docker.linuxserver.updater"
        name="Docker Image Updater (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -22,6 +22,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.updater:
 -------------------------
+
+2.0.2
+- Update systemd to not delay Kodi start
 
 2.0.1
 - Remove LibreELEC dependency
