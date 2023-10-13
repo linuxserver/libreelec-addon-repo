@@ -15,6 +15,20 @@ oe_setup_addon "$servicename"
 # set docker image
 DOCKERIMAGE="linuxserver/duckdns"
 
+ARCH=$(grep LIBREELEC_ARCH /etc/os-release | sed -E 's|.*\.(.*)"|\1|')
+if [ "${ARCH}" = "arm" ]; then
+  echo '
+  **************************************************************
+  **************************************************************
+  ****            You are using 32 bit userspace            ****
+  ****       Linuxserver has deprecated 32 bit images       ****
+  **** https://info.linuxserver.io/issues/2023-07-01-armhf/ ****
+  ****         This addon will not run on your system       ****
+  **************************************************************
+  **************************************************************'
+  sleep infinity
+fi
+
 while [ "$E_TOKEN" = "token" ]; do
   echo "Enter duckdns subdomain and token in addon settings to continue"
   sleep 60
@@ -22,11 +36,23 @@ done
 
 # add image to cron updater list
 if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh ]; then
-  sleep 10
+  echo "Waiting for Docker Updater Addon to initialize"
+  until [ -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh ]; do
+    sleep 1
+  done
+  echo "Docker Updater Addon is now initialized"
 fi
 
 if ! grep -q "$DOCKERIMAGE" /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh; then
   echo "/storage/.kodi/addons/service.system.docker/bin/docker pull $DOCKERIMAGE" >> /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
+fi
+
+if [ ! -S /run/docker.sock ]; then
+  echo "Waiting for docker socket. . ."
+  until [ -S /run/docker.sock ]; do
+    sleep 1
+  done
+  echo "Docker socket is now up"
 fi
 
 docker rm "$name" 2>/dev/null

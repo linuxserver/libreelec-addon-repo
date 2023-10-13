@@ -19,4 +19,4 @@ ExecStartPost=/usr/bin/sleep 10
 ExecStop=/bin/sh /storage/.kodi/addons/%p/bin/stop
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=kodi.target

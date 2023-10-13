@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="docker.linuxserver.portainer"
        name="Portainer (LinuxServer.io)"
-       version="2.1.0"
+       version="2.1.1"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -23,9 +23,16 @@ Please use Portainer to manage only containers created through Portainer. Contai
     <disclaimer>
 Please do not use portainer to manage other LinuxServer.io addon generated containers. Their status are automated.
     </disclaimer>
+    <broken>
+This addon has been deprecated. You can run the portainer container manually via docker compose or cli.
+    </broken>
     <news>
 docker.linuxserver.portainer:
 --------------------------
+
+2.1.1
+- Update systemd to not delay Kodi start
+- Deprecate the portainer addon
 
 2.1.0
 - Update to Portainer 2.0 at the new repo (see Portainer changelog for breaking changes)
