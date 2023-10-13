@@ -2,7 +2,7 @@
 <addons>
 <addon id="docker.linuxserver.adguard"
        name="AdGuardHome (LinuxServer.io)"
-       version="2.1.0"
+       version="2.1.1"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -30,6 +30,10 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.adguard:
 ---------------------------
 
+2.1.1
+- Update systemd to not delay Kodi start
+- Add 32bit deprecation notice
+
 2.1.0
 - Switch to new multi-arch images
 
@@ -53,7 +57,7 @@ docker.linuxserver.adguard:
 
 <addon id="docker.linuxserver.beets"
        name="Beets (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -75,6 +79,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.beets:
 -------------------------
+
+2.0.2
+- Update systemd to not delay Kodi start
 
 2.0.1
 - Remove LibreELEC dependency
@@ -124,7 +131,7 @@ docker.linuxserver.beets:
 
 <addon id="docker.linuxserver.boinc"
        name="Boinc (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -150,6 +157,9 @@ Please visit https://linuxserver.io for more info on this image and addon.
 docker.linuxserver.boinc:
 ------------------------
 
+2.0.2
+- Update systemd to not delay Kodi start
+
 2.0.1
 - Remove LibreELEC dependency
 
@@ -170,7 +180,7 @@ docker.linuxserver.boinc:
 
 <addon id="docker.linuxserver.daapd"
        name="Daapd (LinuxServer.io)"
-       version="1.0.0"
+       version="1.0.1"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -193,6 +203,9 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.daapd:
 -------------------------
 
+1.0.1
+- Update systemd to not delay Kodi start
+
 1.0.0
 - Initial release
     </news>
@@ -207,7 +220,7 @@ docker.linuxserver.daapd:
 
 <addon id="docker.linuxserver.domoticz"
        name="Domoticz (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -231,6 +244,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.domoticz:
 -----------------------------
+
+2.0.2
+- Update systemd to not delay Kodi start
 
 2.0.1
 - Remove LibreELEC dependency
@@ -264,7 +280,7 @@ docker.linuxserver.domoticz:
 
 <addon id="docker.linuxserver.duckdns"
        name="DuckDNS (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -287,6 +303,9 @@ Please visit www.duckdns.org to get a custom url and token
     <news>
 docker.linuxserver.duckdns:
 ---------------------------
+
+2.0.2
+- Update systemd to not delay Kodi start
 
 2.0.1
 - Remove LibreELEC dependency
@@ -349,7 +368,7 @@ docker.linuxserver.duckdns:
 
 <addon id="docker.linuxserver.duplicati"
        name="Duplicati (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -371,6 +390,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.duplicati:
 -----------------------------
+
+2.0.2
+- Update systemd to not delay Kodi start
 
 2.0.1
 - Remove LibreELEC dependency
@@ -410,7 +432,7 @@ docker.linuxserver.duplicati:
 
 <addon id="docker.linuxserver.emby"
        name="Emby (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -431,6 +453,9 @@ Please visit https://linuxserver.io for more info on this image and addon.
     <news>
 docker.linuxserver.emby:
 ------------------------
+
+2.0.2
+- Update systemd to not delay Kodi start
 
 2.0.1
 - Remove LibreELEC dependency
@@ -491,7 +516,7 @@ docker.linuxserver.emby:
 
 <addon id="docker.linuxserver.foldingathome"
        name="Folding@home (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -517,6 +542,9 @@ Please visit https://linuxserver.io for more info on this image and addon.
 docker.linuxserver.foldingathome:
 ------------------------
 
+2.0.2
+- Update systemd to not delay Kodi start
+
 2.0.1
 - Remove LibreELEC dependency
 
@@ -537,7 +565,7 @@ docker.linuxserver.foldingathome:
 
 <addon id="docker.linuxserver.heimdall"
        name="Heimdall (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -560,6 +588,9 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.heimdall:
 -------------------------
 
+2.0.2
+- Update systemd to not delay Kodi start
+
 2.0.1
 - Remove LibreELEC dependency
 
@@ -580,7 +611,7 @@ docker.linuxserver.heimdall:
 
 <addon id="docker.linuxserver.jellyfin"
        name="Jellyfin (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -601,6 +632,9 @@ Please visit https://linuxserver.io for more info on this image and addon.
     <news>
 docker.linuxserver.jellyfin:
 ------------------------
+
+2.0.2
+- Update systemd to not delay Kodi start
 
 2.0.1
 - Remove LibreELEC dependency
@@ -641,7 +675,7 @@ docker.linuxserver.jellyfin:
 
 <addon id="docker.linuxserver.letsencrypt"
        name="Nginx Letsencrypt (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -666,9 +700,16 @@ Please visit https://linuxserver.io for more information.
     </description>
     <disclaimer>
     </disclaimer>
+    <broken>
+Letsencrypt image has been superseded by the SWAG image. Please switch to the SWAG addon.
+    </broken>
     <news>
 docker.linuxserver.letsencrypt:
 -------------------------------
+
+2.0.2
+- Update systemd to not delay Kodi start
+- Mark as broken as addon is replaced by SWAG
 
 2.0.1
 - Remove LibreELEC dependency
@@ -741,7 +782,7 @@ docker.linuxserver.letsencrypt:
 
 <addon id="docker.linuxserver.mariadb"
        name="MariaDB (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -767,6 +808,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.mariadb:
 ---------------------------
+
+2.0.2
+- Update systemd to not delay Kodi start
 
 2.0.1
 - Remove LibreELEC dependency
@@ -831,7 +875,7 @@ docker.linuxserver.mariadb:
 
 <addon id="docker.linuxserver.minisatip"
        name="Minisatip (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -853,6 +897,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.minisatip:
 -----------------------------
+
+2.0.2
+- Update systemd to not delay Kodi start
 
 2.0.1
 - Remove LibreELEC dependency
@@ -904,7 +951,7 @@ docker.linuxserver.minisatip:
 
 <addon id="docker.linuxserver.muximux"
        name="Muximux (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -926,6 +973,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.muximux:
 ---------------------------
+
+2.0.2
+- Update systemd to not delay Kodi start
 
 2.0.1
 - Remove LibreELEC dependency
@@ -968,7 +1018,7 @@ docker.linuxserver.muximux:
 
 <addon id="docker.linuxserver.netdata"
        name="Netdata (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -990,6 +1040,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.netdata:
 ---------------------------
+
+2.0.2
+- Update systemd to not delay Kodi start
 
 2.0.1
 - Remove LibreELEC dependency
@@ -1014,7 +1067,7 @@ docker.linuxserver.netdata:
 
 <addon id="docker.linuxserver.nextcloud"
        name="Nextcloud (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -1044,6 +1097,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.nextcloud:
 -----------------------------
+
+2.0.2
+- Update systemd to not delay Kodi start
 
 2.0.1
 - Remove LibreELEC dependency
@@ -1086,7 +1142,7 @@ docker.linuxserver.nextcloud:
 
 <addon id="docker.linuxserver.nginx"
        name="Nginx (LinuxServer.io)"
-       version="2.1.0"
+       version="2.1.1"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -1110,6 +1166,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.nginx:
 -------------------------
+
+2.1.1
+- Update systemd to not delay Kodi start
 
 2.1.0
 - Add MaxMinDB license key (optional, needed for GeoIP)
@@ -1153,7 +1212,7 @@ docker.linuxserver.nginx:
 
 <addon id="docker.linuxserver.oscam"
        name="Oscam (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -1175,6 +1234,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.oscam:
 -------------------------
+
+2.0.2
+- Update systemd to not delay Kodi start
 
 2.0.1
 - Remove LibreELEC dependency
@@ -1216,7 +1278,7 @@ docker.linuxserver.oscam:
 
 <addon id="docker.linuxserver.photoshow"
        name="Photoshow (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -1235,9 +1297,16 @@ Please visit https://linuxserver.io for more information.
     </description>
     <disclaimer>
     </disclaimer>
+    <broken>
+This image/addon has been deprecated due to lack of upstream activity.
+    </broken>
     <news>
 docker.linuxserver.photoshow:
 -----------------------------
+
+2.0.2
+- Update systemd to not delay Kodi start
+- Deprecate the addon due to image deprecation
 
 2.0.1
 - Remove LibreELEC dependency
@@ -1281,7 +1350,7 @@ docker.linuxserver.photoshow:
 
 <addon id="docker.linuxserver.pi-hole"
        name="Pi-hole (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -1307,9 +1376,16 @@ Please visit https://linuxserver.io for more information.
     </description>
     <disclaimer>
     </disclaimer>
+    <broken>
+This addon has been deprecated. You can run the pi-hole container manually via docker compose or cli.
+    </broken>
     <news>
 docker.linuxserver.pi-hole:
 -------------------------
+
+2.0.2
+- Update systemd to not delay Kodi start
+- Deprecate the pi-hole addon
 
 2.0.1
 - Remove LibreELEC dependency
@@ -1354,7 +1430,7 @@ docker.linuxserver.pi-hole:
 
 <addon id="docker.linuxserver.plex"
        name="Plex (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -1376,6 +1452,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.plex:
 ------------------------
+
+2.0.2
+- Update systemd to not delay Kodi start
 
 2.0.1
 - Remove LibreELEC dependency
@@ -1431,7 +1510,7 @@ docker.linuxserver.plex:
 
 <addon id="docker.linuxserver.portainer"
        name="Portainer (LinuxServer.io)"
-       version="2.1.0"
+       version="2.1.1"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -1453,9 +1532,16 @@ Please use Portainer to manage only containers created through Portainer. Contai
     <disclaimer>
 Please do not use portainer to manage other LinuxServer.io addon generated containers. Their status are automated.
     </disclaimer>
+    <broken>
+This addon has been deprecated. You can run the portainer container manually via docker compose or cli.
+    </broken>
     <news>
 docker.linuxserver.portainer:
 --------------------------
+
+2.1.1
+- Update systemd to not delay Kodi start
+- Deprecate the portainer addon
 
 2.1.0
 - Update to Portainer 2.0 at the new repo (see Portainer changelog for breaking changes)
@@ -1496,7 +1582,7 @@ docker.linuxserver.portainer:
 
 <addon id="docker.linuxserver.quassel-core"
        name="Quassel Core (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -1520,6 +1606,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.quassel-core:
 --------------------------------
+
+2.0.2
+- Update systemd to not delay Kodi start
 
 2.0.1
 - Remove LibreELEC dependency
@@ -1565,7 +1654,7 @@ docker.linuxserver.quassel-core:
 
 <addon id="docker.linuxserver.resilio-sync"
        name="Resilio Sync (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -1587,6 +1676,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.resilio-sync:
 --------------------------------
+
+2.0.2
+- Update systemd to not delay Kodi start
 
 2.0.1
 - Remove LibreELEC dependency
@@ -1632,7 +1724,7 @@ docker.linuxserver.resilio-sync:
 
 <addon id="docker.linuxserver.swag"
        name="SWAG - Secure Web Application Gateway (LinuxServer.io)"
-       version="1.1.1"
+       version="1.1.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -1660,6 +1752,9 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.swag:
 -------------------------------
 
+1.1.2
+- Update systemd to not delay Kodi start
+
 1.1.1
 - Add support for additional docker arguments
 
@@ -1686,7 +1781,7 @@ docker.linuxserver.swag:
 
 <addon id="docker.linuxserver.tautulli"
        name="Tautulli (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -1708,6 +1803,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.tautulli:
 --------------------------
+
+2.0.2
+- Update systemd to not delay Kodi start
 
 2.0.1
 - Remove LibreELEC dependency
@@ -1735,7 +1833,7 @@ docker.linuxserver.tautulli:
 
 <addon id="docker.linuxserver.thelounge"
        name="TheLounge (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -1757,6 +1855,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.thelounge:
 -----------------------------
+
+2.0.2
+- Update systemd to not delay Kodi start
 
 2.0.1
 - Remove LibreELEC dependency
@@ -1799,7 +1900,7 @@ docker.linuxserver.thelounge:
 
 <addon id="docker.linuxserver.tvheadend"
        name="TVheadend (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -1821,6 +1922,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.tvheadend:
 -----------------------------
+
+2.0.2
+- Update systemd to not delay Kodi start
 
 2.0.1
 - Remove LibreELEC dependency
@@ -1869,7 +1973,7 @@ docker.linuxserver.tvheadend:
 
 <addon id="docker.linuxserver.updater"
        name="Docker Image Updater (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -1890,6 +1994,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.updater:
 -------------------------
+
+2.0.2
+- Update systemd to not delay Kodi start
 
 2.0.1
 - Remove LibreELEC dependency
@@ -1931,7 +2038,7 @@ docker.linuxserver.updater:
 
 <addon id="docker.linuxserver.webgrabplus"
        name="WebGrab+Plus (LinuxServer.io)"
-       version="2.1.0"
+       version="2.1.1"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -1963,6 +2070,9 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.webgrabplus:
 -------------------------------
 
+2.1.1
+- Update systemd to not delay Kodi start
+
 2.1.0
 - Add hostname and mac address options to settings. They are needed for license validation.
 
@@ -1993,7 +2103,7 @@ docker.linuxserver.webgrabplus:
 
 <addon id="docker.linuxserver.znc"
        name="ZNC (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -2017,6 +2127,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.znc:
 -----------------------
+
+2.0.2
+- Update systemd to not delay Kodi start
 
 2.0.1
 - Remove LibreELEC dependency

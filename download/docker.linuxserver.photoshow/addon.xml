@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="docker.linuxserver.photoshow"
        name="Photoshow (LinuxServer.io)"
-       version="2.0.1"
+       version="2.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -20,9 +20,16 @@ Please visit https://linuxserver.io for more information.
     </description>
     <disclaimer>
     </disclaimer>
+    <broken>
+This image/addon has been deprecated due to lack of upstream activity.
+    </broken>
     <news>
 docker.linuxserver.photoshow:
 -----------------------------
+
+2.0.2
+- Update systemd to not delay Kodi start
+- Deprecate the addon due to image deprecation
 
 2.0.1
 - Remove LibreELEC dependency
