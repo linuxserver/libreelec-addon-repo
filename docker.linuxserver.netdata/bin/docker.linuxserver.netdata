@@ -21,7 +21,7 @@ if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.s
   until [ -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh ]; do
     sleep 1
   done
-  echo "Docker Updater Addon is now initilized"
+  echo "Docker Updater Addon is now initialized"
 fi
 
 if ! grep -q "$DOCKERIMAGE" /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh; then
