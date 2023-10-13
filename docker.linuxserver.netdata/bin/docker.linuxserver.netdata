@@ -17,11 +17,23 @@ DOCKERIMAGE="netdata/netdata"
 
 # add image to cron updater list
 if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh ]; then
-  sleep 10
+  echo "Waiting for Docker Updater Addon to initialize"
+  until [ -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh ]; do
+    sleep 1
+  done
+  echo "Docker Updater Addon is now initilized"
 fi
 
 if ! grep -q "$DOCKERIMAGE" /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh; then
   echo "/storage/.kodi/addons/service.system.docker/bin/docker pull $DOCKERIMAGE" >> /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
+fi
+
+if [ ! -S /run/docker.sock ]; then
+  echo "Waiting for docker socket. . ."
+  until [ -S /run/docker.sock ]; do
+    sleep 1
+  done
+  echo "Docker socket is now up"
 fi
 
 docker rm "$name" 2>/dev/null
