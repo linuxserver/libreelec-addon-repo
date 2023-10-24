@@ -84,7 +84,7 @@ if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.s
 fi
 
 if ! grep -q "$DOCKERIMAGE" /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh; then
-  echo "/storage/.kodi/addons/service.system.docker/bin/docker pull $DOCKERIMAGE" >> /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
+  echo "/storage/.kodi/addons/service.system.docker/bin/docker pull ${DOCKERIMAGE}:${DOCKERTAG}" >> /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
 fi
 
 if [ ! -S /run/docker.sock ]; then
