@@ -14,19 +14,32 @@ oe_setup_addon "$servicename"
 
 # set docker image
 DOCKERIMAGE="linuxserver/muximux"
-
+DOCKERTAG="latest"
 ARCH=$(grep LIBREELEC_ARCH /etc/os-release | sed -E 's|.*\.(.*)"|\1|')
 if [ "${ARCH}" = "arm" ]; then
-  echo '
-  **************************************************************
-  **************************************************************
-  ****            You are using 32 bit userspace            ****
-  ****       Linuxserver has deprecated 32 bit images       ****
-  **** https://info.linuxserver.io/issues/2023-07-01-armhf/ ****
-  ****         This addon will not run on your system       ****
-  **************************************************************
-  **************************************************************'
-  sleep infinity
+  if [ $(uname -m) = "aarch64" ]; then
+    echo '
+    **************************************************************
+    **************************************************************
+    ****            You are using 32 bit userspace            ****
+    ****       Linuxserver has deprecated 32 bit images       ****
+    **** https://info.linuxserver.io/issues/2023-07-01-armhf/ ****
+    ****  This addon will attempt to run the aarch64 version  ****
+    **************************************************************
+    **************************************************************'
+    DOCKERTAG="arm64v8-latest"
+  else
+    echo '
+    **************************************************************
+    **************************************************************
+    ****            You are using a 32 bit device             ****
+    ****       Linuxserver has deprecated 32 bit images       ****
+    **** https://info.linuxserver.io/issues/2023-07-01-armhf/ ****
+    ****         This addon will not run on your system       ****
+    **************************************************************
+    **************************************************************'
+    sleep infinity
+  fi
 fi
 
 # add image to cron updater list
@@ -39,7 +52,7 @@ if [ ! -f /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.s
 fi
 
 if ! grep -q "$DOCKERIMAGE" /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh; then
-  echo "/storage/.kodi/addons/service.system.docker/bin/docker pull $DOCKERIMAGE" >> /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
+  echo "/storage/.kodi/addons/service.system.docker/bin/docker pull ${DOCKERIMAGE}:${DOCKERTAG}" >> /storage/.kodi/userdata/addon_data/docker.linuxserver.updater/update.sh
 fi
 
 if [ ! -S /run/docker.sock ]; then
@@ -61,4 +74,4 @@ docker run --name="$name" \
            -e TZ="$TIMEZONE" \
            -v "$V_config":/config \
            -p "$P_port":80 \
-           "$DOCKERIMAGE":latest
+           "$DOCKERIMAGE":"$DOCKERTAG"
