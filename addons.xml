@@ -57,7 +57,7 @@ docker.linuxserver.adguard:
 
 <addon id="docker.linuxserver.beets"
        name="Beets (LinuxServer.io)"
-       version="2.0.2"
+       version="2.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -79,6 +79,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.beets:
 -------------------------
+
+2.0.3
+- Force aarch64 image on 32/64 bit hybrid systems
 
 2.0.2
 - Update systemd to not delay Kodi start
@@ -131,7 +134,7 @@ docker.linuxserver.beets:
 
 <addon id="docker.linuxserver.boinc"
        name="Boinc (LinuxServer.io)"
-       version="2.0.2"
+       version="2.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -157,6 +160,9 @@ Please visit https://linuxserver.io for more info on this image and addon.
 docker.linuxserver.boinc:
 ------------------------
 
+2.0.3
+- Force aarch64 image on 32/64 bit hybrid systems
+
 2.0.2
 - Update systemd to not delay Kodi start
 
@@ -180,7 +186,7 @@ docker.linuxserver.boinc:
 
 <addon id="docker.linuxserver.daapd"
        name="Daapd (LinuxServer.io)"
-       version="1.0.1"
+       version="1.0.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -203,6 +209,9 @@ Please visit https://linuxserver.io for more information.
 docker.linuxserver.daapd:
 -------------------------
 
+1.0.2
+- Force aarch64 image on 32/64 bit hybrid systems
+
 1.0.1
 - Update systemd to not delay Kodi start
 
@@ -220,7 +229,7 @@ docker.linuxserver.daapd:
 
 <addon id="docker.linuxserver.domoticz"
        name="Domoticz (LinuxServer.io)"
-       version="2.0.2"
+       version="2.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -244,6 +253,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.domoticz:
 -----------------------------
+
+2.0.3
+- Force aarch64 image on 32/64 bit hybrid systems
 
 2.0.2
 - Update systemd to not delay Kodi start
@@ -280,7 +292,7 @@ docker.linuxserver.domoticz:
 
 <addon id="docker.linuxserver.duckdns"
        name="DuckDNS (LinuxServer.io)"
-       version="2.0.2"
+       version="2.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -303,6 +315,9 @@ Please visit www.duckdns.org to get a custom url and token
     <news>
 docker.linuxserver.duckdns:
 ---------------------------
+
+2.0.3
+- Force aarch64 image on 32/64 bit hybrid systems
 
 2.0.2
 - Update systemd to not delay Kodi start
@@ -368,7 +383,7 @@ docker.linuxserver.duckdns:
 
 <addon id="docker.linuxserver.duplicati"
        name="Duplicati (LinuxServer.io)"
-       version="2.0.2"
+       version="2.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -390,6 +405,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.duplicati:
 -----------------------------
+
+2.0.3
+- Force aarch64 image on 32/64 bit hybrid systems
 
 2.0.2
 - Update systemd to not delay Kodi start
@@ -432,7 +450,7 @@ docker.linuxserver.duplicati:
 
 <addon id="docker.linuxserver.emby"
        name="Emby (LinuxServer.io)"
-       version="2.0.2"
+       version="2.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -453,6 +471,9 @@ Please visit https://linuxserver.io for more info on this image and addon.
     <news>
 docker.linuxserver.emby:
 ------------------------
+
+2.0.3
+- Force aarch64 image on 32/64 bit hybrid systems
 
 2.0.2
 - Update systemd to not delay Kodi start
@@ -565,7 +586,7 @@ docker.linuxserver.foldingathome:
 
 <addon id="docker.linuxserver.heimdall"
        name="Heimdall (LinuxServer.io)"
-       version="2.0.2"
+       version="2.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -587,6 +608,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.heimdall:
 -------------------------
+
+2.0.3
+- Force aarch64 image on 32/64 bit hybrid systems
 
 2.0.2
 - Update systemd to not delay Kodi start
@@ -611,7 +635,7 @@ docker.linuxserver.heimdall:
 
 <addon id="docker.linuxserver.jellyfin"
        name="Jellyfin (LinuxServer.io)"
-       version="2.0.2"
+       version="2.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -632,6 +656,9 @@ Please visit https://linuxserver.io for more info on this image and addon.
     <news>
 docker.linuxserver.jellyfin:
 ------------------------
+
+2.0.3
+- Force aarch64 image on 32/64 bit hybrid systems
 
 2.0.2
 - Update systemd to not delay Kodi start
@@ -782,7 +809,7 @@ docker.linuxserver.letsencrypt:
 
 <addon id="docker.linuxserver.mariadb"
        name="MariaDB (LinuxServer.io)"
-       version="2.0.2"
+       version="2.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -808,6 +835,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.mariadb:
 ---------------------------
+
+2.0.3
+- Force aarch64 image on 32/64 bit hybrid systems
 
 2.0.2
 - Update systemd to not delay Kodi start
@@ -875,7 +905,7 @@ docker.linuxserver.mariadb:
 
 <addon id="docker.linuxserver.minisatip"
        name="Minisatip (LinuxServer.io)"
-       version="2.0.2"
+       version="2.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -897,6 +927,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.minisatip:
 -----------------------------
+
+2.0.3
+- Force aarch64 image on 32/64 bit hybrid systems
 
 2.0.2
 - Update systemd to not delay Kodi start
@@ -951,7 +984,7 @@ docker.linuxserver.minisatip:
 
 <addon id="docker.linuxserver.muximux"
        name="Muximux (LinuxServer.io)"
-       version="2.0.2"
+       version="2.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -973,6 +1006,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.muximux:
 ---------------------------
+
+2.0.3
+- Force aarch64 image on 32/64 bit hybrid systems
 
 2.0.2
 - Update systemd to not delay Kodi start
@@ -1067,7 +1103,7 @@ docker.linuxserver.netdata:
 
 <addon id="docker.linuxserver.nextcloud"
        name="Nextcloud (LinuxServer.io)"
-       version="2.0.2"
+       version="2.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -1097,6 +1133,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.nextcloud:
 -----------------------------
+
+2.0.3
+- Force aarch64 image on 32/64 bit hybrid systems
 
 2.0.2
 - Update systemd to not delay Kodi start
@@ -1142,7 +1181,7 @@ docker.linuxserver.nextcloud:
 
 <addon id="docker.linuxserver.nginx"
        name="Nginx (LinuxServer.io)"
-       version="2.1.1"
+       version="2.1.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -1166,6 +1205,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.nginx:
 -------------------------
+
+2.1.2
+- Force aarch64 image on 32/64 bit hybrid systems
 
 2.1.1
 - Update systemd to not delay Kodi start
@@ -1212,7 +1254,7 @@ docker.linuxserver.nginx:
 
 <addon id="docker.linuxserver.oscam"
        name="Oscam (LinuxServer.io)"
-       version="2.0.2"
+       version="2.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -1234,6 +1276,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.oscam:
 -------------------------
+
+2.0.3
+- Force aarch64 image on 32/64 bit hybrid systems
 
 2.0.2
 - Update systemd to not delay Kodi start
@@ -1430,7 +1475,7 @@ docker.linuxserver.pi-hole:
 
 <addon id="docker.linuxserver.plex"
        name="Plex (LinuxServer.io)"
-       version="2.0.2"
+       version="2.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -1452,6 +1497,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.plex:
 ------------------------
+
+2.0.3
+- Force aarch64 image on 32/64 bit hybrid systems
 
 2.0.2
 - Update systemd to not delay Kodi start
@@ -1582,7 +1630,7 @@ docker.linuxserver.portainer:
 
 <addon id="docker.linuxserver.quassel-core"
        name="Quassel Core (LinuxServer.io)"
-       version="2.0.2"
+       version="2.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -1606,6 +1654,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.quassel-core:
 --------------------------------
+
+2.0.3
+- Force aarch64 image on 32/64 bit hybrid systems
 
 2.0.2
 - Update systemd to not delay Kodi start
@@ -1654,7 +1705,7 @@ docker.linuxserver.quassel-core:
 
 <addon id="docker.linuxserver.resilio-sync"
        name="Resilio Sync (LinuxServer.io)"
-       version="2.0.2"
+       version="2.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -1676,6 +1727,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.resilio-sync:
 --------------------------------
+
+2.0.3
+- Force aarch64 image on 32/64 bit hybrid systems
 
 2.0.2
 - Update systemd to not delay Kodi start
@@ -1724,7 +1778,7 @@ docker.linuxserver.resilio-sync:
 
 <addon id="docker.linuxserver.swag"
        name="SWAG - Secure Web Application Gateway (LinuxServer.io)"
-       version="1.1.2"
+       version="1.1.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -1751,6 +1805,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.swag:
 -------------------------------
+
+1.1.3
+- Force aarch64 image on 32/64 bit hybrid systems
 
 1.1.2
 - Update systemd to not delay Kodi start
@@ -1781,7 +1838,7 @@ docker.linuxserver.swag:
 
 <addon id="docker.linuxserver.tautulli"
        name="Tautulli (LinuxServer.io)"
-       version="2.0.2"
+       version="2.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -1803,6 +1860,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.tautulli:
 --------------------------
+
+2.0.3
+- Force aarch64 image on 32/64 bit hybrid systems
 
 2.0.2
 - Update systemd to not delay Kodi start
@@ -1833,7 +1893,7 @@ docker.linuxserver.tautulli:
 
 <addon id="docker.linuxserver.thelounge"
        name="TheLounge (LinuxServer.io)"
-       version="2.0.2"
+       version="2.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -1855,6 +1915,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.thelounge:
 -----------------------------
+
+2.0.3
+- Force aarch64 image on 32/64 bit hybrid systems
 
 2.0.2
 - Update systemd to not delay Kodi start
@@ -1900,7 +1963,7 @@ docker.linuxserver.thelounge:
 
 <addon id="docker.linuxserver.tvheadend"
        name="TVheadend (LinuxServer.io)"
-       version="2.0.2"
+       version="2.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -1922,6 +1985,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.tvheadend:
 -----------------------------
+
+2.0.3
+- Force aarch64 image on 32/64 bit hybrid systems
 
 2.0.2
 - Update systemd to not delay Kodi start
@@ -2038,7 +2104,7 @@ docker.linuxserver.updater:
 
 <addon id="docker.linuxserver.webgrabplus"
        name="WebGrab+Plus (LinuxServer.io)"
-       version="2.1.1"
+       version="2.1.2"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -2069,6 +2135,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.webgrabplus:
 -------------------------------
+
+2.1.2
+- Force aarch64 image on 32/64 bit hybrid systems
 
 2.1.1
 - Update systemd to not delay Kodi start
@@ -2103,7 +2172,7 @@ docker.linuxserver.webgrabplus:
 
 <addon id="docker.linuxserver.znc"
        name="ZNC (LinuxServer.io)"
-       version="2.0.2"
+       version="2.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -2127,6 +2196,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.linuxserver.znc:
 -----------------------
+
+2.0.3
+- Force aarch64 image on 32/64 bit hybrid systems
 
 2.0.2
 - Update systemd to not delay Kodi start
